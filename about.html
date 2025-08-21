@@ -11,20 +11,28 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="index.html">Anda<br>Suberu</a>
-    </div>
-    <nav>
-      <a href="index.html">Work</a>
-      <a href="about.html">About</a>
-      <a href="https://www.linkedin.com/in/andasuberu/">Connect</a>
-      <a href="https://drive.google.com/file/d/1IDr0rsyPOR_c7mccU089vMK97wMrugr3/view?usp=drive_link">Resume</a>
-    </nav>
-  </header>
+  <header> 
+  <div class="logo">
+    <a href="index.html">Anda<br>Suberu</a>
+  </div>
 
-  <section class="about-hero">
-  <div class="about-hero-left">
+  <!-- Hamburger Button -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="nav-menu">
+    <a href="index.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="https://www.linkedin.com/in/andasuberu/">Connect</a>
+    <a href="https://drive.google.com/file/d/1IDr0rsyPOR_c7mccU089vMK97wMrugr3/view?usp=drive_link">Resume</a>
+  </nav>
+</header>
+
+  <section class="hero">
+  <div class="hero-left">
     <h1 class="line1">GOOD IDEAS</h1>
     <h1 class="line2">DESERVE GOOD DESIGN<img src="images/asterisk.svg" alt="asterisk" class="asterisk"></h1>
   </div>
@@ -37,7 +45,7 @@
       <!-- Double column -->
       <div class="gallery-row double-about">
         <div class="about-left"><p>About</p></div>
-        <div class="about-right"><p class="about-description">I’m a multidisciplinary visual designer based in Abuja, Nigeria.<br><br>
+        <div class="about-right"><p class="about-description">Hi! I'm Anda Suberu, a multidisciplinary visual designer based in Abuja, Nigeria.<br><br>
         I work with various people, making visual solutions and meaningful experiences through visual identity, illustration, UI/UX, and web design.<br><br>
         Through my experience across diverse projects, I have picked up a high level of proficiency with industry-standard design tools and software in the above fields. Added to my background in computer engineering and traditional art, I bring both technical precision and artistic creativity to all my projects.<br><br></p>
         </div>
@@ -61,6 +69,33 @@
       <p>© 2025<br>Anda Suberu</p>
     </div>
   </footer>
+
+  <script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  // Toggle menu when hamburger is clicked
+  hamburger.addEventListener("click", function () {
+    navMenu.classList.toggle("open");
+    hamburger.style.display = navMenu.classList.contains("open") ? "none" : "flex";
+  });
+
+  // Close menu when any nav link is clicked
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("open");
+      hamburger.style.display = "flex";
+    });
+  });
+
+  // Close menu when clicking anywhere on the nav background (but not on links)
+  navMenu.addEventListener("click", (e) => {
+    if (e.target === navMenu) { // only if clicked directly on the nav container
+      navMenu.classList.remove("open");
+      hamburger.style.display = "flex";
+    }
+  });
+</script>
 
 </body>
 </html>
