@@ -195,30 +195,7 @@ padding-bottom: 1rem;
 
 @media (max-width: 767px) {
 .hero {
-flex-direction: column;
-align-items: flex-start;
-margin-top: 4rem;
-margin-bottom: 4rem;
-gap: 2rem;
-display: none;
-}
-
-.hero-left h1.line1 {
-font-size: 15vw;
-line-height: 0.7;
-padding-bottom: 3vw;
-}
-
-.hero-left h1.line2 {
-font-size: 15vw;
-line-height: 0.7;
-}
-
-.hero-right {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  padding-right: 2rem;
-  padding-left: 0rem;
+display: none!important;
 }
 
 .asterisk {
