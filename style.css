@@ -82,6 +82,11 @@ nav a {
 }
 
 @media (max-width: 767px) {
+  header {
+  margin-top: 2rem;
+  margin-bottom: -1rem;
+  }
+
   .hamburger {
     display: flex;
     z-index: 1001; /* keep above menu */
@@ -425,7 +430,7 @@ border-top: 1px solid #1a1a1a;
   gap: 2rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
 .project-gallery {
   gap: 1rem;
   }
@@ -452,6 +457,7 @@ border-top: 1px solid #1a1a1a;
   display: flex;
   gap: 2rem;
   margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 767px) {
