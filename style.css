@@ -167,21 +167,21 @@ nav a {
 
 /* Responsive breakpoints */
 @media (max-width: 1024px) and (min-width: 768px) {
-  .hero-left h1.line1 {
-  font-size: 4.2rem;
-  line-height: 0.7;
-  padding-bottom: 1rem;
+.hero-left h1.line1 {
+font-size: 9vw;
+line-height: 0.7;
+padding-bottom: 1rem;
 }
 
 .hero-left h1.line2 {
-  font-size: 4.2rem;
+  font-size: 9vw;
   line-height: 0.7;
 }
 
 .hero-right {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   line-height: 1.6;
-  padding-right: 3rem;
+  padding-right: 1rem;
   padding-left: 3rem;
 }
 
@@ -272,6 +272,19 @@ line-height: 0.7;
 }
 
 /* Responsive breakpoints */
+@media (max-width: 1024px) and (min-width: 768px) {
+.project-info h3 {
+font-size: 0.8rem;
+font-weight: 300;
+}
+
+.project-info p {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: -2px;
+}
+}
+
 @media (max-width: 767px) {
   .projects {
     column-count: 1;
