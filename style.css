@@ -200,6 +200,7 @@ align-items: flex-start;
 margin-top: 4rem;
 margin-bottom: 4rem;
 gap: 2rem;
+display: none;
 }
 
 .hero-left h1.line1 {
@@ -432,33 +433,8 @@ footer .copyright {
 
 
 /* About Page */
-.about-hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  max-width: 1250px;
-  margin: auto;
-  margin-top: 7rem;
-  margin-bottom: 7rem;
-}
-
 .about-hero-divider {
 border-top: 1px solid #1a1a1a;
-}
-
-.about-hero-left h1.line1 {
-  font-size: 6.5rem;
-  font-family: 'Bebas Neue', sans-serif;
-  line-height: 0.7;
-  font-weight: 400;
-  padding-bottom: 1rem;
-}
-
-.about-hero-left h1.line2 {
-  font-size: 6.5rem;
-  font-family: 'Bebas Neue', sans-serif;
-  line-height: 0.7;
-  font-weight: 400;
 }
 
 .about-page {
@@ -479,7 +455,7 @@ border-top: 1px solid #1a1a1a;
 }
 
 .about-left {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: 0.7;
   font-weight: 400;
   color: #929292;
@@ -487,7 +463,7 @@ border-top: 1px solid #1a1a1a;
 
 .about-right {
   max-width: 610px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 300;
   line-height: 1.6;
   margin-top: -0.6rem;
@@ -499,4 +475,15 @@ border-top: 1px solid #1a1a1a;
   display: flex;
   gap: 2rem;
   margin-top: 3rem;
+}
+
+@media (max-width: 767px) {
+  .gallery-row.double-about {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-right {
+    max-width: 100%;
+  }
 }
