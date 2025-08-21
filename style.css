@@ -331,7 +331,7 @@ footer .copyright {
 }
 
 .project-hero-right {
-  max-width: 610px;
+  max-width: 50%;
   font-size: 1.3rem;
   font-weight: 300;
   line-height: 1.6;
@@ -383,7 +383,7 @@ footer .copyright {
 }
 
 /* Responsive gallery */
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .gallery-row.double {
     flex-direction: column;
   }
@@ -402,6 +402,15 @@ footer .copyright {
 
   .gallery-row.double {
   gap: 1rem;
+  }
+
+  .gallery-row.double-hero {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .project-hero-right {
+    max-width: 100%;
   }
 }
 
@@ -444,7 +453,7 @@ border-top: 1px solid #1a1a1a;
 }
 
 .about-right {
-  max-width: 610px;
+  max-width: 50%;
   font-size: 1.1rem;
   font-weight: 300;
   line-height: 1.6;
