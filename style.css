@@ -27,25 +27,25 @@ a:hover {
 /* Header */
 header {
   display: flex;
-  justify-content: space-between; /* Logo left, menu right */
+  justify-content: space-between;
   margin: 3rem auto;
   align-items: center;
-  padding: 0rem 0rem;
   max-width: 1250px;
 }
 
-.logo a{
+.logo a {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5rem;
   display: flex;
   align-items: center;
-  gap: 0.8rem; /* space between logo and name */
+  gap: 0.8rem;
 }
 
 nav {
   display: flex;
   gap: 2rem;
+  transition: max-height 0.3s ease-in-out;
 }
 
 nav a {
@@ -53,6 +53,66 @@ nav a {
   font-weight: 400;
   color: #929292;
   text-decoration: none;
+}
+
+/* Hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* evenly space bars */
+  align-items: center;
+  width: 24px;
+  height: 24px; /* total height can scale, spacing adjusts automatically */
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 1px; /* set thickness */
+  background: #fff;
+  transition: 0.3s;
+}
+
+/* Hide hamburger on desktop */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hamburger {
+    display: flex;
+    z-index: 1001; /* keep above menu */
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: #000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+
+  nav a {
+    font-size: 1.3rem;
+    color: #929292;
+  }
+
+  nav.open {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 /* Hero Section */
@@ -105,6 +165,70 @@ nav a {
   to   { transform: rotate(360deg); }
 }
 
+/* Responsive breakpoints */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero-left h1.line1 {
+  font-size: 4.2rem;
+  line-height: 0.7;
+  padding-bottom: 1rem;
+}
+
+.hero-left h1.line2 {
+  font-size: 4.2rem;
+  line-height: 0.7;
+}
+
+.hero-right {
+  font-size: 0.7rem;
+  line-height: 1.6;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.asterisk {
+  display: inline-block;
+  width: 0.5em;   /* scale with text */
+  height: 0.5em;
+  margin-left: 8px;
+}
+}
+
+@media (max-width: 767px) {
+.hero {
+flex-direction: column;
+align-items: flex-start;
+margin-top: 4rem;
+margin-bottom: 4rem;
+gap: 2rem;
+}
+
+.hero-left h1.line1 {
+font-size: 15vw;
+line-height: 0.7;
+padding-bottom: 1rem;
+}
+
+.hero-left h1.line2 {
+font-size: 15vw;
+line-height: 0.7;
+}
+
+.hero-right {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding-right: 2rem;
+  padding-left: 0rem;
+}
+
+.asterisk {
+  display: inline-block;
+  width: 8vw;   /* scale with text */
+  height: vw;
+  margin-left: 4px;
+}
+
+}
+
 /* Projects grid */
 .projects {
   max-width: 1250px;
@@ -148,13 +272,7 @@ nav a {
 }
 
 /* Responsive breakpoints */
-@media (max-width: 900px) {
-  .projects {
-    column-count: 3;
-  }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .projects {
     column-count: 1;
   }
