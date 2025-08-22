@@ -409,8 +409,13 @@ footer .copyright {
     gap: 2rem;
   }
 
+  .project-hero-left {
+  font-size: 1.5rem;
+  }
+
   .project-hero-right {
     max-width: 100%;
+    font-size: 1.1rem;
   }
 }
 
