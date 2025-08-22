@@ -6,7 +6,6 @@
 
 body {
   font-family: 'Sora', sans-serif;
-  /*background: #f7f4ee;*/
   background: #f6f6f6;
   color: #212121;
   line-height: 1.6;
@@ -238,3 +237,4 @@ footer a {
 footer .copyright {
   text-align: right;
 }
+
