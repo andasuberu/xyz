@@ -6,10 +6,10 @@
 
 body {
   font-family: 'Sora', sans-serif;
-  background: #f6f6f6;
+  background: #ffffff;
   color: #212121;
   line-height: 1.6;
-  padding: 0 0.7rem;
+  padding: 0 0.5rem;
 }
 
 /* Links */
@@ -29,12 +29,12 @@ header {
   margin: 3rem auto;
   align-items: center;
   max-width: 1250px;
-  padding: 0 0.3rem;
+  padding: 0 0.5rem;
 }
 
 .logo a {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5rem;
   display: flex;
   align-items: center;
@@ -49,9 +49,26 @@ nav {
 
 nav a {
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 400;
   color: #212121;
   text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #212121; /* stroke */
+  border-radius: 9999px;  /* fully rounded */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #212121;
+  color: #fff;
+}
+
+#up {
+  margin-bottom: -6px;
+  margin-right: 6px;
+  fill: currentColor;
 }
 
 /* Hamburger */
@@ -160,7 +177,7 @@ nav a {
   max-width: 1440px;
   margin: 3rem auto;
   column-count: 5;      /* number of masonry columns */
-  column-gap: 0.7rem;     /* space between columns */
+  column-gap: 0.5rem;     /* space between columns */
 }
 
 .project-card {
@@ -169,7 +186,7 @@ nav a {
   break-inside: avoid;     /* prevent cards from splitting between columns */
   overflow: hidden;
   transition: transform 0.2s ease;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Natural height for media */
@@ -223,12 +240,12 @@ footer {
   justify-content: space-between;
   margin: 3rem auto;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 0rem;
   padding-right: 0rem;
   padding-left: 0rem;
   max-width: 1250px;
   font-size: 1.1rem;
-  border-top: 1px solid #1a1a1a;
+  border-top: 0px solid #1a1a1a;
 }
 
 footer a {
@@ -236,5 +253,6 @@ footer a {
 }
 
 footer .copyright {
-  text-align: right;
+  text-align: center;
+  margin: auto;
 }
