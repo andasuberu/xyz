@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anda Suberu – Illustrator">
+  <title>Anda Suberu – Illustrator</title>
+  <link rel="icon" href="images/asfavicon.ico" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="illostyle.css">
+</head>
+<body>
+<header> 
+  <div class="logo">
+    <a href="index.html">Anda<br>Suberu</a>
+  </div>
+
+  <!-- Hamburger Button -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="nav-menu">
+    <a href="index.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="https://www.linkedin.com/in/andasuberu/">Connect</a>
+    <a href="https://www.linkedin.com/in/andasuberu/">Hire Me</a>
+  </nav>
+</header>
+
+  <section class="hero">
+  <div class="hero-left">
+    <h1 class="intro"><img src="images/asterisk.svg" alt="asterisk" class="asterisk"><br>Anda Suberu is an Abuja-based visual designer and illustrator who loves to make custom vector illustrations, icons and visual assets that enhance brand identities, digital experiences, and print.</h1>
+  </div>
+  </section>
+
+  <section class="projects">
+    <div class="project-card">
+      <img src="images/jmpr-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/mnpgrey-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/mura-icons.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/travel-icons.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/musivo-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/oba-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/hestia-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/fushigi-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/tuno-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/marentide-icons.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/freelanceblog-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/d&b-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/antu-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/abuja-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/hmwl-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/sumscreen-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/sciic-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/dream-icons.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/alpha-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/cards-illustration.png">
+    </div>
+
+  </section>
+
+  <footer id="contact">
+    <div class="contact">
+      <p>LinkedIn<br>Gmail</p>
+    </div>
+    <div class="copyright">
+      <p>© 2025<br>Anda Suberu</p>
+    </div>
+  </footer>
+
+  <script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  // Toggle menu when hamburger is clicked
+  hamburger.addEventListener("click", function () {
+    navMenu.classList.toggle("open");
+    hamburger.style.display = navMenu.classList.contains("open") ? "none" : "flex";
+  });
+
+  // Close menu when any nav link is clicked
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("open");
+      hamburger.style.display = "flex";
+    });
+  });
+
+  // Close menu when clicking anywhere on the nav background (but not on links)
+  navMenu.addEventListener("click", (e) => {
+    if (e.target === navMenu) { // only if clicked directly on the nav container
+      navMenu.classList.remove("open");
+      hamburger.style.display = "flex";
+    }
+  });
+</script>
+
+</body>
+</html>
