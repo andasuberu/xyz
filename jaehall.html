@@ -10,17 +10,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="index.html">Anda<br>Suberu</a>
-    </div>
-    <nav>
-      <a href="index.html">Work</a>
-      <a href="about.html">About</a>
-      <a href="https://www.linkedin.com/in/andasuberu/">Connect</a>
-      <a href="https://drive.google.com/file/d/1IDr0rsyPOR_c7mccU089vMK97wMrugr3/view?usp=drive_link">Resume</a>
-    </nav>
-  </header>
+  <header> 
+  <div class="logo">
+    <a href="https://andasuberu.xyz">Anda<br>Suberu</a>
+  </div>
+
+  <!-- Hamburger Button -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="nav-menu">
+    <a href="https://andasuberu.xyz">Work</a>
+    <a href="https://andasuberu.xyz/about">About</a>
+    <a href="https://linkedin.com/in/andasuberu/">Connect</a>
+    <a href="https://drive.google.com/file/d/1IDr0rsyPOR_c7mccU089vMK97wMrugr3/view?usp=drive_link">Resume</a>
+  </nav>
+</header>
 
   <main class="project-page">
 
@@ -73,13 +81,39 @@
 
   <footer id="contact">
     <div class="contact">
-      <p>LinkedIn<br>Gmail</p>
+      <p><a href="https://linkedin.com/in/andasuberu/">LinkedIn</a><br><a href="mailto:uberanda@gmail.com">Gmail</a></p>
     </div>
     <div class="copyright">
       <p>© 2025<br>Anda Suberu</p>
     </div>
   </footer>
 
-</body>
+  <script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
 
+  // Toggle menu when hamburger is clicked
+  hamburger.addEventListener("click", function () {
+    navMenu.classList.toggle("open");
+    hamburger.style.display = navMenu.classList.contains("open") ? "none" : "flex";
+  });
+
+  // Close menu when any nav link is clicked
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("open");
+      hamburger.style.display = "flex";
+    });
+  });
+
+  // Close menu when clicking anywhere on the nav background (but not on links)
+  navMenu.addEventListener("click", (e) => {
+    if (e.target === navMenu) { // only if clicked directly on the nav container
+      navMenu.classList.remove("open");
+      hamburger.style.display = "flex";
+    }
+  });
+</script>
+
+</body>
 </html>
