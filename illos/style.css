@@ -29,6 +29,7 @@ header {
   margin: 3rem auto;
   align-items: center;
   max-width: 1250px;
+  padding: 0 0.3rem;
 }
 
 .logo a {
