@@ -1,230 +1,242 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anda Suberu – Illustrator">
+  <title>Anda Suberu – Illustrator</title>
+  <link rel="icon" href="images/asfavicon.ico" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header> 
+  <div class="logo">
+    <a href="illos.html">Anda<br>Suberu</a>
+  </div>
 
-body {
-  font-family: 'Sora', sans-serif;
-  /*background: #f7f4ee;*/
-  background: #f6f6f6;
-  color: #212121;
-  line-height: 1.6;
-  padding: 0 0.7rem;
-}
+  <!-- Hamburger Button -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-/* Links */
-a {
-  color: inherit;
-  text-decoration: none;
-}
+  <nav id="nav-menu">
+    <a href="illos.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="https://www.linkedin.com/in/andasuberu/">Connect</a>
+    <a href="https://www.upwork.com/freelancers/andasuberu">Hire Me</a>
+  </nav>
+</header>
 
-a:hover {
-  text-decoration: none;
-}
+  <section class="hero">
+  <div class="hero-left">
+    <h1 class="intro"><img src="images/asterisk.svg" alt="asterisk" class="asterisk"><br>Anda Suberu is an Abuja-based visual designer and illustrator who loves to make custom vector illustrations, icons and visual assets that enhance brand identities, digital experiences, and print.</h1>
+  </div>
+  </section>
 
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  margin: 3rem auto;
-  align-items: center;
-  max-width: 1250px;
-}
+  <section class="projects">
+    <div class="project-card">
+      <img src="images/jmpr-illustration.png">
+    </div>
 
-.logo a {
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
+    <div class="project-card">
+      <img src="images/mnpgrey-illustration.png">
+    </div>
 
-nav {
-  display: flex;
-  gap: 2rem;
-  transition: max-height 0.3s ease-in-out;
-}
+    <div class="project-card">
+      <img src="images/mura-icons.png">
+    </div>
 
-nav a {
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #212121;
-  text-decoration: none;
-}
+    <div class="project-card">
+      <img src="images/travel-icons.png">
+    </div>
 
-/* Hamburger */
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around; /* evenly space bars */
-  align-items: center;
-  width: 24px;
-  height: 24px; /* total height can scale, spacing adjusts automatically */
-  cursor: pointer;
-}
+    <div class="project-card">
+      <img src="images/musivo-illustration.png">
+    </div>
 
-.hamburger span {
-  display: block;
-  width: 100%;
-  height: 1px; /* set thickness */
-  background: #212121;
-  transition: 0.3s;
-}
+    <div class="project-card">
+      <img src="images/oba-illustration.png">
+    </div>
 
-/* Hide hamburger on desktop */
-@media (min-width: 768px) {
-  .hamburger {
-    display: none !important;
-  }
-}
+    <div class="project-card">
+      <img src="images/hestia-illustration.png">
+    </div>
 
-@media (max-width: 767px) {
-  header {
-  margin-top: 2rem;
-  margin-bottom: -1rem;
-  }
+    <div class="project-card">
+      <img src="images/fushigi-illustration.png">
+    </div>
 
-  .hamburger {
-    display: flex;
-    z-index: 1001; /* keep above menu */
-  }
+    <div class="project-card">
+      <img src="images/tuno-illustration.png">
+    </div>
 
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    background: #f6f6f6;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-  }
+    <div class="project-card">
+      <img src="images/marentide-icons.png">
+    </div>
 
-  nav a {
-    font-size: 1.3rem;
-    color: #212121;
-  }
+    <div class="project-card">
+      <img src="images/freelanceblog-illustration.png">
+    </div>
 
-  nav.open {
-    opacity: 1;
-    visibility: visible;
-  }
-}
+    <div class="project-card">
+      <img src="images/d&b-illustration.png">
+    </div>
 
-/* Hero Section */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  max-width: 1250px;
-  margin: auto;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
+    <div class="project-card">
+      <img src="images/antu-illustration.png">
+    </div>
 
-.hero-left h1.intro {
-  font-size: 1.6rem;
-  font-family: 'Sora', sans-serif;
-  line-height: 1.2;
-  font-weight: 500;
-  padding-bottom: 1rem;
-  padding-right: 10%;
-  padding-left: 10%;
-  text-align: center;
-}
+    <div class="project-card">
+      <img src="images/abuja-illustration.png">
+    </div>
 
-.asterisk {
-  display: block;
-  width: 0.7em;
-  height: 0.7em;
-  margin-left: 8px;
-  margin: auto;
-  animation: spin 4s linear infinite;
-}
+    <div class="project-card">
+      <img src="images/hmwl-illustration.png">
+    </div>
 
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
+    <div class="project-card">
+      <img src="images/sumscreen-illustration.png">
+    </div>
 
-/* Projects grid */
-.projects {
-  max-width: 1440px;
-  margin: 3rem auto;
-  column-count: 5;      /* number of masonry columns */
-  column-gap: 0.7rem;     /* space between columns */
-}
+    <div class="project-card">
+      <img src="images/sciic-illustration.png">
+    </div>
 
-.project-card {
-  display: block;
-  width: 100%;
-  break-inside: avoid;     /* prevent cards from splitting between columns */
-  overflow: hidden;
-  transition: transform 0.2s ease;
-  margin-bottom: 0.7rem;
-}
+    <div class="project-card">
+      <img src="images/dream-icons.png">
+    </div>
 
-/* Natural height for media */
-.project-card img,
-.project-card video {
-  width: 100%;
-  height: auto;            /* use natural height */
-  display: block;
-  object-fit: cover;       /* keeps videos cropped nicely */
-}
+    <div class="project-card">
+      <img src="images/alpha-illustration.png">
+    </div>
 
-/* Responsive breakpoints */
-@media (max-width: 767px) {
-  .hero-left h1.intro {
-  font-size: 1.6rem;
-  font-family: 'Sora', sans-serif;
-  line-height: 1.2;
-  font-weight: 500;
-  padding-bottom: 1rem;
-  padding-right: 10%;
-  padding-left: 10%;
-  text-align: center;
-  }
+    <div class="project-card">
+      <img src="images/cards-illustration.png">
+    </div>
 
-  .projects {
-    column-count: 2;
-    column-gap: 0.4rem;
-  }
+  </section>
 
-  .project-card {
-  margin-bottom: 0.4rem;
-  }
-body {
-  padding: 0 0.4rem;
-}
-}
+  <section class="projects-mobile">
+    <div class="project-card">
+      <img src="images/jmpr-illustration.png">
+    </div>
 
-/* Footer */
-footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 3rem auto;
-  align-items: center;
-  padding-top: 2rem;
-  padding-right: 0rem;
-  padding-left: 0rem;
-  max-width: 1250px;
-  font-size: 1.1rem;
-  border-top: 1px solid #1a1a1a;
-}
+    <div class="project-card">
+      <img src="images/tuno-illustration.png">
+    </div>
 
-footer a {
-  color: #999;
-}
+    <div class="project-card">
+      <img src="images/dream-icons.png">
+    </div>
 
-footer .copyright {
-  text-align: right;
-}
+    <div class="project-card">
+      <img src="images/mnpgrey-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/d&b-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/marentide-icons.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/freelanceblog-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/travel-icons.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/cards-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/mura-icons.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/musivo-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/sciic-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/antu-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/oba-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/alpha-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/abuja-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/hestia-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/sumscreen-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/hmwl-illustration.png">
+    </div>
+
+    <div class="project-card">
+      <img src="images/fushigi-illustration.png">
+    </div>
+
+  </section>
+
+  <footer id="contact">
+    <div class="contact">
+      <p>LinkedIn<br>Gmail</p>
+    </div>
+    <div class="copyright">
+      <p>© 2025<br>Anda Suberu</p>
+    </div>
+  </footer>
+
+  <script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  // Toggle menu when hamburger is clicked
+  hamburger.addEventListener("click", function () {
+    navMenu.classList.toggle("open");
+    hamburger.style.display = navMenu.classList.contains("open") ? "none" : "flex";
+  });
+
+  // Close menu when any nav link is clicked
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("open");
+      hamburger.style.display = "flex";
+    });
+  });
+
+  // Close menu when clicking anywhere on the nav background (but not on links)
+  navMenu.addEventListener("click", (e) => {
+    if (e.target === navMenu) { // only if clicked directly on the nav container
+      navMenu.classList.remove("open");
+      hamburger.style.display = "flex";
+    }
+  });
+</script>
+
+</body>
+</html>
