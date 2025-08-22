@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+  /*background: #f7f4ee;*/
+  background: #f6f6f6;
+  color: #212121;
+  line-height: 1.6;
+  padding: 0 0.7rem;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem auto;
+  align-items: center;
+  max-width: 1250px;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  transition: max-height 0.3s ease-in-out;
+}
+
+nav a {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #212121;
+  text-decoration: none;
+}
+
+/* Hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* evenly space bars */
+  align-items: center;
+  width: 24px;
+  height: 24px; /* total height can scale, spacing adjusts automatically */
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 1px; /* set thickness */
+  background: #212121;
+  transition: 0.3s;
+}
+
+/* Hide hamburger on desktop */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+  margin-top: 2rem;
+  margin-bottom: -1rem;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 1001; /* keep above menu */
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: #f6f6f6;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+
+  nav a {
+    font-size: 1.3rem;
+    color: #212121;
+  }
+
+  nav.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1250px;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.hero-left h1.intro {
+  font-size: 1.6rem;
+  font-family: 'Sora', sans-serif;
+  line-height: 1.2;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  padding-right: 10%;
+  padding-left: 10%;
+  text-align: center;
+}
+
+.asterisk {
+  display: block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-left: 8px;
+  margin: auto;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Projects grid */
+.projects {
+  max-width: 1440px;
+  margin: 3rem auto;
+  column-count: 5;      /* number of masonry columns */
+  column-gap: 0.7rem;     /* space between columns */
+}
+
+.project-card {
+  display: block;
+  width: 100%;
+  break-inside: avoid;     /* prevent cards from splitting between columns */
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  margin-bottom: 0.7rem;
+}
+
+/* Natural height for media */
+.project-card img,
+.project-card video {
+  width: 100%;
+  height: auto;            /* use natural height */
+  display: block;
+  object-fit: cover;       /* keeps videos cropped nicely */
+}
+
+/* Responsive breakpoints */
+@media (max-width: 767px) {
+  .projects {
+    column-count: 1;
+  }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem auto;
+  align-items: center;
+  padding-top: 2rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
+  max-width: 1250px;
+  font-size: 1.1rem;
+  border-top: 1px solid #1a1a1a;
+}
+
+footer a {
+  color: #999;
+}
+
+footer .copyright {
+  text-align: right;
+}
