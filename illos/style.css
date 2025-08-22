@@ -183,9 +183,28 @@ nav a {
 
 /* Responsive breakpoints */
 @media (max-width: 767px) {
-  .projects {
-    column-count: 1;
+  .hero-left h1.intro {
+  font-size: 1.6rem;
+  font-family: 'Sora', sans-serif;
+  line-height: 1.2;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  padding-right: 10%;
+  padding-left: 10%;
+  text-align: center;
   }
+
+  .projects {
+    column-count: 2;
+    column-gap: 0.4rem;
+  }
+
+  .project-card {
+  margin-bottom: 0.4rem;
+  }
+body {
+  padding: 0 0.4rem;
+}
 }
 
 /* Footer */
