@@ -6,8 +6,8 @@
 
 body {
   font-family: 'Sora', sans-serif;
-  background: #ffffff;
-  color: #212121;
+  background: #fff;
+  color: #222;
   line-height: 1.6;
   padding: 0 0.5rem;
 }
@@ -50,18 +50,18 @@ nav {
 nav a {
   font-size: 1.1rem;
   font-weight: 400;
-  color: #212121;
+  color: #222;
   text-decoration: none;
   display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid #212121; /* stroke */
+  padding: 8px 16px;
+  border: 2px solid #222; /* stroke */
   border-radius: 9999px;  /* fully rounded */
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #212121;
+  background-color: #222;
   color: #fff;
 }
 
@@ -71,69 +71,23 @@ nav a:hover {
   fill: currentColor;
 }
 
-/* Hamburger */
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around; /* evenly space bars */
-  align-items: center;
-  width: 24px;
-  height: 24px; /* total height can scale, spacing adjusts automatically */
-  cursor: pointer;
-}
-
-.hamburger span {
-  display: block;
-  width: 100%;
-  height: 2px; /* set thickness */
-  background: #212121;
-  transition: 0.3s;
-}
-
-/* Hide hamburger on desktop */
 @media (min-width: 768px) {
-  .hamburger {
-    display: none !important;
+  #hire-mobile {
+    display: none;
   }
+  
 }
 
 @media (max-width: 767px) {
-  header {
-  margin-top: 2rem;
-  margin-bottom: -1rem;
+  #hire {
+    display: none;
   }
 
-  .hamburger {
-    display: flex;
-    z-index: 1001; /* keep above menu */
-  }
-
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    background: #f6f6f6;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-  }
-
-  nav a {
-    font-size: 1.3rem;
-    color: #212121;
-  }
-
-  nav.open {
-    opacity: 1;
-    visibility: visible;
-  }
+  #up {
+  margin-bottom: -6px;
+  margin-right: -2px;
+  fill: currentColor;
+} 
 }
 
 /* Hero Section */
