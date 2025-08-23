@@ -158,6 +158,7 @@ nav a.active::after {
   .hamburger {
     display: flex;
     z-index: 1001; /* keep above menu */
+    margin-top: -2px;
   }
 
   nav {
