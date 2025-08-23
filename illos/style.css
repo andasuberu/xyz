@@ -33,40 +33,72 @@ header {
 }
 
 .logo a {
-  font-size: 1.5rem;
+  font-family: 'Staatliches', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
   font-weight: 400;
-  line-height: 1.5rem;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1rem;
+}
+
+.logo a span {
+  margin-bottom: -6px;
+}
+
+.logo-icon {
+  width: 56px;   /* adjust size as needed */
+  height: 56px;
+  display: block;
+}
+
+@media (max-width: 767px) {
+.logo a {
+font-size: 1.5rem;
+}
+
+.logo a span {
+  margin-bottom: -2px;
+}
+
+.logo-icon {
+width: 36px;   /* adjust size as needed */
+height: 36px;
+}
 }
 
 nav {
   display: flex;
   gap: 2rem;
   transition: max-height 0.3s ease-in-out;
+  align-items: center
 }
 
 nav a {
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #222;
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
-  border: 2px solid #222; /* stroke */
-  border-radius: 9999px;  /* fully rounded */
-  text-decoration: none;
-  transition: all 0.3s ease;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
-nav a:hover {
-  background-color: #222;
-  color: #fff;
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0px;
+  transform: translateX(-50%);
+  width: 0;                           
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;        
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
 }
 
 #up {
-  margin-bottom: -6px;
+  margin-bottom: -10px;
   margin-right: 6px;
   fill: currentColor;
 }
@@ -84,10 +116,87 @@ nav a:hover {
   }
 
   #up {
-  margin-bottom: -6px;
+  margin-bottom: -10px;
   margin-right: -2px;
   fill: currentColor;
 } 
+}
+
+/* Hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* evenly space bars */
+  align-items: center;
+  width: 24px;
+  height: 16px; /* total height can scale, spacing adjusts automatically */
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px; /* set thickness */
+  background: #222;
+  transition: 0.3s;
+}
+
+/* Hide hamburger on desktop */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+  margin-top: 2rem;
+  margin-bottom: -1rem;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 1001; /* keep above menu */
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: #fff;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+
+  nav a {
+    font-size: 1.3rem;
+    color: #222;
+  }
+
+  nav.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.menu-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* spacing between nav and hire */
+}
+
+@media (max-width: 767px) {
+  .menu-right {
+  gap: 0.5rem;
+}
 }
 
 /* Hero Section */
@@ -104,26 +213,12 @@ nav a:hover {
 .hero-left h1.intro {
   font-size: 1.6rem;
   font-family: 'Sora', sans-serif;
-  line-height: 1.2;
+  line-height: 1.3;
   font-weight: 500;
   padding-bottom: 1rem;
   padding-right: 10%;
   padding-left: 10%;
   text-align: center;
-}
-
-.asterisk {
-  display: block;
-  width: 0.7em;
-  height: 0.7em;
-  margin-left: 8px;
-  margin: auto;
-  animation: spin 4s linear infinite;
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
 }
 
 /* Projects grid */
@@ -193,17 +288,23 @@ footer {
   display: flex;
   justify-content: space-between;
   margin: 3rem auto;
-  align-items: center;
-  padding-top: 0rem;
+  margin-top: -2rem;
+  align-items: left;
+  padding-top: 3rem;
   padding-right: 0rem;
   padding-left: 0rem;
   max-width: 1250px;
-  font-size: 1.1rem;
-  border-top: 0px solid #1a1a1a;
+  font-size: 1rem;
+  border-top: 1px solid #222;
 }
 
 footer a {
-  color: #999;
+  color: #222;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 footer .copyright {
