@@ -360,11 +360,11 @@ border-top: 1px solid #1a1a1a;
 
 .about-right {
   max-width: 50%;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.6;
   margin-top: -0.6rem;
-  color: #fff;
+  color: #222;
   margin-left: auto;
 }
 
@@ -378,10 +378,22 @@ border-top: 1px solid #1a1a1a;
 @media (max-width: 767px) {
   .gallery-row.double-about {
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
   }
 
+  .about-left {
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
   .about-right {
     max-width: 100%;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
   }
+}
+
+.aboutillus {
+  max-width: 100%;
 }
