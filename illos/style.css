@@ -54,11 +54,12 @@ header {
 
 @media (max-width: 767px) {
 .logo a {
-font-size: 1.5rem;
+gap: 0.5rem;
+font-size: 1.4rem;
 }
 
 .logo a span {
-  margin-bottom: -2px;
+  margin-bottom: -3px;
 }
 
 .logo-icon {
@@ -195,7 +196,7 @@ nav a.active::after {
 
 @media (max-width: 767px) {
   .menu-right {
-  gap: 0.5rem;
+  gap: 0.7rem;
 }
 }
 
