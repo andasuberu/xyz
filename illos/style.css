@@ -313,3 +313,75 @@ footer .copyright {
   text-align: center;
   margin: auto;
 }
+
+@media (max-width: 767px) {
+  footer {
+  margin-top: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* About Page */
+.about-hero-divider {
+border-top: 1px solid #1a1a1a;
+}
+
+.about-page {
+  max-width: 1250px;
+  margin: 3rem auto;
+}
+
+.project-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (max-width: 767px) {
+.project-gallery {
+  gap: 1rem;
+  }
+}
+
+.about-left {
+  font-size: 1.5rem;
+  line-height: 0.7;
+  font-weight: 400;
+  color: #222;
+}
+
+.about-right {
+  max-width: 50%;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-top: -0.6rem;
+  color: #fff;
+  margin-left: auto;
+}
+
+.gallery-row.double-about {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+  .gallery-row.double-about {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-right {
+    max-width: 100%;
+  }
+}
