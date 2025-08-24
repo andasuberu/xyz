@@ -423,3 +423,79 @@ border-top: 1px solid #1a1a1a;
 .top-banner a:hover {
   text-decoration: underline;
 }
+
+/* Lightbox overlay */
+.lightbox {
+  display: none; 
+  position: fixed;
+  z-index: 2000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+}
+
+/* Lightbox image */
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+}
+
+/* Close button */
+.lightbox .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #000;
+  font-size: 28px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+/* Next/Prev arrows */
+.lightbox .prev,
+.lightbox .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* ensure perfect vertical centering */
+  padding: 10px;
+  color: #222;
+  font-size: 20px;
+  font-weight: 300;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.lightbox .prev { left: 10px; }
+.lightbox .next { right: 10px; }
+
+.lightbox .prev:hover,
+.lightbox .next:hover,
+.lightbox .close:hover {
+  color: #222;
+}
+
+@media (max-width: 767px) {
+  .lightbox {
+    display: none;                /* keep default hidden state */
+    padding-top: 0;               /* remove desktop offset */
+    text-align: center;           /* recenter horizontally */
+  }
+
+  .lightbox-content {
+    display: block;
+    margin: auto;                 /* center horizontally */
+    max-width: 95%;
+    max-height: 75vh;
+    object-fit: contain;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);  /* vertical centering trick */
+  }
+}
