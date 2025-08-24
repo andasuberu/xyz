@@ -397,3 +397,29 @@ border-top: 1px solid #1a1a1a;
 .aboutillus {
   max-width: 100%;
 }
+
+.top-banner {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  z-index: 2000;
+}
+
+.top-banner a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.top-banner a:hover {
+  text-decoration: underline;
+}
