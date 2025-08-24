@@ -226,16 +226,32 @@ display: none!important;
   margin: 0 0 2rem;
   break-inside: avoid;     /* prevent cards from splitting between columns */
   overflow: hidden;
+  position: relative;
   transition: transform 0.2s ease;
 }
 
-/* Natural height for media */
-.project-card img,
-.project-card video {
+.project-card img {
   width: 100%;
-  height: auto;            /* use natural height */
   display: block;
-  object-fit: cover;       /* keeps videos cropped nicely */
+  transition: opacity 0.4s ease;
+}
+
+.project-card .img-hover {
+  position: absolute;
+  top: 0; left: 0;
+  opacity: 0;
+}
+
+.project-card:hover .img-default {
+  opacity: 0;
+}
+
+.project-card:hover .img-hover {
+  opacity: 1;
+}
+
+.project-card.coming-soon:hover .img-default {
+  opacity: 1;
 }
 
 .project-info {
