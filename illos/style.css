@@ -452,7 +452,7 @@ border-top: 1px solid #1a1a1a;
   top: 15px;
   right: 20px;
   color: #000;
-  font-size: 28px;
+  font-size: 1rem;
   font-weight: 300;
   cursor: pointer;
 }
@@ -498,4 +498,9 @@ border-top: 1px solid #1a1a1a;
     top: 50%;
     transform: translateY(-50%);  /* vertical centering trick */
   }
+
+  .lightbox .prev,
+.lightbox .next {
+font-size: 1rem;
+}
 }
