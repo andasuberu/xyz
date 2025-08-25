@@ -286,8 +286,21 @@ font-weight: 300;
 
 @media (max-width: 767px) {
   .projects {
-    column-count: 1;
+    display: none;
   }
+
+  .projects-mobile {
+    column-count: 1;
+    margin: 3rem auto;
+    column-gap: 1.5rem;     /* space between columns */
+  }
+
+}
+
+@media (min-width: 768px) {
+  .projects-mobile {
+    display: none;
+  }  
 }
 
 /* Footer */
