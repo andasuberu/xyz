@@ -440,11 +440,15 @@ border-top: 1px solid #1a1a1a;
 
 /* Lightbox image */
 .lightbox-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 80vh;
-}
+    display: block;
+    margin: auto;                 /* center horizontally */
+    max-width: 95%;
+    max-height: 75vh;
+    object-fit: contain;
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);  /* vertical centering trick */
+  }
 
 /* Close button */
 .lightbox .close {
@@ -504,5 +508,3 @@ border-top: 1px solid #1a1a1a;
 font-size: 15px;
 }
 }
-
-
