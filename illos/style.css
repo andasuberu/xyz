@@ -351,6 +351,7 @@ border-top: 1px solid #1a1a1a;
 
 .about-left {
   font-size: 1.5rem;
+  font-family: 'Merriweather', sans-serif;
   line-height: 0.7;
   font-weight: 400;
   color: #222;
@@ -508,4 +509,3 @@ border-top: 1px solid #1a1a1a;
 font-size: 15px;
 }
 }
-
