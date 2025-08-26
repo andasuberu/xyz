@@ -46,9 +46,8 @@ header {
   margin-bottom: -6px;
 }
 
-.logo-icon {
-  width: 56px;   /* adjust size as needed */
-  height: 56px;
+.logo-full {
+  width: 220px;   /* adjust size as needed */
   display: block;
 }
 
@@ -62,9 +61,8 @@ font-size: 1.4rem;
   margin-bottom: -3px;
 }
 
-.logo-icon {
-width: 36px;   /* adjust size as needed */
-height: 36px;
+.logo-full {
+width: 150px;   /* adjust size as needed */
 }
 }
 
@@ -213,10 +211,10 @@ nav a.active::after {
 }
 
 .hero-left h1.intro {
-  font-size: 1.6rem;
-  font-family: 'Sora', sans-serif;
+  font-size: 1.8rem;
+  font-family: 'Merriweather', sans-serif;
   line-height: 1.3;
-  font-weight: 500;
+  font-weight: 600;
   padding-bottom: 1rem;
   padding-right: 10%;
   padding-left: 10%;
@@ -258,10 +256,10 @@ nav a.active::after {
 
 @media (max-width: 767px) {
   .hero-left h1.intro {
-  font-size: 1.6rem;
-  font-family: 'Sora', sans-serif;
+  font-size: 1.8rem;
+  font-family: 'Merriweather', sans-serif;
   line-height: 1.2;
-  font-weight: 500;
+  font-weight: 600;
   padding-bottom: 1rem;
   padding-right: 10%;
   padding-left: 10%;
@@ -398,6 +396,7 @@ border-top: 1px solid #1a1a1a;
   max-width: 100%;
 }
 
+/*
 .top-banner {
   position: relative;
   left: 50%;
@@ -423,6 +422,7 @@ border-top: 1px solid #1a1a1a;
 .top-banner a:hover {
   text-decoration: underline;
 }
+*/
 
 /* Lightbox overlay */
 .lightbox {
