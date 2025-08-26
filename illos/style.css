@@ -211,7 +211,7 @@ nav a.active::after {
 }
 
 .hero-left h1.intro {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-family: 'Merriweather', sans-serif;
   line-height: 1.3;
   font-weight: 600;
@@ -256,7 +256,7 @@ nav a.active::after {
 
 @media (max-width: 767px) {
   .hero-left h1.intro {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-family: 'Merriweather', sans-serif;
   line-height: 1.2;
   font-weight: 600;
@@ -508,3 +508,4 @@ border-top: 1px solid #1a1a1a;
 font-size: 15px;
 }
 }
+
