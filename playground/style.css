@@ -248,7 +248,7 @@ display: none!important;
 }
 
 
-/* Proejcts gallery */
+/* Projects gallery */
 .gallery {
       column-count: 3;       /* masonry effect */
       column-gap: 20px;
@@ -305,7 +305,7 @@ display: none!important;
   .gallery {
     column-count: 1;
     margin: 3rem auto;
-    column-gap: 20px;     /* space between columns */
+    column-gap: 16px;     /* space between columns */
   }
 
 }
