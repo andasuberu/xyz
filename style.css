@@ -44,6 +44,7 @@ header {
 
 nav {
   display: flex;
+  align-items: center;
   gap: 2rem;
   transition: max-height 0.3s ease-in-out;
 }
@@ -53,6 +54,14 @@ nav a {
   font-weight: 400;
   color: #929292;
   text-decoration: none;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a.active {
+  color: #fff;
 }
 
 /* Hamburger */
