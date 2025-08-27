@@ -247,101 +247,12 @@ display: none!important;
 
 }
 
-/* Projects grid */
-.projects {
-  max-width: 1250px;
-  margin: 3rem auto;
-  column-count: 3;      /* number of masonry columns */
-  column-gap: 1.5rem;     /* space between columns */
-}
 
-.project-card {
-  display: inline-block;   /* important: let items flow in columns */
-  width: 100%;
-  margin: 0 0 2rem;
-  break-inside: avoid;     /* prevent cards from splitting between columns */
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.2s ease;
-}
-
-.project-card img {
-  width: 100%;
-  display: block;
-  transition: opacity 0.4s ease;
-}
-
-.project-card .img-hover {
-  position: absolute;
-  top: 0; left: 0;
-  opacity: 0;
-}
-
-.project-card:hover .img-default {
-  opacity: 0;
-}
-
-.project-card:hover .img-hover {
-  opacity: 1;
-}
-
-.project-card.coming-soon:hover .img-default {
-  opacity: 1;
-}
-
-.project-info {
-  margin: 1rem 0 0 0;
-  text-align: left;
-  font-size: 1.3rem;
-}
-
-.project-info h3 {
-  font-size: 1.1rem;
-  font-weight: 300;
-}
-
-.project-info p {
-  font-size: 1.1rem;
-  color: #999;
-}
-
-/* Responsive breakpoints */
-@media (max-width: 1024px) and (min-width: 768px) {
-.project-info h3 {
-font-size: 0.8rem;
-font-weight: 300;
-}
-
-.project-info p {
-  font-size: 0.8rem;
-  color: #999;
-  margin-top: -2px;
-}
-}
-
-@media (max-width: 767px) {
-  .projects {
-    display: none;
-  }
-
-  .projects-mobile {
-    column-count: 1;
-    margin: 3rem auto;
-    column-gap: 1.5rem;     /* space between columns */
-  }
-
-}
-
-@media (min-width: 768px) {
-  .projects-mobile {
-    display: none;
-  }  
-}
-
+/* Proejcts gallery */
 .gallery {
       column-count: 3;       /* masonry effect */
       column-gap: 20px;
-      max-width: 3000px;
+      max-width: 1250px;
       margin: 0 auto;
     }
 
@@ -377,17 +288,27 @@ font-weight: 300;
     }
 
     .title {
+      font-family: 'Sora', sans-serif;
       font-size: 1.1rem;
-      margin-top: 8px;
-      font-weight: bold;
-      color: #333;
+      margin-top: 16px;
+      font-weight: 400;
+      color: #fff;
     }
 
     .subtitle {
-      font-size: 0.95rem;
-      color: #777;
-      margin-bottom: 4px;
+      font-size: 1.1rem;
+      color: #999;
+      margin-bottom: 16px;
     }
+
+    @media (max-width: 767px) {
+  .gallery {
+    column-count: 1;
+    margin: 3rem auto;
+    column-gap: 20px;     /* space between columns */
+  }
+
+}
 
 /* Footer */
 footer {
