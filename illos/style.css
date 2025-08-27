@@ -283,6 +283,68 @@ body {
 }
 }
 
+/* Projects gallery */
+.gallery {
+      column-count: 5;       /* masonry effect */
+      column-gap: 10px;
+      max-width: 1440px;
+      margin: 3rem auto;
+    }
+
+    .gallery-item {
+      display: inline-block;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    .image-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .image-wrapper img {
+      display: block;
+      width: 100%;
+      height: auto; /* respects intrinsic aspect ratio */
+      transition: opacity 0.4s ease;
+    }
+
+    .image-wrapper img.hover-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+
+    .image-wrapper:hover img.hover-img {
+      opacity: 1;
+    }
+
+    .title {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.1rem;
+      margin-top: 16px;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #999;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 767px) {
+  .gallery {
+    column-count: 1;
+    margin: 3rem auto;
+    column-gap: 16px;     /* space between columns */
+  }
+
+}
+
 /* Footer */
 footer {
   display: flex;
