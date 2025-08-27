@@ -43,21 +43,12 @@
 
   <section class="projects">
   <div class="project-card">
-  <a href="https://andasuberu.xyz/jaehall" 
-   style="display: block; aspect-ratio: 940 / 794; width: 100%; overflow: hidden;">
-  
-  <img src="images/jaehall-thumbnail.png" 
-       alt="Jaehall project thumbnail" 
-       class="img-default" 
-       style="width: 100%; height: 100%; object-fit: cover;">
-       
-  <img src="images/jaehall-hover.png" 
-       alt="Jaehall hover thumbnail" 
-       class="img-hover" 
-       style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
-  </a>
+    <a href="https://andasuberu.xyz/jaehall">
+      <img src="images/jaehall-thumbnail.png" alt="Golden Meadow project thumbnail" class="img-default">
+      <img src="images/jaehall-hover.png" alt="Golden Meadow hover thumbnail" class="img-hover">
+    </a>
     <div class="project-info">
-      <h3>Jaehall</h3>
+      <h3>Golden Meadow</h3>
       <p>Brand Identity</p>
     </div>
   </div>
@@ -271,6 +262,43 @@
       navMenu.classList.remove("open");
       hamburger.style.display = "flex";
     }
+  });
+</script>
+
+<script>
+  // Hide cards until fully loaded
+  document.addEventListener("DOMContentLoaded", () => {
+    const projectCards = document.querySelectorAll(".project-card");
+
+    projectCards.forEach(card => {
+      const images = card.querySelectorAll("img");
+      let loadedCount = 0;
+
+      images.forEach(img => {
+        if (img.complete) {
+          loadedCount++;
+        } else {
+          img.addEventListener("load", () => {
+            loadedCount++;
+            if (loadedCount === images.length) {
+              card.classList.add("visible");
+            }
+          });
+          img.addEventListener("error", () => {
+            // still show the card if an image fails to load
+            loadedCount++;
+            if (loadedCount === images.length) {
+              card.classList.add("visible");
+            }
+          });
+        }
+      });
+
+      // if all were already cached/loaded
+      if (loadedCount === images.length) {
+        card.classList.add("visible");
+      }
+    });
   });
 </script>
 
