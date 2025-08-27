@@ -266,38 +266,38 @@
 </script>
 
 <script>
-  // Hide cards until fully loaded
+  //Hide cards until fully loaded
   document.addEventListener("DOMContentLoaded", () => {
     const projectCards = document.querySelectorAll(".project-card");
 
-    projectCards.forEach(card => {
+    projectCards.forEach((card, index) => {
       const images = card.querySelectorAll("img");
       let loadedCount = 0;
+
+      const checkLoaded = () => {
+        if (loadedCount === images.length) {
+          // both images for this card are ready → show this card
+          setTimeout(() => {
+            card.classList.add("visible");
+          }, index * 200); // stagger for nicer effect
+        }
+      };
 
       images.forEach(img => {
         if (img.complete) {
           loadedCount++;
+          checkLoaded();
         } else {
           img.addEventListener("load", () => {
             loadedCount++;
-            if (loadedCount === images.length) {
-              card.classList.add("visible");
-            }
+            checkLoaded();
           });
           img.addEventListener("error", () => {
-            // still show the card if an image fails to load
             loadedCount++;
-            if (loadedCount === images.length) {
-              card.classList.add("visible");
-            }
+            checkLoaded();
           });
         }
       });
-
-      // if all were already cached/loaded
-      if (loadedCount === images.length) {
-        card.classList.add("visible");
-      }
     });
   });
 </script>
