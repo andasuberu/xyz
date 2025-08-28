@@ -308,6 +308,10 @@ display: none!important;
     column-gap: 16px;     /* space between columns */
   }
 
+  .gallery-item {
+    margin-bottom: 10px;
+  }
+
 }
 
 /* Footer */
