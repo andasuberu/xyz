@@ -195,12 +195,13 @@ nav .start-project::before {
 }
   
   .hero-left h1.line1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding-left: 8%;
   padding-right: 8%;
 }
   
   .hero-left h1.line2 {
+  font-size: 1.1rem;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -287,7 +288,8 @@ nav .start-project::before {
   
   .masonry-item img {
   width: 100%;
-  height: 300px;
+  height: 350px;
+}
 
 /* Footer */
 footer {
