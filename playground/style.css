@@ -35,7 +35,7 @@ a:hover {
 /* Header */
 header {
   position: fixed;
-  top: 2rem;
+  top: 1rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -101,7 +101,7 @@ nav .start-project::before {
     left: 50%;
     transform: translateX(-50%);
     top: 1rem;               /* small gap from top */
-    width: calc(100% - 2rem);/* span full width but with side breathing room */
+    width: 100%;/* span full width */
     border-radius: 9999px;   /* fully rounded pill */
     padding: 0.8rem 1.2rem;
     justify-content: center;
