@@ -382,4 +382,12 @@ footer .copyright {
   .about-content {
     grid-template-columns: 1fr;
   }
+  
+  .about-title {
+  font-size: 2rem;
+}
+  
+  .about-text-left {
+  font-size: 1.5rem;
+}
 }
