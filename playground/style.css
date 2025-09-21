@@ -189,6 +189,16 @@ nav .start-project::before {
 }
 
 @media (max-width: 767px) {
+  .hero-left h1.line1 {
+  font-size: 2rem;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+  
+  .hero-left h1.line2 {
+  padding-left: 10%;
+  padding-right: 10%;
+}
 
   .asterisk {
     display: inline-block;
