@@ -288,6 +288,10 @@ nav .start-project::before {
 }
 
 @media (max-width: 767px) {
+  .masonry-item:hover img {
+  border-radius: 12px;
+}
+  
   .masonry-gallery {
     grid-template-columns: 1fr;
   }
