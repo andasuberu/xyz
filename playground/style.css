@@ -55,7 +55,7 @@ nav {
   display: flex;
   justify-content: center; /* distribute nav items evenly */
   align-items: center;
-  gap: 2rem; /* spacing between items */
+  gap: 1.3rem; /* spacing between items */
   transition: max-height 0.3s ease-in-out;
 }
 
