@@ -98,13 +98,13 @@ nav .start-project::before {
 
 @media (max-width: 767px) {
   header {
-    left: 0;
-    transform: none;
-    top: 0;
-    width: 100%;
-    border-radius: 0; /* optional: remove pill look */
-    padding: 1rem;
-    justify-content: space-around; /* or center if you prefer */
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1rem;               /* small gap from top */
+    width: calc(100% - 2rem);/* span full width but with side breathing room */
+    border-radius: 9999px;   /* fully rounded pill */
+    padding: 0.8rem 1.2rem;
+    justify-content: center;
   }
 
   nav {
@@ -112,6 +112,7 @@ nav .start-project::before {
     justify-content: space-around;
   }
 }
+
 
 /* Hero Section */
 .hero {
