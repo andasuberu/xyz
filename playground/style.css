@@ -306,40 +306,6 @@ nav .start-project::before {
   height: 300px;
 }
 
-/* Footer */
-footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 3rem auto;
-  margin-top: 0rem;
-  align-items: left;
-  padding-top: 3rem;
-  padding-right: 0rem;
-  padding-left: 0rem;
-  max-width: 1250px;
-  font-size: 1rem;
-}
-
-footer a {
-  color: #1a1a1a;
-  text-decoration: underline;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer .copyright {
-  text-align: center;
-  margin: auto;
-}
-
-@media (max-width: 767px) {
-  footer {
-    margin-top: 1rem;
-  }
-}
-
 /* About Section */
 .about-section {
   max-width: 1200px;
@@ -389,5 +355,40 @@ footer .copyright {
   
   .about-text-left {
   font-size: 1.5rem;
+  padding-right: 0%;
 }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem auto;
+  margin-top: 0rem;
+  align-items: left;
+  padding-top: 3rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
+  max-width: 1250px;
+  font-size: 1rem;
+}
+
+footer a {
+  color: #1a1a1a;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .copyright {
+  text-align: center;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  footer {
+    margin-top: 1rem;
+  }
 }
