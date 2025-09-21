@@ -47,7 +47,7 @@ header {
   background: rgba(255, 255, 255, 0.4); /* more visible (try 0.25–0.4) */
   backdrop-filter: blur(20px) saturate(170%);
   -webkit-backdrop-filter: blur(20px) saturate(170%);
-  border-radius: 5rem;
+  border-radius: 1000px;
   z-index: 1000;
 }
 
@@ -189,9 +189,6 @@ nav .start-project::before {
 }
 
 @media (max-width: 767px) {
-  .hero {
-    display: none !important;
-  }
 
   .asterisk {
     display: inline-block;
