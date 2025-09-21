@@ -55,7 +55,7 @@ nav {
   display: flex;
   justify-content: center; /* distribute nav items evenly */
   align-items: center;
-  gap: 1.3rem; /* spacing between items */
+  gap: 2rem; /* spacing between items */
   transition: max-height 0.3s ease-in-out;
 }
 
@@ -96,11 +96,21 @@ nav .start-project::before {
   background: #00ff6a; /* green dot */
 }
 
-/*nav .start-project:hover { background-color: #1a1a1a80; }*/
+@media (max-width: 767px) {
+  header {
+    left: 0;
+    transform: none;
+    top: 0;
+    width: 100%;
+    border-radius: 0; /* optional: remove pill look */
+    padding: 1rem;
+    justify-content: space-around; /* or center if you prefer */
+  }
 
-.profileimg {
-  border-radius: 9999px;
-  width: 40px;
+  nav {
+    width: 100%;
+    justify-content: space-around;
+  }
 }
 
 /* Hero Section */
