@@ -198,6 +198,17 @@
 
         masonryItems.forEach((item) => animObserver.observe(item));
       });
+
+      // wait until images load
+window.addEventListener('load', () => {
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+});
+
     </script>
   </body>
 </html>
