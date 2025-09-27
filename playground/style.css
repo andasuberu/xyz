@@ -305,6 +305,10 @@ nav .start-project::before {
   height: 300px;
 }
   
+  .captiontag {
+  font-size: 1.2rem;
+}
+  
 }
 
 /* About Section */
