@@ -355,7 +355,7 @@ nav a.active {
 footer {
   display: flex;
   justify-content: space-between;
-  margin: 3rem auto 0;
+  margin: 3rem auto;
   align-items: left;
   padding-top: 3rem;
   max-width: 1250px;
