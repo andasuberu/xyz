@@ -6,6 +6,7 @@
 }
 
 body {
+  scroll-behavior: smooth;
   font-family: 'Archivo', sans-serif;
   background: #f7f4ee;
   color: #1a1a1a;
@@ -313,6 +314,10 @@ nav .start-project::before {
 }
 
 /* About Section */
+#about {
+  scroll-margin-top: 7rem; /* adjust to your header height */
+}
+
 .about-section {
   max-width: 1200px;
   margin: 7rem auto;
