@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Primeries - Anda Suberu">
-  <title>Primeries – Anda Suberu</title>
-  <link rel="icon" href="images/asfavicon.ico" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header> 
-  <div class="logo">
-    <a href="https://andasuberu.xyz">Anda<br>Suberu</a>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Anda Suberu – Visual Designer" />
+    <title>Primeries – Anda Suberu</title>
+    <link rel="icon" href="images/afavicon.ico" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poly:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="nav-menu">
+        <a href="https://andasuberu.xyz/#projects">Projects</a>
+        <a href="https://andasuberu.xyz/#about">About</a>
+        <a
+          href="https://drive.google.com/file/d/1IDr0rsyPOR_c7mccU089vMK97wMrugr3/view?usp=drive_link"
+        >
+          Resume
+        </a>
+        <a href="mailto:uberanda@gmail.com">Contact</a>
+      </nav>
+    </header>
 
-  <!-- Hamburger Button -->
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <nav id="nav-menu">
-    <a href="https://andasuberu.xyz">Work</a>
-    <a href="https://andasuberu.xyz/about">About</a>
-    <a href="https://drive.google.com/file/d/1IDr0rsyPOR_c7mccU089vMK97wMrugr3/view?usp=drive_link">Resume</a>
-    <a class="start-project" href="mailto:uberanda@gmail.com">Available for Hire</a>
-  </nav>
-</header>
-
-  <main class="project-page">
+<main class="project-page">
 
     <section class="project-gallery">
       <!-- Double column -->
@@ -71,42 +75,81 @@
     </section> -->
   </main>
 
-  <footer id="contact">
-    <div class="contact">
-      <p><a href="https://linkedin.com/in/andasuberu/">LinkedIn</a><br><a href="mailto:uberanda@gmail.com">Gmail</a></p>
-    </div>
-    <div class="copyright">
-      <p>© 2025<br>Anda Suberu</p>
-    </div>
-  </footer>
+<footer>
+      <div class="copyright">
+        <p>
+          © 2025 Anda Suberu. All Rights Reserved
+        </p>
+      </div>
+    </footer>
 
-  <script>
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("nav-menu");
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const items = document.querySelectorAll(".masonry-item img.lazy");
 
-  // Toggle menu when hamburger is clicked
-  hamburger.addEventListener("click", function () {
-    navMenu.classList.toggle("open");
-    hamburger.style.display = navMenu.classList.contains("open") ? "none" : "flex";
-  });
+        // Lazy load using Intersection Observer
+        const observer = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove("lazy");
+                obs.unobserve(img);
+              }
+            });
+          },
+          { rootMargin: "200px" }
+        );
 
-  // Close menu when any nav link is clicked
-  document.querySelectorAll("#nav-menu a").forEach(link => {
-    link.addEventListener("click", () => {
-      navMenu.classList.remove("open");
-      hamburger.style.display = "flex";
-    });
-  });
+        items.forEach((img) => observer.observe(img));
 
-  // Close menu when clicking anywhere on the nav background (but not on links)
-  navMenu.addEventListener("click", (e) => {
-    if (e.target === navMenu) { // only if clicked directly on the nav container
-      navMenu.classList.remove("open");
-      hamburger.style.display = "flex";
-    }
-  });
-</script>
+        // Smooth entry animation
+        const masonryItems = document.querySelectorAll(".masonry-item");
+        const animObserver = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        masonryItems.forEach((item) => animObserver.observe(item));
+      });
+
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("nav-menu");
+
+      // Toggle menu when hamburger is clicked
+      hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("open");
+        hamburger.style.display = navMenu.classList.contains("open")
+          ? "none"
+          : "flex";
+      });
+
+      // Close menu when any nav link is clicked
+      document.querySelectorAll("#nav-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("open");
+          hamburger.style.display = "flex";
+        });
+      });
+
+      // Close menu when clicking anywhere on the nav background (but not on links)
+      navMenu.addEventListener("click", (e) => {
+        if (e.target === navMenu) {
+          navMenu.classList.remove("open");
+          hamburger.style.display = "flex";
+        }
+      });
+    </script>
 
 </body>
 
 </html>
+
