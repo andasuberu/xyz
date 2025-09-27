@@ -485,18 +485,20 @@ footer .copyright {
 }
 
 .project-hero-left {
-  font-size: 1.6rem;
+  font-family: 'Poly', sans-serif;
+  font-size: 3rem;
   line-height: 0.7;
   font-weight: 400;
 }
 
 .project-hero-right {
+  font-family: 'Archivo', sans-serif;
   max-width: 50%;
   font-size: 1.3rem;
   font-weight: 300;
   line-height: 1.6;
   margin-top: -0.6rem;
-  color: #fff;
+  color: #1a1a1a;
   margin-left: auto;
 }
 
