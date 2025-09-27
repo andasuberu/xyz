@@ -209,6 +209,23 @@ window.addEventListener('load', () => {
   }
 });
 
+      // Smooth scroll on page load if there's a hash
+window.addEventListener('load', () => {
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      const headerOffset = 100; // height of your header in px
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }
+});
+
     </script>
   </body>
 </html>
