@@ -509,6 +509,7 @@ footer .copyright {
 
 /* Gallery rows */
 .project-gallery {
+  margin-top: -3rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
