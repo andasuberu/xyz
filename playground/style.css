@@ -405,7 +405,8 @@ footer .copyright {
 .project-hero-left {
   font-family: 'Poly', sans-serif;
   font-size: 3rem;
-  line-height: 0.7;
+  line-height: 1;
+  margin-top: -15px;
   font-weight: 400;
 }
 
@@ -425,6 +426,13 @@ footer .copyright {
   color: #929292;
 }
 
+/* Responsive Projects */
+@media (max-width: 767px) {
+.project-hero-left {  
+ margin-top: -15px;
+ }
+}
+  
 /* Gallery rows */
 .project-gallery {
   margin-top: -3rem;
