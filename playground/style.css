@@ -404,15 +404,11 @@ nav .start-project::before {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .about-content {
+  .contact-content {
     grid-template-columns: 1fr;
   }
   
-  .about-title {
-  font-size: 2rem;
-}
-  
-  .about-text-left {
+  .contact-text-left {
   font-size: 1.5rem;
   padding-right: 0%;
 }
