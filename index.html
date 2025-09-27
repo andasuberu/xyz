@@ -199,24 +199,17 @@
         masonryItems.forEach((item) => animObserver.observe(item));
       });
 
-      // wait until images load
-window.addEventListener('load', () => {
+      window.addEventListener('load', () => {
   if (window.location.hash) {
     const target = document.querySelector(window.location.hash);
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
-});
+      // Get the height of your fixed header
+      const header = document.querySelector('header');
+      const headerHeight = header ? header.offsetHeight : 0;
 
-      // Smooth scroll on page load if there's a hash
-window.addEventListener('load', () => {
-  if (window.location.hash) {
-    const target = document.querySelector(window.location.hash);
-    if (target) {
-      const headerOffset = 100; // height of your header in px
-      const elementPosition = target.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      // Scroll to target minus header height
+      const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerHeight - 10; // extra 10px for padding
 
       window.scrollTo({
         top: offsetPosition,
