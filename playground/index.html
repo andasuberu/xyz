@@ -48,28 +48,18 @@
     </section>
 
     <section class="masonry-gallery">
-      <!-- Row 1 -->
       <div class="masonry-item span-1">
-        <img
-          data-src="images/salvo-thumbnail.png"
-          alt="Image 1"
-          class="lazy"
-        />
+        <img data-src="images/salvo-thumbnail.png" alt="Image 1" class="lazy" />
         <h3 class="caption">Salvo</h3>
         <h3 class="captiontag">Cool and Bold Vodka</h3>
       </div>
 
       <div class="masonry-item span-1">
-        <img
-          data-src="images/jaehall-thumbnail.png"
-          alt="Image 2"
-          class="lazy"
-        />
+        <img data-src="images/jaehall-thumbnail.png" alt="Image 2" class="lazy" />
         <h3 class="caption">Jaehall Autos</h3>
         <h3 class="captiontag">Elite Cars, Exceptional Service</h3>
       </div>
 
-      <!-- Row 2 -->
       <div class="masonry-item span-1">
         <img
           data-src="images/goldenmeadow-thumbnail.gif"
@@ -90,7 +80,6 @@
         <h3 class="captiontag">Shop the Culture. Live the Style.</h3>
       </div>
 
-      <!-- Row 3 -->
       <div class="masonry-item span-1">
         <img
           data-src="images/swiftpay-thumbnail.png"
@@ -111,13 +100,8 @@
         <h3 class="captiontag">The Future of Aquaculture</h3>
       </div>
 
-      <!-- Row 4 -->
       <div class="masonry-item span-1">
-        <img
-          data-src="images/kicad-thumbnail.png"
-          alt="Image 7"
-          class="lazy"
-        />
+        <img data-src="images/kicad-thumbnail.png" alt="Image 7" class="lazy" />
         <h3 class="caption">KiCad</h3>
         <h3 class="captiontag">Open Source PCB Design</h3>
       </div>
@@ -134,37 +118,46 @@
     </section>
 
     <section id="about" class="about-section">
-  <h3 class="about-title">About</h3>
-  <div class="about-content">
-    <p class="about-text-left">
-      I’m Anda — a multidisciplinary visual designer.<br>
-      I enjoy designing to solve real problems and working with people who are as excited to bring their vision to life as I am.<br>
-    </p>
-    <p class="about-text-right">
-      My work blends technical precision from my background in computer engineering with creativity from traditional art. I enjoy making designs and building websites that are both functional and visually engaging, and illustrating concepts that bring a clear idea to life.<br><br>
-      I’ve worked across a mix of projects, from branding and illustration to product interfaces and websites. And over time I’ve built for small businesses, startups, and personal creative ventures.<br><br>
-      I always aim to make my designs approachable, impactful, and results-driven. In my downtime, you'll probably find me watching a good TV show, playing Mini Motorways, learning Japanese, or hitting the gym.
-    </p>
-  </div>
-</section>
-    
+      <h3 class="about-title">About</h3>
+      <div class="about-content">
+        <p class="about-text-left">
+          I’m Anda — a multidisciplinary visual designer.<br />
+          I enjoy designing to solve real problems and working with people who
+          are as excited to bring their vision to life as I am.<br />
+        </p>
+        <p class="about-text-right">
+          My work blends technical precision from my background in computer
+          engineering with creativity from traditional art. I enjoy making
+          designs and building websites that are both functional and visually
+          engaging, and illustrating concepts that bring a clear idea to
+          life.<br /><br />
+          I’ve worked across a mix of projects, from branding and illustration
+          to product interfaces and websites. And over time I’ve built for small
+          businesses, startups, and personal creative ventures.<br /><br />
+          I always aim to make my designs approachable, impactful, and
+          results-driven. In my downtime, you'll probably find me watching a
+          good TV show, playing Mini Motorways, learning Japanese, or hitting
+          the gym.
+        </p>
+      </div>
+    </section>
+
     <section class="contact-section">
-  <div class="contact-content">
-    <p class="contact-text-left">A project in mind?
-    </p>
-    <p class="contact-text-right">
-        I’d love to hear about it. Tell me what you’re working on and how I can help. Reach out with a short note at <a href="mailto:uberanda@gmail.com" style="text-decoration: underline;">uberanda@gmail.com</a>, and we’ll take it from there.
-
-    </p>
-  </div>
-</section>
-
+      <div class="contact-content">
+        <p class="contact-text-left">A project in mind?</p>
+        <p class="contact-text-right">
+          I’d love to hear about it. Tell me what you’re working on and how I
+          can help. Reach out with a short note at
+          <a href="mailto:uberanda@gmail.com" style="text-decoration: underline"
+            >uberanda@gmail.com</a
+          >, and we’ll take it from there.
+        </p>
+      </div>
+    </section>
 
     <footer>
       <div class="copyright">
-        <p>
-          © 2025 Anda Suberu. All Rights Reserved
-        </p>
+        <p>© 2025 Anda Suberu. All Rights Reserved</p>
       </div>
     </footer>
 
@@ -204,33 +197,6 @@
         );
 
         masonryItems.forEach((item) => animObserver.observe(item));
-      });
-
-      const hamburger = document.getElementById("hamburger");
-      const navMenu = document.getElementById("nav-menu");
-
-      // Toggle menu when hamburger is clicked
-      hamburger.addEventListener("click", function () {
-        navMenu.classList.toggle("open");
-        hamburger.style.display = navMenu.classList.contains("open")
-          ? "none"
-          : "flex";
-      });
-
-      // Close menu when any nav link is clicked
-      document.querySelectorAll("#nav-menu a").forEach((link) => {
-        link.addEventListener("click", () => {
-          navMenu.classList.remove("open");
-          hamburger.style.display = "flex";
-        });
-      });
-
-      // Close menu when clicking anywhere on the nav background (but not on links)
-      navMenu.addEventListener("click", (e) => {
-        if (e.target === navMenu) {
-          navMenu.classList.remove("open");
-          hamburger.style.display = "flex";
-        }
       });
     </script>
   </body>
