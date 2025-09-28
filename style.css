@@ -62,7 +62,7 @@ header {
 .header-container {
   max-width: 1250px;
   margin: 0 auto;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,8 +71,8 @@ header {
 /* Logo */
 .logo {
   font-family: 'Poly', serif;
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.6rem;
+  font-weight: 400;
   color: #1a1a1a; /* crisp dark text */
   text-decoration: none;
 }
