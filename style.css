@@ -83,12 +83,16 @@ header {
   flex-direction: column;
   justify-content: space-between;
   width: 24px;
-  height: 18px;
+  height: 10px;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
+
+  position: relative;
+  z-index: 1001; /* stays above fullscreen menu */
 }
+
 
 .hamburger span {
   display: block;
@@ -101,6 +105,52 @@ header {
 
 .hamburger:hover span {
   background: #555; /* slight change on hover */
+}
+
+/* Fullscreen Menu Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(247, 244, 238, 0.98); /* soft background */
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 2000;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Menu links */
+.menu-overlay ul {
+  list-style: none;
+  text-align: center;
+}
+
+.menu-overlay ul li {
+  margin: 1.5rem 0;
+}
+
+.menu-overlay ul li a {
+  font-family: 'Poly', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+.menu-overlay ul li a:hover {
+  color: #666;
 }
 
 /* Hero Section */
