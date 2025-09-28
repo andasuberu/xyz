@@ -179,19 +179,36 @@
         masonryItems.forEach((item) => animObserver.observe(item));
       });
 
-      // === Chrome anchor scroll fix ===
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    const targetId = this.getAttribute("href").substring(1);
-    const target = document.getElementById(targetId);
-    if (target) {
-      e.preventDefault();
-      const yOffset = -100; // adjust for header height
-      const y = target.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
+       // === Smooth scroll for same-page nav clicks ===
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        const targetId = this.getAttribute("href").substring(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          const yOffset = -100; // adjust for header height
+          const y = target.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      });
+    });
+  });
+
+  // === Smooth scroll after page load if URL has a hash (cross-page links) ===
+  window.addEventListener("load", function () {
+    if (window.location.hash) {
+      const targetId = window.location.hash.substring(1);
+      const target = document.getElementById(targetId);
+
+      if (target) {
+        setTimeout(() => {
+          const yOffset = -100; // adjust for header height
+          const y = target.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }, 100); // delay ensures layout is ready
+      }
     }
   });
-});
 
     </script>
   </body>
