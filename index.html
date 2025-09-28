@@ -179,6 +179,20 @@
         masonryItems.forEach((item) => animObserver.observe(item));
       });
 
+      // === Chrome anchor scroll fix ===
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    const targetId = this.getAttribute("href").substring(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      e.preventDefault();
+      const yOffset = -100; // adjust for header height
+      const y = target.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  });
+});
+
     </script>
   </body>
 </html>
