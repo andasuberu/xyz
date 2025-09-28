@@ -14,7 +14,7 @@ body {
   color: #1a1a1a;
   line-height: 1.6;
   padding: 0 1rem;
-  padding-top: 6rem; /* adjust based on header height */
+  padding-top: 5rem; /* adjust based on header height */
 
   /* Mesh gradient */
   background: radial-gradient(circle at 20% 30%, #FBF7DC, transparent 40%),
