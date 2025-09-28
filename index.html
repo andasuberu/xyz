@@ -23,15 +23,11 @@
   <body>
     <header>
       <nav id="nav-menu">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a
-          href="https://drive.google.com/file/d/1IDr0rsyPOR_c7mccU089vMK97wMrugr3/view?usp=drive_link"
-        >
-          Resume
-        </a>
-        <a href="mailto:uberanda@gmail.com">Contact</a>
-      </nav>
+  <a href="/" class="scroll-to" data-target="projects">Projects</a>
+  <a href="/" class="scroll-to" data-target="about">About</a>
+  <a href="https://drive.google.com/file/d/1IDr0rsyPOR_c7mccU089vMK97wMrugr3/view?usp=drive_link">Resume</a>
+  <a href="mailto:uberanda@gmail.com">Contact</a>
+</nav>
     </header>
 
     <section class="hero" id="projects">
@@ -142,43 +138,82 @@
     </footer>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const items = document.querySelectorAll(".masonry-item img.lazy");
+document.addEventListener("DOMContentLoaded", function () {
+  // =======================
+  // Lazy load images
+  // =======================
+  const items = document.querySelectorAll(".masonry-item img.lazy");
 
-        // Lazy load using Intersection Observer
-        const observer = new IntersectionObserver(
-          (entries, obs) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove("lazy");
-                obs.unobserve(img);
-              }
-            });
-          },
-          { rootMargin: "200px" }
-        );
-
-        items.forEach((img) => observer.observe(img));
-
-        // Smooth entry animation
-        const masonryItems = document.querySelectorAll(".masonry-item");
-        const animObserver = new IntersectionObserver(
-          (entries, obs) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-                obs.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.2 }
-        );
-
-        masonryItems.forEach((item) => animObserver.observe(item));
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove("lazy");
+          obs.unobserve(img);
+        }
       });
+    },
+    { rootMargin: "200px" }
+  );
 
+  items.forEach((img) => observer.observe(img));
+
+  // =======================
+  // Entry animations
+  // =======================
+  const masonryItems = document.querySelectorAll(".masonry-item");
+  const animObserver = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  masonryItems.forEach((item) => animObserver.observe(item));
+
+  // =======================
+  // Smooth scroll nav
+  // =======================
+  document.querySelectorAll("a.scroll-to").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const targetId = link.dataset.target;
+
+      // If already on homepage
+      if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        // Go back to homepage with param
+        window.location.href = "/?scroll=" + targetId;
+      }
+    });
+  });
+
+  // On homepage: scroll if param is present
+  const params = new URLSearchParams(window.location.search);
+  const scrollTarget = params.get("scroll");
+  if (scrollTarget) {
+    const target = document.getElementById(scrollTarget);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        // Clean up the URL
+        const newUrl = window.location.pathname + window.location.hash;
+        window.history.replaceState({}, "", newUrl);
+      }, 300);
+    }
+  }
+});
     </script>
   </body>
 </html>
