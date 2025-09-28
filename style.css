@@ -94,10 +94,6 @@ nav a.active {
 }
 
 /* Hero Section */
-#projects {
-  scroll-margin-top: 6rem;
-}
-
 .hero {
   display: flex;
   justify-content: space-between;
@@ -244,10 +240,6 @@ nav a.active {
 }
 
 /* About Section */
-#about {
-  scroll-margin-top: 6rem;
-}
-
 .about-section {
   max-width: 1200px;
   margin: 7rem auto;
