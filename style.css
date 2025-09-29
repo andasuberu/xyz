@@ -150,10 +150,6 @@ header {
   transition: color 0.3s ease;
 }
 
-.menu-overlay ul li a:hover {
-  color: #666;
-}
-
 @media (max-width: 767px) {
 .menu-overlay ul li a {
   font-size: 2rem;
@@ -496,6 +492,7 @@ footer .copyright {
   width: 100%;
   display: block;
   object-fit: cover;
+  border-radius: 12px;
 }
 
 .gallery-row.double {
@@ -514,6 +511,7 @@ footer .copyright {
   width: calc(50% - 1rem); /* half width minus half the gap */
   display: block;
   object-fit: cover;
+  border-radius: 12px;
 }
 
 .gallery-row.double div {
