@@ -522,10 +522,6 @@ footer .copyright {
 
 /* Responsive gallery */
 @media (max-width: 767px) {
-  .gallery-row.double img {
-    width: 100%;
-  }
-
   .gallery-row.double div {
     width: 100%;
   }
