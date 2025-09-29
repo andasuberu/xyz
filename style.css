@@ -143,14 +143,24 @@ header {
 
 .menu-overlay ul li a {
   font-family: 'Poly', serif;
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: 3rem;
+  font-weight: 200;
   color: #1a1a1a;
   transition: color 0.3s ease;
 }
 
 .menu-overlay ul li a:hover {
   color: #666;
+}
+
+@media (max-width: 767px) {
+.menu-overlay ul li a {
+  font-size: 2rem;
+  }
+  
+  .menu-overlay ul li {
+  margin: 0.7rem 0;
+  }
 }
 
 /* Hero Section */
@@ -182,18 +192,6 @@ header {
 }
 
 /* Responsive Hero */
-@media (max-width: 1024px) and (min-width: 768px) {
-  .hero-left h1.line1 {
-    font-size: 9vw;
-    line-height: 0.7;
-  }
-
-  .hero-left h1.line2 {
-    font-size: 9vw;
-    line-height: 0.7;
-  }
-}
-
 @media (max-width: 767px) {
   .hero {
     margin: 3rem auto;
