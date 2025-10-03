@@ -14,9 +14,9 @@ body {
   color: #1a1a1a;
   line-height: 1.6;
   padding: 0 1rem;
-  padding-top: 5rem; /* adjust based on header height */
+  padding-top: 5rem;
 
-  /* Mesh gradient */
+  /*
   background: radial-gradient(circle at 20% 30%, #FBF7DC, transparent 40%),
               radial-gradient(circle at 80% 20%, #DDEFF0, transparent 40%),
               radial-gradient(circle at 40% 70%, #FFFEFC, transparent 40%),
@@ -24,6 +24,7 @@ body {
   background-blend-mode: overlay;
   background-size: cover;
 }
+  */
 
 /* Links */
 a {
@@ -36,34 +37,37 @@ a:hover {
   text-decoration: none;
 }
 
-/* Header */
-header {
+/* Fixed Header */
+  header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.2); /* nearly transparent */
+  padding:0 1rem 1rem 1rem;
+  background: #f7f4ee;
+  z-index: 1000;
+  
+  /* 
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  z-index: 1000;
-
-  /* Prismy overlay effect */
   background-image: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 200, 255, 0.15) 25%,  /* pinkish */
-    rgba(200, 255, 255, 0.15) 50%,  /* aqua */
-    rgba(200, 200, 255, 0.15) 75%   /* bluish */
+    rgba(255, 200, 255, 0.15) 25%,
+    rgba(200, 255, 255, 0.15) 50%,
+    rgba(200, 200, 255, 0.15) 75% 
   );
-  background-blend-mode: overlay;
+  background-blend-mode: overlay; 
+  */
 }
 
 /* Container inside header */
 .header-container {
   max-width: 1250px;
   margin: 0 auto;
-  padding: 1rem 1rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,7 +77,8 @@ header {
 .logo {
   font-family: 'Poly', serif;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 0px;
   color: #1a1a1a; /* crisp dark text */
   text-decoration: none;
 }
