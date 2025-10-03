@@ -81,7 +81,10 @@ a:hover {
   letter-spacing: 0px;
   color: #1a1a1a; /* crisp dark text */
   text-decoration: none;
-  width: 50px;
+}
+
+.logo img {
+max-width: 50px;
 }
 
 /* Hamburger menu */
