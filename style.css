@@ -14,7 +14,6 @@ body {
   color: #1a1a1a;
   line-height: 1.6;
   padding: 0 1rem;
-  padding-top: 2rem; /* adjust based on header height */
 
   /* Mesh gradient */
   background: radial-gradient(circle at 20% 30%, #FBF7DC, transparent 40%),
@@ -63,6 +62,7 @@ a:hover {
 .header-container {
   max-width: 1250px;
   margin: 0 auto;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
