@@ -177,22 +177,24 @@ a:hover {
 .hero-left h1.line1 {
   font-size: 3rem;
   font-family: 'Poly', sans-serif;
-  text-align: left;
+  text-align: center;
   line-height: 1.2;
   font-weight: 200;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin-right: 10%;
+  margin-left: 8%;
+  margin-right: 8%;
   letter-spacing: -0.07rem;
 }
 
 .hero-left h1.line2 {
   font-size: 1.3rem;
   font-family: 'Archivo', sans-serif;
-  text-align: left;
+  text-align: center;
   line-height: 1.5;
   font-weight: 400;
-  margin-right: 10%;
+  margin-left: 8%;
+  margin-right: 8%;
 }
 
 /* Responsive Hero */
@@ -234,7 +236,7 @@ a:hover {
   font-family: 'Poly', sans-serif;
   font-size: 3rem;
   font-weight: 500;
-  text-align: left;
+  text-align: center;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
