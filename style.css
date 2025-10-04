@@ -199,7 +199,7 @@ a:hover {
 @media (max-width: 767px) {
   .hero {
     margin: 3rem auto;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
   }
 
   .hero-left h1.line1 {
