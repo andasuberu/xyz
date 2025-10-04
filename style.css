@@ -70,8 +70,8 @@ a:hover {
 /* Logo */
 .logo {
   font-size: 1.5rem;
-  font-family: 'Sora', sans-serif;
-  letter-spacing: -0.07rem;
+  font-family: 'Archivo', sans-serif;
+  letter-spacing: -0.03rem;
   display: flex;
   align-items: center;
 }
@@ -176,21 +176,21 @@ a:hover {
 .hero-left h1.line1 {
   font-size: 3rem;
   font-family: 'Poly', sans-serif;
-  text-align: center;
+  text-align: left;
   line-height: 1.2;
   font-weight: 200;
-  margin-bottom: 2rem;
-  margin-left: 8%;
+  margin-bottom: 1rem;
   margin-right: 8%;
+  letter-spacing: -0.07rem;
 }
 
 .hero-left h1.line2 {
   font-size: 1.3rem;
   font-family: 'Archivo', sans-serif;
-  text-align: center;
+  text-align: left;
   line-height: 1.5;
   font-weight: 400;
-  padding: 0 20% 1rem;
+  margin-right: 10%;
 }
 
 /* Responsive Hero */
@@ -205,7 +205,6 @@ a:hover {
 
   .hero-left h1.line2 {
     font-size: 1.2rem;
-    padding: 0 10%;
   }
 }
 
@@ -238,7 +237,7 @@ a:hover {
 .caption {
   position: relative;
   margin-top: 20px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 400;
   text-align: left;
   display: inline-flex;
