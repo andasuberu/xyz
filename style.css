@@ -228,6 +228,15 @@ a:hover {
   display: block;
 }
 
+  .work-title {
+  font-family: 'Poly', sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+  
 /* Masonry Gallery */
 .masonry-gallery {
   display: grid;
