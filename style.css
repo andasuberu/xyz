@@ -65,8 +65,6 @@ a:hover {
 
 /* Container inside header */
 .header-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,37 +84,32 @@ a:hover {
 
 /* Hamburger menu */
 .hamburger {
-  position: relative;
-  width: 20px;
-  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 10px;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 1001;
+
+  position: relative;
+  z-index: 1001; /* stays above fullscreen menu */
 }
 
-/* Bars */
+
 .hamburger span {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 20px;
+  display: block;
   height: 2px;
+  width: 100%;
   background: #1a1a1a;
   border-radius: 2px;
-  transform: translate(-50%, -50%);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-/* Make the first bar vertical */
-.hamburger span:first-child {
-  transform: translate(-50%, -50%) rotate(90deg);
-}
-
-/* The second bar stays horizontal */
-.hamburger span:last-child {
-  transform: translate(-50%, -50%) rotate(0deg);
+.hamburger:hover span {
+  background: #555; /* slight change on hover */
 }
 
 /* Fullscreen Menu Overlay */
@@ -578,4 +571,3 @@ footer .copyright {
 .show {
   opacity: 1;
 }
-  
