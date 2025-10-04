@@ -43,7 +43,7 @@ a:hover {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.5rem 1rem 1.5rem 1rem;
+  padding: 1.4rem 1rem 1.4rem 1rem;
   background: #f7f4ee;
   z-index: 1000;
   
@@ -65,6 +65,8 @@ a:hover {
 
 /* Container inside header */
 .header-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,7 +80,7 @@ a:hover {
 
 .logo img {
   display: block;
-  max-width: 27px;
+  max-width: 24px;
   height: auto;
 }
 
@@ -576,3 +578,4 @@ footer .copyright {
 .show {
   opacity: 1;
 }
+  
