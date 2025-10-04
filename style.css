@@ -169,18 +169,18 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  max-width: 1250px;
+  max-width: 1200px;
   margin: 7rem auto;
 }
 
 .hero-left h1.line1 {
   font-size: 3rem;
   font-family: 'Poly', sans-serif;
-  text-align: center;
+  text-align: left;
   line-height: 1.2;
   font-weight: 200;
-  padding: 0 12% 1rem;
   margin-bottom: 2rem;
+  margin-right: 10%;
 }
 
 .hero-left h1.line2 {
@@ -200,7 +200,6 @@ a:hover {
 
   .hero-left h1.line1 {
     font-size: 2rem;
-    padding: 0 8%;
   }
 
   .hero-left h1.line2 {
