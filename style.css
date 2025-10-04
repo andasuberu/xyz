@@ -216,6 +216,7 @@ a:hover {
   gap: 24px;
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: 4rem;
 }
 
 .masonry-item {
