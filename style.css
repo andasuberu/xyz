@@ -239,6 +239,12 @@ a:hover {
   margin-top: 2rem;
 }
   
+  @media (max-width: 1024px) {
+  .work-title {
+    font-size: 2rem;
+  }
+}
+  
 /* Masonry Gallery */
 .masonry-gallery {
   display: grid;
