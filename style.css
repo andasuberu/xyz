@@ -74,9 +74,9 @@ a:hover {
 
 /* Logo */
 .logo {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-family: 'Sora', sans-serif;
-  letter-spacing: -1px;
+  letter-spacing: -0.05rem;
   display: flex;
   align-items: center;
 }
