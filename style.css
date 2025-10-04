@@ -171,7 +171,8 @@ a:hover {
   align-items: flex-end;
   max-width: 1200px;
   margin: 7rem auto;
-  margin-bottom: 3rem;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
 }
 
 .hero-left h1.line1 {
