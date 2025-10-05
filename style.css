@@ -10,7 +10,7 @@ html {
 
 body {
   font-family: 'Archivo', sans-serif;
-  background: #1a1a1a;
+  background: #000000;
   color: #f6f6f6;
   line-height: 1.6;
   padding: 0 1rem;
@@ -186,7 +186,7 @@ a:hover {
   content: "";
   width: 8px;
   height: 8px;
-  background-color: #d0782a;
+  background-color: #ff4d00;
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -238,7 +238,7 @@ a:hover {
   font-weight: 400;
   margin-left: 20%;
   margin-right: 20%;
-  color: #d0782a;
+  color: #ff4d00;
 }
   
 /* Responsive Hero */
@@ -275,7 +275,7 @@ a:hover {
   
 /* Hero Video */
 .hero-video {
-  width: 100vw;
+  max-width: 1200px;
   position: relative;
   margin: 0;
   left: 50%;
