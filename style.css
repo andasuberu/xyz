@@ -210,7 +210,7 @@ a:hover {
 /* Responsive Hero */
 @media (max-width: 767px) {
   .hero {
-    margin: 7rem auto 3rem auto;
+    margin: 6rem auto 4rem auto;
   }
 
   .hero-left h1.line1 {
