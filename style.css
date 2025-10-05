@@ -10,8 +10,8 @@ html {
 
 body {
   font-family: 'Archivo', sans-serif;
-  background: #000000;
-  color: #ffffff;
+  background: #1a1a1a;
+  color: #f6f6f6;
   line-height: 1.6;
   padding: 0 1rem;
   padding-top: 1.5rem;
@@ -39,7 +39,6 @@ a:hover {
 
 /* Fixed Header */
   header {
-  background: #000000;
   z-index: 1000;
   
   /* 
@@ -173,8 +172,33 @@ a:hover {
   margin: 7rem auto 5rem auto;
 }
 
+  
+.line1 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;          /* centers it */
+}
+
+/* Orange circle before text */
+.line1::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #d0782a;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: 0px;
+}
+  
+.hero-left {
+  text-align: center;
+}
+  
 .hero-left h1.line1 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: 'Inter Tight', sans-serif;
   text-align: center;
   line-height: 1.5;
@@ -214,6 +238,7 @@ a:hover {
   font-weight: 400;
   margin-left: 20%;
   margin-right: 20%;
+  color: #d0782a;
 }
   
 /* Responsive Hero */
