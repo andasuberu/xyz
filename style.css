@@ -38,6 +38,18 @@ a:hover {
 }
 
 /* Header */
+/*  header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 1rem;
+  background: transparent;
+  mix-blend-mode: difference;
+  pointer-events: none;
+} */
+  
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -271,13 +283,23 @@ a:hover {
   display: block;
 }
 
+  .work-subtitle {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 0rem;
+  margin-top: 2rem;
+  color: #999999;
+}
+  
   .work-title {
   font-family: 'Inter Tight', sans-serif;
   font-size: 3rem;
   font-weight: 500;
   text-align: left;
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
   
   @media (max-width: 1024px) {
