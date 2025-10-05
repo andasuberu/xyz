@@ -170,8 +170,7 @@ a:hover {
   justify-content: space-between;
   align-items: flex-end;
   max-width: 1200px;
-  margin: 7rem auto;
-  margin-bottom: 3rem;
+  margin: 7rem auto 5rem auto;
 }
 
 .hero-left h1.line1 {
@@ -198,8 +197,7 @@ a:hover {
 /* Responsive Hero */
 @media (max-width: 767px) {
   .hero {
-    margin: 3rem auto;
-    margin-bottom: 5rem;
+    margin: 5rem auto 3rem auto;
   }
 
   .hero-left h1.line1 {
