@@ -1,612 +1,210 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Archivo', sans-serif;
-  background: #f7f4ee;
-  color: #1a1a1a;
-  line-height: 1.6;
-  padding: 0 1rem;
-  padding-top: 1.5rem;
-
-  /*
-  background: radial-gradient(circle at 20% 30%, #FBF7DC, transparent 40%),
-              radial-gradient(circle at 80% 20%, #DDEFF0, transparent 40%),
-              radial-gradient(circle at 40% 70%, #FFFEFC, transparent 40%),
-              radial-gradient(circle at 70% 80%, #F7DFD0, transparent 40%);
-  background-blend-mode: overlay;
-  background-size: cover;
-}
-  */
-
-/* Links */
-a {
-  color: inherit;
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-/* Fixed Header */
-  header {
-  background: #f7f4ee;
-  z-index: 1000;
-  
-  /* 
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  background-image: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 200, 255, 0.15) 25%,
-    rgba(200, 255, 255, 0.15) 50%,
-    rgba(200, 200, 255, 0.15) 75% 
-  );
-  background-blend-mode: overlay; 
-  */
-}
-
-/* Container inside header */
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Logo */
-.logo {
-  font-size: 1.5rem;
-  font-family: 'Poly', sans-serif;
-  letter-spacing: -0.03rem;
-  font-weight: 200;
-  display: flex;
-  align-items: center;
-}
-
-@media (max-width: 767px) {
-  .logo {
-  font-size: 1.3rem;
-  }    
-}
-
-/* Hamburger menu */
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-
-  position: relative;
-  z-index: 1001; /* stays above fullscreen menu */
-}
-
-
-.hamburger span {
-  display: block;
-  height: 2px;
-  width: 100%;
-  background: #1a1a1a;
-  border-radius: 2px;
-  transition: background 0.3s ease;
-}
-
-.hamburger:hover span {
-  background: #555; /* slight change on hover */
-}
-
-/* Fullscreen Menu Overlay */
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(247, 244, 238, 0.98); /* soft background */
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-  z-index: 2000;
-}
-
-.menu-overlay.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Menu links */
-.menu-overlay ul {
-  list-style: none;
-  text-align: center;
-}
-
-.menu-overlay ul li {
-  margin: 1.5rem 0;
-}
-
-.menu-overlay ul li a {
-  font-family: 'Poly', serif;
-  font-size: 3rem;
-  font-weight: 200;
-  color: #1a1a1a;
-  transition: color 0.3s ease;
-}
-
-@media (max-width: 767px) {
-.menu-overlay ul li a {
-  font-size: 2rem;
-  }
-  
-  .menu-overlay ul li {
-  margin: 0.7rem 0;
-  }
-}
-
-/* Hero Section */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  max-width: 1200px;
-  margin: 7rem auto;
-  margin-bottom: 5rem;
-}
-
-.hero-left h1.line1 {
-  font-size: 3rem;
-  font-family: 'Poly', sans-serif;
-  text-align: center;
-  line-height: 1.2;
-  font-weight: 200;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 8%;
-  margin-right: 8%;
-  letter-spacing: -0.07rem;
-}
-
-.hero-left h1.line2 {
-  font-size: 1.3rem;
-  font-family: 'Archivo', sans-serif;
-  text-align: center;
-  line-height: 1.5;
-  font-weight: 400;
-  margin-left: 8%;
-  margin-right: 8%;
-}
-
-/* Responsive Hero */
-@media (max-width: 767px) {
-  .hero {
-    margin: 3rem auto;
-    margin-bottom: 5rem;
-  }
-
-  .hero-left h1.line1 {
-    font-size: 2rem;
-  }
-
-  .hero-left h1.line2 {
-    font-size: 1.2rem;
-  }
-}
-  
-/* Hero Video */
-.hero-video {
-  width: 100vw;
-  height: 480px;
-  position: relative;
-  margin: 0;
-  left: 50%;
-  right: 50%;
-  transform: translateX(-50%);
-  overflow: hidden;
-}
-
-.hero-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-  .work-title {
-  font-family: 'Poly', sans-serif;
-  font-size: 3rem;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 2rem;
-  margin-top: 5rem;
-}
-  
-  @media (max-width: 1024px) {
-  .work-title {
-    font-size: 2rem;
-  }
-}
-  
-/* Masonry Gallery */
-.masonry-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.masonry-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.masonry-item img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: border-radius 0.4s ease;
-}
-
-.masonry-item:hover img {
-  border-radius: 100px 100px 12px 12px;
-}
-
-.caption {
-  position: relative;
-  margin-top: 20px;
-  font-size: 1.2rem;
-  font-weight: 400;
-  text-align: left;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.caption::after {
-  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>');
-  display: inline-block;
-  vertical-align: middle;
-  transform: translateY(3px);
-}
-
-.captiontag {
-  font-size: 1.3rem;
-  font-weight: 400;
-  color: #929292;
-  text-align: left;
-  margin: -4px 0 10px;
-}
-
-.masonry-item.span-2 {
-  grid-column: span 2;
-}
-
-/* Responsive Gallery */
-@media (max-width: 1024px) {
-  .masonry-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .masonry-item.span-2 {
-    grid-column: span 2;
-  }
-}
-
-@media (max-width: 767px) {
-  .masonry-item:hover img {
-    border-radius: 12px;
-  }
-
-  .masonry-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .masonry-item.span-2 {
-    grid-column: span 1;
-  }
-
-  .masonry-item img {
-    height: 300px;
-  }
-
-  .captiontag {
-    font-size: 1.2rem;
-  }
-}
-
-/* About Section */
-.about-section {
-  max-width: 1200px;
-  margin: 7rem auto;
-}
-
-.about-title {
-  font-family: 'Poly', sans-serif;
-  font-size: 3rem;
-  font-weight: 500;
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
-.about-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
-.about-text-left {
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #1a1a1a;
-  text-align: left;
-  padding-right: 30%;
-}
-
-.about-text-right {
-  font-size: 1.3rem;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #1a1a1a;
-  text-align: left;
-}
-
-@media (max-width: 1024px) {
-  .about-content {
-    grid-template-columns: 1fr;
-  }
-
-  .about-title {
-    font-size: 2rem;
-  }
-
-  .about-text-left {
-    font-size: 1.3rem;
-    padding-right: 0;
-  }
-}
-
-/* Contact Section */
-.contact-section {
-  max-width: 1200px;
-  margin: 7rem auto;
-}
-
-.contact-title {
-  font-family: 'Poly', sans-serif;
-  font-size: 3rem;
-  font-weight: 500;
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
-.contact-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
-.contact-text-left {
-  font-family: 'Poly', sans-serif;
-  font-size: 3rem;
-  font-weight: 500;
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
-.contact-text-right {
-  font-size: 1.3rem;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #1a1a1a;
-  text-align: left;
-  padding-top: 1.3rem;
-}
-
-@media (max-width: 1024px) {
-  .contact-content {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .contact-text-left {
-    font-size: 2rem;
-  }
-
-  .contact-text-right {
-    padding-top: 0;
-  }
-}
-
-/* Footer */
-footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 3rem auto;
-  align-items: left;
-  padding-top: 3rem;
-  max-width: 1250px;
-  font-size: 1rem;
-}
-
-footer a {
-  color: #1a1a1a;
-  text-decoration: underline;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer .copyright {
-  text-align: center;
-  margin: auto;
-}
-
-@media (max-width: 767px) {
-  footer {
-    margin-top: 1rem;
-  }
-}
-
-
-/* Project Page*/
-.project-page {
-  max-width: 1200px;
-  margin: 3rem auto;
-}
-
-.project-hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 7rem;
-  margin-bottom: 3rem;
-  gap: 3rem;
-  flex-wrap: wrap; /* allows stacking on small screens */
-}
-
-.project-hero-left {
-  font-family: 'Poly', sans-serif;
-  font-size: 3rem;
-  line-height: 1;
-  margin-top: -15px;
-  font-weight: 400;
-}
-
-.project-hero-right {
-  font-family: 'Archivo', sans-serif;
-  max-width: 50%;
-  font-size: 1.3rem;
-  font-weight: 400;
-  line-height: 1.6;
-  margin-top: -0.6rem;
-  color: #1a1a1a;
-  margin-left: auto;
-}
-
-.project-hero-services {
-  padding-top: 1rem;
-  color: #929292;
-}
-
-/* Responsive Projects */
-@media (max-width: 767px) {
-.project-hero-left {  
- margin-top: -15px;
- }
-}
-  
-/* Gallery rows */
-.project-gallery {
-  margin-top: -3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.gallery-row.single img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.gallery-row.double {
-  display: flex;
-  gap: 2rem;
-}
-
-.gallery-row.double-hero {
-  display: flex;
-  gap: 2rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-.gallery-row.double img {
-  width: calc(50% - 1rem); /* half width minus half the gap */
-  display: block;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.gallery-row.double div {
-  width: calc(50% - 1rem); /* half width minus half the gap */
-  display: block;
-  object-fit: cover;
-}
-
-/* Responsive gallery */
-@media (max-width: 767px) {
-  .gallery-row.double img {
-  width: calc(50% - 0.5rem); /* half width minus half the gap */
-  }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Anda Suberu – Visual Designer" />
+    <title>Anda Suberu – Visual Designer</title>
+    <link rel="icon" href="images/asfavicon.ico" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poly:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="/" class="logo">Anda Suberu</a>
+        <button class="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
     
-  .gallery-row.double div {
-    width: 100%;
-  }
+    <nav class="menu-overlay">
+      <ul>
+        <li><a href="https://drive.google.com/file/d/1IDr0rsyPOR_c7mccU089vMK97wMrugr3/view?usp=drive_link">View My Resume</a></li>
+        <li><a href="mailto:uberanda@gmail.com">Get in Touch</a></li>
+      </ul>
+    </nav>
 
-  .project-gallery {
-  gap: 1rem;
-  }
+    <section class="hero">
+      <div class="hero-left">
+        <h1 class="line1 fade-up">
+          Hi there! I'm Anda.
+        </h1>
+        <h1 class="line2 fade-up">
+          I'm a multi-disciplinary visual designer and illustrator based in Abuja, Nigeria. I provide clean and engaging branding, interfaces and visual solutions to brands of all sizes.
+        </h1>
+      </div>
+    </section>
+    
+    <section class="hero-video">
+  <video autoplay muted loop playsinline>
+    <source src="videos/AS Website Header.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</section>
 
-  .gallery-row.double {
-  gap: 1rem;
-  }
+    <h3 class="work-title fade-up">My Work</h3>
+    <section class="masonry-gallery">
+      <div class="masonry-item span-1 fade-in">
+        <a href="https://andasuberu.xyz/salvo"><img data-src="images/salvo-thumbnail.png" alt="Salvo" class="lazy"/></a>
+        <h3 class="caption">Salvo</h3>
+        <h3 class="captiontag">Cool and Bold Vodka</h3>
+      </div>
 
-  .gallery-row.double-hero {
-    flex-direction: column;
-    gap: 2rem;
-  }
+      <div class="masonry-item span-1 fade-in">
+        <a href="https://andasuberu.xyz/jaehall"><img data-src="images/jaehall-thumbnail.png" alt="Jaehall" class="lazy"/></a>
+        <h3 class="caption">Jaehall Autos</h3>
+        <h3 class="captiontag">Elite Cars, Exceptional Service</h3>
+      </div>
 
-  .project-hero-left {
-  font-size: 2rem;
-  }
+      <div class="masonry-item span-1 fade-in">
+        <a href="https://andasuberu.xyz/goldenmeadow"><img data-src="images/goldenmeadow-thumbnail.gif" alt="Golden Meadow" class="lazy"/></a>
+        <h3 class="caption">Golden Meadow</h3>
+        <h3 class="captiontag">Sunlit Scents for your Soul</h3>
+      </div>
 
-  .project-hero-right {
-    max-width: 100%;
-    font-size: 1.2rem;
-  }
-}
+      <div class="masonry-item span-1 fade-in">
+        <a href="https://andasuberu.xyz/primeries"><img data-src="images/primeries-thumbnail.png" alt="Primeries" class="lazy"/></a>
+        <h3 class="caption">Primeries</h3>
+        <h3 class="captiontag">Shop the Culture. Live the Style.</h3>
+      </div>
 
-/* ---- Entrance Animations ---- */
-.fade-up {
-  opacity: 0;
-  transition: opacity 0.7s ease-out;
-}
+      <div class="masonry-item span-1 fade-in">
+        <a href="https://andasuberu.xyz/swiftpay"><img data-src="images/swiftpay-thumbnail.png" alt="SwiftPay" class="lazy"/></a>
+        <h3 class="caption">SwiftPay</h3>
+        <h3 class="captiontag">Payments Made Easy</h3>
+      </div>
 
-.fade-in {
-  opacity: 0;
-  transition: opacity 0.7s ease-out;
-}
+      <div class="masonry-item span-1 fade-in">
+        <a href="https://andasuberu.xyz/futurefish"><img data-src="images/futurefish-thumbnail.png" alt="Future Fish" class="lazy"/></a>
+        <h3 class="caption">Future Fish</h3>
+        <h3 class="captiontag">The Future of Aquaculture</h3>
+      </div>
 
-.show {
-  opacity: 1;
-}
+      <div class="masonry-item span-1 fade-in">
+        <a href="https://andasuberu.xyz/coe"><img data-src="images/coe-thumbnail.png" alt="Afe Babalola University" class="lazy"/></a>
+        <h3 class="caption">Afe Babalola University</h3>
+        <h3 class="captiontag">Labor Servitum Et Integritas</h3>
+      </div>
+      
+      <div class="masonry-item span-1 fade-in">
+        <a href="https://andasuberu.xyz/illustrations"><img data-src="images/illustrations-thumbnail.png" alt="Illustrations" class="lazy"/></a>
+        <h3 class="caption">Illustrations</h3>
+        <h3 class="captiontag">Things I've Drawn</h3>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h3 class="about-title fade-up">About</h3>
+      <div class="about-content">
+        <p class="about-text-left fade-up">
+          I believe that great ideas deserve great design. 
+          I enjoy designing to solve real problems and working with people who
+          are as excited to bring their vision to life as I am.<br />
+        </p>
+        <p class="about-text-right fade-up">
+          My work blends technical precision from my background in computer
+          engineering with creativity from traditional art. I enjoy making
+          designs and building websites that are both functional and visually
+          engaging, and illustrating concepts that bring a clear idea to
+          life.<br /><br />
+          I’ve worked across a mix of projects, from branding and illustration
+          to product interfaces and websites. And over time I’ve built for startups, small and large businesses, and personal creative ventures.<br /><br />
+          I always aim to make my designs approachable, impactful, and
+          results-driven. When I'm not working, you'll probably find me watching a
+          good TV show, playing Mini Motorways, learning Japanese, or hitting
+          the gym.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-content">
+        <p class="contact-text-left fade-up">Project in mind?</p>
+        <p class="contact-text-right fade-up">
+          I’d love to hear about it. Tell me what you’re working on and how I
+          can help. Reach out with a short note at
+          <a href="mailto:uberanda@gmail.com" style="text-decoration: underline"
+            >uberanda@gmail.com</a
+          > and we’ll take it from there.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="copyright fade-up">
+        <p>© 2025 Anda Suberu. All Rights Reserved</p>
+      </div>
+    </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Lazy load images
+  const items = document.querySelectorAll(".masonry-item img.lazy");
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove("lazy");
+          obs.unobserve(img);
+        }
+      });
+    },
+    { rootMargin: "200px" }
+  );
+  items.forEach(img => observer.observe(img));
+
+  // Animate fade-up / fade-in elements
+  const animItems = document.querySelectorAll(".fade-up, .fade-in");
+  const animObserver = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  animItems.forEach(item => animObserver.observe(item));
+
+  // Hamburger toggle
+  const hamburger = document.querySelector(".hamburger");
+  const menuOverlay = document.querySelector(".menu-overlay");
+  hamburger.addEventListener("click", e => {
+    e.stopPropagation();
+    hamburger.classList.toggle("active");
+    menuOverlay.classList.toggle("active");
+  });
+  document.querySelectorAll(".menu-overlay a").forEach(link => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      menuOverlay.classList.remove("active");
+    });
+  });
+  menuOverlay.addEventListener("click", e => {
+    if (e.target === menuOverlay) {
+      hamburger.classList.remove("active");
+      menuOverlay.classList.remove("active");
+    }
+  });
+});
+</script>
+  </body>
+</html>
