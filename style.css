@@ -44,7 +44,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 1.5rem 1rem;
+  padding: 1.2rem 1rem;
   background: transparent;
   mix-blend-mode: difference;
   pointer-events: none;
@@ -65,6 +65,12 @@ header {
   color: white; /* base color */
   text-transform: uppercase;
   pointer-events: auto;
+}
+  
+@media (max-width: 767px) {
+.header-container .logo {
+  font-size: 0.9rem;
+}
 }
   
 /* Hamburger menu */
@@ -234,7 +240,7 @@ header {
   }
 
   .hero-left h1.line1 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-left: 4%;
     margin-right: 4%;
   }
@@ -246,13 +252,13 @@ header {
   }
   
     .hero-left h1.line3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-left: 7%;
     margin-right: 7%;
   }
   
   .hero-left h1.btn {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-left: 4%;
     margin-right: 4%;
   }
