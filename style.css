@@ -69,16 +69,16 @@ a:hover {
 
 /* Logo */
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: 'Archivo', sans-serif;
-  letter-spacing: -0.03rem;
   display: flex;
   align-items: center;
+  letter-spacing: -0.07rem;
 }
 
 @media (max-width: 767px) {
   .logo {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   }    
 }
 
@@ -175,37 +175,60 @@ a:hover {
 
 .hero-left h1.line1 {
   font-size: 3rem;
-  font-family: 'Poly', sans-serif;
-  text-align: left;
+  font-family: 'Archivo', sans-serif;
+  text-align: center;
   line-height: 1.2;
-  font-weight: 200;
+  font-weight: 600;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  margin-left: 10%;
   margin-right: 10%;
   letter-spacing: -0.07rem;
 }
 
 .hero-left h1.line2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-family: 'Archivo', sans-serif;
-  text-align: left;
+  text-align: center;
   line-height: 1.5;
   font-weight: 400;
-  margin-right: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+  letter-spacing: -0.07rem;
+}
+  
+.hero-left h1.lsline2 {
+  font-size: 1.2rem;
+  font-family: 'Archivo', sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 /* Responsive Hero */
 @media (max-width: 767px) {
   .hero {
-    margin: 5rem auto 3rem auto;
+    margin: 7rem auto 3rem auto;
   }
 
   .hero-left h1.line1 {
     font-size: 2rem;
+    margin-left: 0%;
+    margin-right: 0%;
   }
 
   .hero-left h1.line2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  
+  .hero-left h1.lsline2 {
+    font-size: 1.1rem;
+    margin-left: 4%;
+    margin-right: 4%;
   }
 }
   
