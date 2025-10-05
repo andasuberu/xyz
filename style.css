@@ -167,8 +167,8 @@ a:hover {
 /* Hero Section */
 .hero {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: flex-start;
   max-width: 1200px;
   margin: 7rem auto 5rem auto;
 }
@@ -183,10 +183,10 @@ a:hover {
 }
   
   .hero-left h1.line2 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: 'Inter Tight', sans-serif;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1;
   font-weight: 800;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -236,8 +236,8 @@ a:hover {
   
     .hero-left h1.line3 {
     font-size: 1rem;
-    margin-left: 4%;
-    margin-right: 4%;
+    margin-left: 7%;
+    margin-right: 7%;
   }
   
   .hero-left h1.btn {
