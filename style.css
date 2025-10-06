@@ -511,6 +511,7 @@ a:hover {
 .project-hero-right {
   max-width: 100%;
   font-size: 1.2rem;  
+  padding-left: 0rem;
 }
   
   .project-hero-services {
