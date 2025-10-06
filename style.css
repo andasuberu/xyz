@@ -49,7 +49,7 @@ a:hover {
   margin: 0 auto;
 }
 
-.header-container .logo {
+.header-container .nav {
   font-family: "Inter Tight", sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -59,7 +59,7 @@ a:hover {
 }
   
 @media (max-width: 767px) {
-.header-container .logo {
+.header-container .nav {
   font-size: 0.9rem;
 }
 }
@@ -443,7 +443,7 @@ a:hover {
   margin: 0 auto;
 }
 
-.footer-container .logo {
+.footer-container .nav {
   font-family: "Inter Tight", sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -453,7 +453,7 @@ a:hover {
 }
   
 @media (max-width: 767px) {
-.footer-container .logo {
+.footer-container .nav {
   font-size: 0.9rem;
 }
 }
