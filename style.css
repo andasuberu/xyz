@@ -38,7 +38,7 @@ a:hover {
 }
 
 /* Header */
-/*  header {
+  header {
   position: fixed;
   top: 0;
   left: 0;
@@ -48,7 +48,7 @@ a:hover {
   background: transparent;
   mix-blend-mode: difference;
   pointer-events: none;
-} */
+}
   
 .header-container {
   display: flex;
@@ -267,7 +267,7 @@ a:hover {
   
 /* Hero Video */
 .hero-video {
-  max-width: 1200px;
+  width: 100vw;
   position: relative;
   margin: 0;
   left: 50%;
@@ -291,7 +291,7 @@ a:hover {
   font-weight: 500;
   text-align: left;
   margin-bottom: 0rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
   color: #999999;
 }
   
