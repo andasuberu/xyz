@@ -506,7 +506,7 @@ a:hover {
   justify-content: center;
   align-items: flex-start;
   max-width: 1200px;
-  margin: 7rem auto 5rem auto;
+  margin: 3rem auto 3rem auto;
 }
 
 .next-project {
@@ -529,7 +529,6 @@ a:hover {
   vertical-align: middle;
   transform: translateY(3px);
   margin-left: -8px;
-  margin-top: -4rem;
 }
 
 /* Responsive Projects */
