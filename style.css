@@ -10,8 +10,8 @@ html {
 
 body {
   font-family: 'Archivo', sans-serif;
-  background: #000000;
-  color: #f6f6f6;
+  background: #181818;
+  color: #FAF9F7;
   line-height: 1.6;
   padding: 0 1rem;
   padding-top: 1.5rem;
@@ -89,72 +89,6 @@ a:hover {
   z-index: 1001; /* stays above fullscreen menu */
 }
 
-
-.hamburger span {
-  display: block;
-  height: 2px;
-  width: 100%;
-  background: #ffffff;
-  border-radius: 2px;
-  transition: background 0.3s ease;
-}
-
-.hamburger:hover span {
-  background: #ffffff; /* slight change on hover */
-}
-
-/* Fullscreen Menu Overlay */
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(247, 244, 238, 0.98); /* soft background */
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-  z-index: 2000;
-}
-
-.menu-overlay.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Menu links */
-.menu-overlay ul {
-  list-style: none;
-  text-align: center;
-}
-
-.menu-overlay ul li {
-  margin: 1.5rem 0;
-}
-
-.menu-overlay ul li a {
-  font-family: 'Poly', serif;
-  font-size: 3rem;
-  font-weight: 200;
-  color: #ffffff;
-  transition: color 0.3s ease;
-}
-
-@media (max-width: 767px) {
-.menu-overlay ul li a {
-  font-size: 2rem;
-  }
-  
-  .menu-overlay ul li {
-  margin: 0.7rem 0;
-  }
-}
-
 /* Hero Section */
 .hero {
   display: flex;
@@ -178,7 +112,7 @@ a:hover {
   content: "";
   width: 8px;
   height: 8px;
-  background-color: #ff4d00;
+  background-color: #EE4423;
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -230,7 +164,7 @@ a:hover {
   font-weight: 400;
   margin-left: 20%;
   margin-right: 20%;
-  color: #ff4d00;
+  color: #EE4423;
 }
   
 /* Responsive Hero */
@@ -425,7 +359,7 @@ a:hover {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #ffffff;
+  color: #FAF9F7;
   text-align: left;
   padding-right: 30%;
 }
@@ -434,7 +368,7 @@ a:hover {
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #ffffff;
+  color: #FAF9F7;
   text-align: left;
 }
 
@@ -485,7 +419,7 @@ a:hover {
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #ffffff;
+  color: #FAF9F7;
   text-align: left;
   padding-top: 1.3rem;
 }
@@ -512,12 +446,12 @@ footer {
   margin: 3rem auto;
   align-items: left;
   padding-top: 3rem;
-  max-width: 1250px;
+  max-width: 1200px;
   font-size: 1rem;
 }
 
 footer a {
-  color: #ffffff;
+  color: #FAF9F7;
   text-decoration: underline;
 }
 
@@ -571,7 +505,7 @@ footer .copyright {
   font-weight: 400;
   line-height: 1.6;
   margin-top: -0.6rem;
-  color: #ffffff;
+  color: #FAF9F7;
   margin-left: auto;
 }
 
