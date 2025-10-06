@@ -225,7 +225,7 @@ a:hover {
   font-weight: 500;
   text-align: left;
   margin-bottom: 0rem;
-  margin-top: 2rem;
+  margin-top: 5rem;
   color: #999999;
 }
   
@@ -241,8 +241,12 @@ a:hover {
 }
   
   @media (max-width: 1024px) {
+  .work-subtitle {
+    font-size: 0.9rem;
+    }
+    
   .work-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
   
