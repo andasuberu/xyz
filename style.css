@@ -506,7 +506,7 @@ a:hover {
   justify-content: center;
   align-items: flex-start;
   max-width: 1200px;
-  margin: 3rem auto 3rem auto;
+  margin: 4rem auto 4rem auto;
 }
 
 .next-project {
@@ -547,6 +547,11 @@ a:hover {
   .project-hero-services {
   font-size: 0.9rem;
 }
+ 
+  .project-navigation {  
+  margin: 3rem auto 3rem auto;
+}
+  
   .next-project {
   font-size: 1rem;
 }
