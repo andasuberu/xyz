@@ -217,7 +217,7 @@ a:hover {
   display: block;
 }
 
-  .work-subtitle {
+  .subtitle {
   max-width: 1200px;
   margin: 0 auto;
   font-family: 'Inter Tight', sans-serif;
@@ -229,7 +229,7 @@ a:hover {
   color: #999999;
 }
   
-  .work-title {
+  .title {
   max-width: 1200px;
   margin: 0 auto;
   font-family: 'Inter Tight', sans-serif;
@@ -241,11 +241,11 @@ a:hover {
 }
   
   @media (max-width: 1024px) {
-  .work-subtitle {
+  .subtitle {
     font-size: 0.9rem;
     }
     
-  .work-title {
+  .title {
     font-size: 1.5rem;
   }
 }
@@ -257,6 +257,8 @@ a:hover {
   gap: 24px;
   max-width: 1200px;
   margin: 0 auto;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid #999999;
 }
 
 .masonry-item {
@@ -342,15 +344,8 @@ a:hover {
 /* About Section */
 .about-section {
   max-width: 1200px;
-  margin: 7rem auto;
+  margin: 0 auto 7rem auto;
 }
-
-.about-title {
-  font-family: 'Poly', sans-serif;
-  font-size: 3rem;
-  font-weight: 500;
-  text-align: left;
-  margin-bottom: 2rem;
 }
 
 .about-content {
@@ -372,17 +367,13 @@ a:hover {
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #FAF9F7;
+  color: #999999;
   text-align: left;
 }
 
 @media (max-width: 1024px) {
   .about-content {
     grid-template-columns: 1fr;
-  }
-
-  .about-title {
-    font-size: 2rem;
   }
 
   .about-text-left {
@@ -394,15 +385,7 @@ a:hover {
 /* Contact Section */
 .contact-section {
   max-width: 1200px;
-  margin: 7rem auto;
-}
-
-.contact-title {
-  font-family: 'Poly', sans-serif;
-  font-size: 3rem;
-  font-weight: 500;
-  text-align: left;
-  margin-bottom: 2rem;
+  margin: 0 auto 7rem auto;
 }
 
 .contact-content {
@@ -412,7 +395,8 @@ a:hover {
 }
 
 .contact-text-left {
-  font-family: 'Poly', sans-serif;
+  font-family: 'Archivo', sans-serif;
+  color: #EE4423;
   font-size: 3rem;
   font-weight: 500;
   text-align: left;
@@ -423,7 +407,7 @@ a:hover {
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #FAF9F7;
+  color: #999999;
   text-align: left;
   padding-top: 1.3rem;
 }
@@ -444,34 +428,31 @@ a:hover {
 }
 
 /* Footer */
-footer {
+ footer {
+  padding: 1rem 0;
+}
+  
+.footer-container {
   display: flex;
   justify-content: space-between;
-  margin: 3rem auto;
-  align-items: left;
-  padding-top: 3rem;
+  align-items: center;
   max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-container .logo {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
   font-size: 1rem;
+  color: white; /* base color */
+  text-transform: uppercase;
+  pointer-events: auto;
 }
-
-footer a {
-  color: #FAF9F7;
-  text-decoration: underline;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer .copyright {
-  text-align: center;
-  margin: auto;
-}
-
+  
 @media (max-width: 767px) {
-  footer {
-    margin-top: 1rem;
-  }
+.footer-container .logo {
+  font-size: 0.9rem;
+}
 }
 
 
