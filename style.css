@@ -528,7 +528,8 @@ a:hover {
   display: inline-block;
   vertical-align: middle;
   transform: translateY(3px);
-  margin-left: -10px;
+  margin-left: -8px;
+  margin-top: -4rem;
 }
 
 /* Responsive Projects */
