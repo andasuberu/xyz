@@ -503,25 +503,26 @@ a:hover {
 
 .project-navigation {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-end;
+  align-items: center;
   max-width: 1200px;
-  margin: 4rem auto 4rem auto;
+  margin: 3rem auto;
+  width: 100%;
 }
 
 .next-project {
-  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin: 0 auto;          /* centers it */
   font-size: 1rem;
   font-family: 'Inter Tight', sans-serif;
-  text-align: center;
   line-height: 1.5;
   font-weight: 400;
   color: #999999;
+  text-align: right;
+  margin: 0;
 }
+
 
 .next-project::after {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%23EE4423" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>');
