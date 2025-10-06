@@ -485,10 +485,12 @@ a:hover {
 
 .project-hero-left {
   font-family: 'Inter Tight', sans-serif;
-  font-size: 3rem;
-  line-height: 1;
-  margin-top: -15px;
+  font-size: 2.5rem;
   font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  margin-top: -1.1rem;
 }
 
 .project-hero-right {
@@ -498,13 +500,13 @@ a:hover {
   font-weight: 400;
   line-height: 1.6;
   margin-top: -0.6rem;
-  color: #FAF9F7;
+  color: #999999;
   margin-left: auto;
 }
 
 .project-hero-services {
   padding-top: 1rem;
-  color: #999999;
+  color: #FAF9F7;
 }
 
 /* Responsive Projects */
