@@ -426,6 +426,11 @@ a:hover {
 
   .contact-text-right {
     padding-top: 0;
+  }
+}
+
+@media (max-width: 797px) {
+  .contact-text-right {
     font-size: 1.2rem;
   }
 }
@@ -504,9 +509,14 @@ a:hover {
 
 /* Responsive Projects */
 @media (max-width: 767px) {
-.project-hero-left {  
+.project-hero-left {
+ font-size: 2rem;
  margin-top: -15px;
  }
+  
+.project-hero-right {
+  font-size: 1.2rem;  
+}
 }
   
 /* Gallery rows */
