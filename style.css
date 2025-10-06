@@ -510,13 +510,19 @@ a:hover {
 /* Responsive Projects */
 @media (max-width: 767px) {
 .project-hero-left {
- font-size: 2rem;
+ font-size: 1.8rem;
  margin-top: -15px;
  }
   
 .project-hero-right {
+  max-width: 100%;
   font-size: 1.2rem;  
 }
+  
+  .project-hero-services {
+  font-size: 0.9rem;
+}
+  
 }
   
 /* Gallery rows */
@@ -580,15 +586,6 @@ a:hover {
   .gallery-row.double-hero {
     flex-direction: column;
     gap: 2rem;
-  }
-
-  .project-hero-left {
-  font-size: 2rem;
-  }
-
-  .project-hero-right {
-    max-width: 100%;
-    font-size: 1.2rem;
   }
 }
 
