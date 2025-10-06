@@ -240,6 +240,12 @@ a:hover {
     font-size: 1.5rem;
   }
 }
+
+ @media (max-width: 797px) {
+   .subtitle {
+    margin-top: 2rem;
+    }
+}
   
 /* Masonry Gallery */
 .masonry-gallery {
@@ -317,6 +323,7 @@ a:hover {
 
   .masonry-gallery {
     grid-template-columns: 1fr;
+    padding-bottom: 2rem;
   }
 
   .masonry-item.span-2 {
