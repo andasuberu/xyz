@@ -567,6 +567,7 @@ a:hover {
 
 .gallery-row.single img {
   width: 100%;
+  height: 250px;
   display: block;
   object-fit: cover;
   border-radius: 0px;
@@ -586,6 +587,7 @@ a:hover {
 
 .gallery-row.double img {
   width: calc(50% - 1rem); /* half width minus half the gap */
+  height: 250px;
   display: block;
   object-fit: cover;
   border-radius: 0px;
