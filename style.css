@@ -537,7 +537,7 @@ footer .copyright {
   width: 100%;
   display: block;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
 .gallery-row.double {
@@ -556,7 +556,7 @@ footer .copyright {
   width: calc(50% - 1rem); /* half width minus half the gap */
   display: block;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
 .gallery-row.double div {
