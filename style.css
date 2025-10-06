@@ -273,7 +273,7 @@ a:hover {
 }
 
 .masonry-item:hover img {
-  border-radius: 100px 100px 12px 12px;
+  border-radius: 100px 100px 100px 100px;
 }
 
 .caption {
@@ -319,7 +319,7 @@ a:hover {
 
 @media (max-width: 767px) {
   .masonry-item:hover img {
-    border-radius: 12px;
+    border-radius: 0px;
   }
 
   .masonry-gallery {
