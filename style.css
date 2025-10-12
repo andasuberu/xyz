@@ -145,7 +145,7 @@ a:hover {
   text-align: center;
   line-height: 1.5;
   font-weight: 400;
-  max-width: 350px;
+  max-width: 330px;
   color: #999999;
 }
 
@@ -179,7 +179,7 @@ a:hover {
   
     .hero-left h1.line3 {
     font-size: 0.9rem;
-    max-width: 270px;
+    max-width: 250px;
   }
   
   .hero-left h1.btn {
