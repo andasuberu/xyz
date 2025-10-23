@@ -145,7 +145,7 @@ a:hover {
   text-align: center;
   line-height: 1.5;
   font-weight: 400;
-  max-width: 330px;
+  max-width: 350px;
   color: #999999;
 }
 
@@ -179,7 +179,7 @@ a:hover {
   
     .hero-left h1.line3 {
     font-size: 0.9rem;
-    max-width: 250px;
+    max-width: 270px;
   }
   
   .hero-left h1.btn {
@@ -390,21 +390,20 @@ a:hover {
 }
 
 .contact-text-left {
-  font-family: 'Archivo', sans-serif;
-  color: #EE4423;
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #FAF9F7;
   text-align: left;
-  margin-bottom: 2rem;
+  padding-right: 30%;
 }
 
 .contact-text-right {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.5;
   color: #999999;
   text-align: left;
-  padding-top: 1.3rem;
 }
 
 @media (max-width: 1024px) {
@@ -416,13 +415,7 @@ a:hover {
   .contact-text-left {
     font-size: 2rem;
   }
-
-  .contact-text-right {
-    padding-top: 0;
-  }
-}
-
-@media (max-width: 797px) {
+  
   .contact-text-right {
     font-size: 1.2rem;
   }
