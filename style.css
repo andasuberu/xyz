@@ -246,6 +246,30 @@ a:hover {
     margin-top: 2rem;
     }
 }
+
+.chevron {
+  display: flex;
+  justify-content: center;
+  animation: bounce 2s infinite;
+  cursor: default;
+}
+
+.chevron svg {
+  width: 28px;
+  height: 28px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(6px);
+  }
+  60% {
+    transform: translateY(3px);
+  }
+}
   
 /* Masonry Gallery */
 .masonry-gallery {
