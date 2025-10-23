@@ -523,11 +523,12 @@ a:hover {
 
 .project-navigation {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   max-width: 1200px;
   margin: 4rem auto 4rem auto;
 }
+
 
 .next-project {
   position: relative;
