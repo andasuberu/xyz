@@ -23,18 +23,19 @@
 
     <section class="hero">
       <div class="hero-left">
-        <h1 class="line1 fade-up">
+        <!--<h1 class="line1 fade-up">
           AVAILABLE FOR NEW WORK
-        </h1>
+        </h1>-->
         <h1 class="line2 fade-up">
           MULTIDISCIPLINARY VISUAL DESIGNER
         </h1>
         <h1 class="line3 fade-up">
          I create visual identities, illustrations, and interfaces for brands of all sizes.<br><br>
         </h1>
-        <a href="mailto:uberanda@gmail.com"><h1 class="btn fade-up" style="text-decoration: underline; font-weight: 600;">
+        <!--<a href="mailto:uberanda@gmail.com"><h1 class="btn fade-up" style="text-decoration: underline; font-weight: 600;">
           LET'S WORK TOGETHER
-          </h1></a>
+          </a>-->
+      </h1>
       </div>
     </section>
     
@@ -125,10 +126,12 @@
     <h3 class="title fade-up">GET IN TOUCH</h3>
     <section class="contact-section">
       <div class="contact-content">
-        <a href="mailto:uberanda@gmail.com" class="contact-text-left fade-up" style="text-decoration: underline;">uberanda@gmail.com</a>
+        <p class="contact-text-left fade-up"> You can contact me directly at: <a href="mailto:uberanda@gmail.com" style="text-decoration: underline;">uberanda@gmail.com</a> </p>
         <p class="contact-text-right fade-up">
-        I'd love to hear what you’re working on and how I can help. Reach out with a short note and we’ll take it from there.
-        </p>
+  I'd love to hear what you’re working on and how I can help. Reach out with a short note and we’ll take it from there. 
+  <br><br>
+  <span id="local-time"></span>
+</p>
       </div>
     </section>
 
@@ -194,6 +197,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+  
+  // Local time
+    function updateLocalTime() {
+  const options = {
+    hour: '2-digit',
+    minute: '2-digit'
+  };
+  const now = new Date().toLocaleTimeString('en-GB', options);
+  document.getElementById('local-time').textContent = `Local time: ${now} (UTC+1)`;
+}
+
+  updateLocalTime(); // show immediately
+  setInterval(updateLocalTime, 60000); // update every minute
 </script>
   </body>
 </html>
