@@ -404,7 +404,8 @@ a:hover {
 /* Contact Section */
 .contact-section {
   max-width: 1200px;
-  margin: 0 auto 7rem auto;
+  padding-bottom: 4rem;
+  margin: 0 auto 3rem auto;
 }
 
 .contact-content {
@@ -523,32 +524,50 @@ a:hover {
 
 .project-navigation {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   max-width: 1200px;
-  margin: 4rem auto 4rem auto;
+  margin: 4rem auto;
 }
 
-
-.next-project {
-  position: relative;
+.previous-project, .next-project {
   display: inline-flex;
-  align-items: right;
-  gap: 0.5rem;
+  align-items: center;
   font-size: 1.3rem;
   font-family: 'Inter Tight', sans-serif;
-  text-align: right;
-  line-height: 1.5;
   font-weight: 400;
   color: #FAF9F7;
+  text-decoration: none;
+  gap: 0.5rem;
 }
 
-.next-project::after {
-  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%23FAF9F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>');
-  display: inline-block;
-  vertical-align: middle;
-  transform: translateY(3px);
-  margin-left: -8px;
+/* Chevron styles */
+.chevron-left {
+  transform: rotate(90deg)!important;
+  display: inline-flex;
+  align-items: center;
+}
+
+.chevron-right {
+  transform: rotate(-90deg)!important;
+  display: inline-flex;
+  align-items: center;
+}
+
+.chevron svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 767px) {
+  .project-navigation {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .previous-project, .next-project {
+    font-size: 1rem;
+  }
 }
 
 /* Responsive Projects */
