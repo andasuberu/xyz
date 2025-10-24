@@ -204,10 +204,11 @@ a:hover {
 .hero-video {
   aspect-ratio: 16 / 9;
   width: 100%;
+  margin: 0;
   height: auto;
   display: block;
-  object-fit: cover; /* optional, keeps consistent framing */
-  background-color: #000; /* prevents white flash before video loads */
+  object-fit: cover;
+  background-color: #000;
 }
 
 
