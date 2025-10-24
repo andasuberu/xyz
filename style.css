@@ -540,6 +540,14 @@ a:hover {
   text-decoration: none;
 }
 
+.previous-project {
+  margin-left: -8px;
+}
+
+.next-project {
+  margin-right: -8px;
+}
+
 /* Chevron styles */
 .project-navigation .chevron {
   animation: none !important;
