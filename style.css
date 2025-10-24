@@ -191,7 +191,7 @@ a:hover {
 }
   
 /* Hero Video */
-.hero-video {
+/*.hero-video {
   width: 100vw;
   position: relative;
   margin: 0;
@@ -199,7 +199,17 @@ a:hover {
   right: 50%;
   transform: translateX(-50%);
   overflow: hidden;
+} */
+
+.hero-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* optional, keeps consistent framing */
+  background-color: #000; /* prevents white flash before video loads */
 }
+
 
 .hero-video video {
   width: 100%;
