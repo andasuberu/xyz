@@ -242,8 +242,8 @@ a:hover {
 }
 
  @media (max-width: 797px) {
-   .hero-video video {
-  height: 150%;
+  .hero-video video {
+    height: 150%;
 }
    
    .subtitle {
