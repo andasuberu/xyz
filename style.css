@@ -163,7 +163,7 @@ a:hover {
 /* Responsive Hero */
 @media (max-width: 767px) {
   .hero {
-    margin: 6rem auto 4rem auto;
+    margin: 6rem auto 2rem auto;
   }
 
   .hero-left h1.line1 {
