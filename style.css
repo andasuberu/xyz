@@ -192,21 +192,20 @@ a:hover {
   
 /* Hero Video */
 .hero-video {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  background-color: #0b0b0f;
+  width: 100vw;
+  position: relative;
+  margin: 0;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
 }
 
-
 .hero-video video {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  margin: -1rem;
 }
 
   .subtitle {
@@ -244,7 +243,7 @@ a:hover {
 
  @media (max-width: 797px) {
    .subtitle {
-    padding-top: 4rem;
+    margin-top: 2rem;
     }
 }
 
@@ -531,7 +530,7 @@ a:hover {
   margin: 4rem auto;
 }
 
-.previous-project, .next-project {
+.all-work {
   display: inline-flex;
   align-items: center;
   font-size: 1.3rem;
@@ -541,12 +540,8 @@ a:hover {
   text-decoration: none;
 }
 
-.previous-project {
+.all-work {
   margin-left: -8px;
-}
-
-.next-project {
-  margin-right: -8px;
 }
 
 /* Chevron styles */
@@ -584,7 +579,7 @@ a:hover {
     top:0px;
   }
 
-  .previous-project, .next-project {
+  .all-work {
     font-size: 1rem;
   }
 }
@@ -608,10 +603,6 @@ a:hover {
  
   .project-navigation {  
   margin: 3rem auto 3rem auto;
-}
-  
-  .next-project {
-  font-size: 1rem;
 }
 }
   
