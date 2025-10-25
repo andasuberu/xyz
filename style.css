@@ -216,7 +216,7 @@ a:hover {
   font-weight: 500;
   text-align: left;
   margin-bottom: 0rem;
-  padding-top: 5rem;
+  margin-top: 5rem;
   color: #999999;
 }
   
@@ -241,15 +241,22 @@ a:hover {
   }
 }
 
- @media (max-width: 797px) {
+@media (max-width: 797px) {
+  .hero-video {
+    height: 350px;
+  }
+
   .hero-video video {
-    height: 150%;
-}
-   
-   .subtitle {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .subtitle {
     margin-top: 2rem;
-    }
+  }
 }
+
 
 .chevron {
   display: flex;
