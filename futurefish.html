@@ -15,11 +15,32 @@
   </head>
   <body>
     <header>
-      <div class="header-container">
-        <a href="https://andasuberu.xyz" class="nav">ANDA SUBERU</a>
-        <a href="mailto:uberanda@gmail.com" class="nav">CONTACT ME</a>
-      </div>
-    </header>
+  <div class="header-container">
+    <a href="https://andasuberu.xyz" class="logo-link">
+      <img src="images/aslogo.svg" alt="Anda Suberu logo" class="logo" />
+    </a>
+
+    <nav class="nav-menu">
+      <ul>
+      <li><a href="mailto:uberanda@gmail.com?subject=Please Share Your CV">Request CV</a></li>
+      <li><a href="https://linkedin.com/in/andasuberu/">Connect With Me</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="mailto:uberanda@gmail.com?subject=Please Share Your CV">Request CV</a></li>
+      <li><a href="https://linkedin.com/in/andasuberu/">Connect With Me</a></li>
+    </ul>
+  </div>
+</header>
 
 <main class="project-page">
 
@@ -60,54 +81,32 @@
 
     </section>
   
-    <section class="project-navigation">
-  <a href="https://andasuberu.xyz" class="all-work">
-    <div class="chevron chevron-left">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-           xmlns="http://www.w3.org/2000/svg">
-        <path d="M18 9L12 15L6 9" stroke="#FAF9F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <section class="project-navigation">
+      <a href="https://andasuberu.xyz" class="all-work">
+      <span class="arrow-wrapper">
+      <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+      <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-    </div>
-    View All Work
-  </a>
-</section>
+      </span>
+      Go Back Home
+      </a>
 
   
   </main>
 
     <footer>
       <div class="footer-container">
-        <a href="https://linkedin.com/in/andasuberu/" class="nav">LINKEDIN</a>
-        <a href="mailto:uberanda@gmail.com" class="nav">SAY HELLO</a>
+        <a href="https://linkedin.com/in/andasuberu/" class="nav">© 2025 Anda Suberu. All Rights Reserved</a>
       </div>
     </footer>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const items = document.querySelectorAll(".masonry-item img.lazy");
-
-        // Lazy load using Intersection Observer
-        const observer = new IntersectionObserver(
-          (entries, obs) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove("lazy");
-                obs.unobserve(img);
-              }
-            });
-          },
-          { rootMargin: "200px" }
-        );
-
-        items.forEach((img) => observer.observe(img));
-
-        // Smooth entry animation
-        const masonryItems = document.querySelectorAll(".masonry-item");
+        // Animate fade-up / fade-in elements
+        const animItems = document.querySelectorAll(".fade-up, .fade-in");
         const animObserver = new IntersectionObserver(
           (entries, obs) => {
-            entries.forEach((entry) => {
+            entries.forEach(entry => {
               if (entry.isIntersecting) {
                 entry.target.classList.add("show");
                 obs.unobserve(entry.target);
@@ -116,35 +115,24 @@
           },
           { threshold: 0.2 }
         );
+        animItems.forEach(item => animObserver.observe(item));
 
-        masonryItems.forEach((item) => animObserver.observe(item));
-      });
+          const hamburger = document.querySelector(".hamburger");
+  const mobileMenu = document.querySelector(".mobile-menu");
 
-       // Hamburger toggle for fullscreen menu
-  const hamburger = document.querySelector(".hamburger");
-  const menuOverlay = document.querySelector(".menu-overlay");
+  hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  mobileMenu.classList.toggle("active");
+});
 
-  hamburger.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent click bubbling
-    hamburger.classList.toggle("active");
-    menuOverlay.classList.toggle("active");
+  document.querySelectorAll(".mobile-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    mobileMenu.classList.remove("active");
   });
+});
 
-  // Close menu when clicking a link
-  document.querySelectorAll(".menu-overlay a").forEach(link => {
-    link.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      menuOverlay.classList.remove("active");
-    });
-  });
-
-  // Close menu when clicking anywhere on the overlay that isn't a link
-  menuOverlay.addEventListener("click", (e) => {
-    if (e.target === menuOverlay) {
-      hamburger.classList.remove("active");
-      menuOverlay.classList.remove("active");
-    }
-  });
+});
     </script>
 
 </body>

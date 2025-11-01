@@ -15,11 +15,32 @@
   </head>
   <body>
     <header>
-      <div class="header-container">
-        <a href="https://andasuberu.xyz" class="nav">ANDA SUBERU</a>
-        <a href="mailto:uberanda@gmail.com" class="nav">CONTACT ME</a>
-      </div>
-    </header>
+  <div class="header-container">
+    <a href="https://andasuberu.xyz" class="logo-link">
+      <img src="images/aslogo.svg" alt="Anda Suberu logo" class="logo" />
+    </a>
+
+    <nav class="nav-menu">
+      <ul>
+      <li><a href="mailto:uberanda@gmail.com?subject=Please Share Your CV">Request CV</a></li>
+      <li><a href="https://linkedin.com/in/andasuberu/">Connect With Me</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="mailto:uberanda@gmail.com?subject=Please Share Your CV">Request CV</a></li>
+      <li><a href="https://linkedin.com/in/andasuberu/">Connect With Me</a></li>
+    </ul>
+  </div>
+</header>
 
     <main class="project-page">
       <section class="project-gallery">
@@ -45,25 +66,26 @@
           <img src="images/Salvo/Salvo.png" alt="Salvo">
         </div>
       </section>
-      
+
+      <section class="project-navigation">
+      <a href="https://andasuberu.xyz" class="all-work">
+      <span class="arrow-wrapper">
+      <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+      <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      </span>
+      Go Back Home
+      </a>
+
+      </section>
     </main>
     
-    <section class="project-navigation">
-  <a href="https://andasuberu.xyz" class="all-work">
-    <div class="chevron chevron-left">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-           xmlns="http://www.w3.org/2000/svg">
-        <path d="M18 9L12 15L6 9" stroke="#FAF9F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
-    View All Work
-  </a>
+
 </section>
     
     <footer>
       <div class="footer-container">
-        <a href="https://linkedin.com/in/andasuberu/" class="nav">LINKEDIN</a>
-        <a href="mailto:uberanda@gmail.com" class="nav">SAY HELLO</a>
+        <a href="https://linkedin.com/in/andasuberu/" class="nav">© 2025 Anda Suberu. All Rights Reserved</a>
       </div>
     </footer>
 
@@ -84,32 +106,22 @@
         );
         animItems.forEach(item => animObserver.observe(item));
 
-        // Hamburger toggle for fullscreen menu
-        const hamburger = document.querySelector(".hamburger");
-        const menuOverlay = document.querySelector(".menu-overlay");
+          const hamburger = document.querySelector(".hamburger");
+  const mobileMenu = document.querySelector(".mobile-menu");
 
-        hamburger.addEventListener("click", (e) => {
-          e.stopPropagation(); 
-          hamburger.classList.toggle("active");
-          menuOverlay.classList.toggle("active");
-        });
+  hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  mobileMenu.classList.toggle("active");
+});
 
-        // Close menu when clicking a link
-        document.querySelectorAll(".menu-overlay a").forEach(link => {
-          link.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            menuOverlay.classList.remove("active");
-          });
-        });
+  document.querySelectorAll(".mobile-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    mobileMenu.classList.remove("active");
+  });
+});
 
-        // Close menu when clicking overlay background
-        menuOverlay.addEventListener("click", (e) => {
-          if (e.target === menuOverlay) {
-            hamburger.classList.remove("active");
-            menuOverlay.classList.remove("active");
-          }
-        });
-      });
+});
     </script>
   </body>
 </html>
