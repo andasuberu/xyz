@@ -4,50 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Hi! I'm Anda Suberu, a multidisciplinary visual designer based in Abuja, Nigeria. I create visual identities, illustrations, and interfaces for brands of all sizes. Let's work together!" />
-    <title>Anda Suberu – Visual Designer</title>
+    <title>Anda Suberu - Visual Designer</title>
     <link rel="icon" type="image/x-icon" href="images/asfavicon.ico">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <div class="header-container">
-        <a href="https://andasuberu.xyz" class="nav">ANDA SUBERU</a>
-        <a href="mailto:uberanda@gmail.com" class="nav">CONTACT ME</a>
-      </div>
-    </header>
+<header>
+  <div class="header-container">
+    <a href="https://andasuberu.xyz" class="logo-link">
+      <img src="images/aslogo.svg" alt="Anda Suberu logo" class="logo" />
+    </a>
+
+    <nav class="nav-menu">
+      <ul>
+      <li><a href="mailto:uberanda@gmail.com?subject=Please Share Your CV">Request CV</a></li>
+      <li><a href="https://linkedin.com/in/andasuberu/">Connect With Me</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="mailto:uberanda@gmail.com?subject=Please Share Your CV">Request CV</a></li>
+      <li><a href="https://linkedin.com/in/andasuberu/">Connect With Me</a></li>
+    </ul>
+  </div>
+</header>
+
 
     <section class="hero">
       <div class="hero-left">
         <h1 class="line2 fade-up">
-          MULTIDISCIPLINARY VISUAL DESIGNER
+          Hi! I'm Anda Suberu — a multidisciplinary visual designer helping early-stage startups and established brands create clear, intentional design.
         </h1>
-        <h1 class="line3 fade-up">
-         I create visual identities, illustrations, and interfaces for brands of all sizes.<br><br>
+        <h1 class="line2m fade-up">
+          Hi! I'm Anda Suberu — a multidisciplinary visual designer helping early-stage startups and established brands create clear, intentional design.
         </h1>
-        <div class="chevron fade-up">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-       xmlns="http://www.w3.org/2000/svg">
-    <path d="M6 9L12 15L18 9" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</div>
-      </h1>
       </div>
-    </section>
-    
-    <section class="hero-video">
-  <video class="project-video" autoplay muted loop playsinline>
-    <source src="videos/AS Website Header.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</section>
+      <div class="cta-container fade-up">
+        <a href="mailto:uberanda@gmail.com" class="cta-btn">Get in Touch</a>
+      <div class="status">
+        <span class="pulse-dot"></span>
+        <span class="status-text">Available for Work</span>
+      </div>
+</div>
 
-    <h3 class="subtitle fade-up">My Portfolio</h3>
-    <h3 class="title fade-up">SELECTED WORK</h3>
+
+    </section>
+
     <section class="masonry-gallery">
       <div class="masonry-item span-1 fade-in">
         <a href="https://andasuberu.xyz/salvo"><img data-src="images/salvo-thumbnail.png" alt="Salvo" class="lazy"/></a>
@@ -98,8 +113,7 @@
       </div>
     </section>
 
-    <h3 class="subtitle fade-up">Profile</h3>
-    <h3 class="title fade-up">ABOUT ME</h3>
+    <h3 class="title fade-up">About Me</h3>
     <section class="about-section">
       <div class="about-content">
         <p class="about-text-left fade-up">
@@ -122,23 +136,28 @@
       </div>
     </section>
     
-    <h3 class="subtitle fade-up">Ready to work together?</h3>
-    <h3 class="title fade-up">GET IN TOUCH</h3>
+    <h3 class="title2 fade-up">Ready to work together?</h3>
     <section class="contact-section">
       <div class="contact-content">
-        <p class="contact-text-left fade-up"> You can contact me directly at: <a href="mailto:uberanda@gmail.com" style="text-decoration: underline;">uberanda@gmail.com</a> </p>
-        <p class="contact-text-right fade-up">
+        <p class="contact-text-left fade-up">
+  You can contact me directly at:
+    <a href="mailto:uberanda@gmail.com" class="email-link" style="text-decoration: underline;">
+    uberanda<span class="at-symbol">@</span>gmail.com<svg class="external-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+    <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    </a>
+  </p>
+  <p class="contact-text-right fade-up">
   I'd love to hear what you’re working on and how I can help. Reach out with a short note and we’ll take it from there. 
   <br><br>
   <span id="local-time"></span>
-</p>
+  </p>
       </div>
     </section>
 
     <footer>
       <div class="footer-container">
-        <a href="https://linkedin.com/in/andasuberu/" class="nav">LINKEDIN</a>
-        <a href="mailto:uberanda@gmail.com" class="nav">SAY HELLO</a>
+        <a href="https://linkedin.com/in/andasuberu/" class="nav">© 2025 Anda Suberu. All Rights Reserved</a>
       </div>
     </footer>
 
@@ -176,26 +195,21 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   animItems.forEach(item => animObserver.observe(item));
 
-  // Hamburger toggle
   const hamburger = document.querySelector(".hamburger");
-  const menuOverlay = document.querySelector(".menu-overlay");
-  hamburger.addEventListener("click", e => {
-    e.stopPropagation();
-    hamburger.classList.toggle("active");
-    menuOverlay.classList.toggle("active");
+  const mobileMenu = document.querySelector(".mobile-menu");
+
+  hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  mobileMenu.classList.toggle("active");
+});
+
+  document.querySelectorAll(".mobile-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    mobileMenu.classList.remove("active");
   });
-  document.querySelectorAll(".menu-overlay a").forEach(link => {
-    link.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      menuOverlay.classList.remove("active");
-    });
-  });
-  menuOverlay.addEventListener("click", e => {
-    if (e.target === menuOverlay) {
-      hamburger.classList.remove("active");
-      menuOverlay.classList.remove("active");
-    }
-  });
+});
+
 });
   
   // Local time
