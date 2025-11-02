@@ -17,7 +17,7 @@ body {
   padding-top: 1.5rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   body {
   padding: 0 1rem;
   }
@@ -56,7 +56,7 @@ header {
 }
 
 /* Responsive Header */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   header {
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -154,7 +154,7 @@ header {
 }
 
 /* Responsive adjustments */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .nav-menu {
     display: none; /* hide desktop nav */
   }
@@ -289,7 +289,7 @@ header {
 }
   
 /* Responsive Hero */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .hero {
     margin: 3rem auto 4rem auto;
   }
@@ -503,7 +503,7 @@ header {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .masonry-item:hover img {
     border-radius: 0px;
   }
@@ -685,7 +685,7 @@ header {
   pointer-events: auto;
 }
   
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 .footer-container .nav {
   font-size: 1rem;
 }
@@ -759,7 +759,7 @@ header {
   margin-left: -8px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .project-navigation {
     gap: 1.5rem;
   }
@@ -797,7 +797,7 @@ header {
 
 
 /* Responsive Projects */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 .project-hero-left {
  font-size: 1.8rem;
  margin-top: -15px;
@@ -871,7 +871,7 @@ header {
 }
 
 /* Responsive gallery */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .gallery-row.double img {
   width: calc(50% - 0.5rem); /* half width minus half the gap */
   }
