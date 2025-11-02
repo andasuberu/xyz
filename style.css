@@ -386,7 +386,7 @@ header {
   margin-top: -3rem;
 }
   
-  @media (max-width: 1024px) {
+  @media (max-width: 767px) {
   .subtitle {
     font-size: 0.9rem;
     }
@@ -493,7 +493,7 @@ header {
 }
 
 /* Responsive Gallery */
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   .masonry-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -555,7 +555,7 @@ header {
   text-align: left;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   .about-content {
     grid-template-columns: 1fr;
   }
@@ -608,7 +608,7 @@ header {
   letter-spacing: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   .contact-content {
     grid-template-columns: 1fr;
     gap: 24px;
