@@ -872,14 +872,6 @@ header {
 
 /* Responsive gallery */
 @media (max-width: 767px) {
-  .gallery-row.single img:hover {
-  border-radius: 2vw;
-  }
-
-  .gallery-row.double img:hover {
-  border-radius: 2vw;
-  }
-  
   .gallery-row.double img {
   width: calc(50% - 0.5rem); /* half width minus half the gap */
   }
