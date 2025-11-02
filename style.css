@@ -95,54 +95,64 @@ header {
   color: #FAF9F7;
 }
 
-/* Hamburger */
+/* Hamburger Button */
 .hamburger {
-  display: none;
+  display: none; /* shown only on mobile */
   flex-direction: column;
   justify-content: space-between;
-  width: 24px;
-  height: 18px;
+  align-items: center;
+  width: 28px; /* slightly wider for X */
+  height: 20px; /* height for proper spacing */
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1100;
+  position: relative;
+  z-index: 2000; /* above header elements */
 }
 
 .hamburger span {
   display: block;
+  width: 100%; /* ensure spans fill button width */
   height: 2px;
   background: #FAF9F7;
   border-radius: 1px;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hamburger active state */
+/* Hamburger active state (turns into X) */
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
+  transform: rotate(45deg) translate(0, 6px); /* centered X */
 }
 
-/* Mobile menu */
+.hamburger.active span:nth-child(2) {
+  opacity: 0; /* hide middle bar */
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(0, -6px); /* centered X */
+}
+
+/* Mobile Menu */
 .mobile-menu {
-  display: none;
+  display: none; /* hidden by default */
   position: fixed;
-  inset: 0;
+  inset: 0; /* top/right/bottom/left 0 */
   background: rgba(11, 11, 15, 0.98);
   backdrop-filter: blur(8px);
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 1000;
+  z-index: 1500; /* below hamburger */
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, pointer-events 0.3s ease;
 }
 
 .mobile-menu ul {
   list-style: none;
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .mobile-menu li {
@@ -156,22 +166,25 @@ header {
   text-decoration: none;
 }
 
-/* Show menu */
+/* Show mobile menu when active */
 .mobile-menu.active {
   display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 767px) {
   .nav-menu {
-    display: none;
+    display: none; /* hide desktop nav */
   }
 
   .hamburger {
-    display: flex;
+    display: flex; /* show hamburger */
     margin-bottom: 8px;
   }
 }
+
 
 /* Hero Section */
 .hero {
