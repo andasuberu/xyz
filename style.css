@@ -94,8 +94,8 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 28px;
-  height: 12px;
+  width: 27px;
+  height: 11px;
   background: none;
   border: none;
   cursor: pointer;
@@ -831,7 +831,7 @@ header {
   
 /* Gallery rows */
 .project-gallery {
-  margin-top: 6rem;
+  margin-top: 0rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -853,7 +853,7 @@ header {
 .gallery-row.double-hero {
   display: flex;
   gap: 2rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
