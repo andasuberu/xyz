@@ -909,3 +909,56 @@ header {
 .show {
   opacity: 1;
 }
+
+/* --- FIX FOR INVISIBLE HAMBURGER --- */
+
+.header-container {
+  position: relative; /* create positioning context */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2000; /* stay above logo/nav */
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #faf9f7; /* white bars */
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Fix possible overlap from mobile menu */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #0b0b0f;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
