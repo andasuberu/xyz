@@ -114,6 +114,7 @@ header {
   background: #FAF9F7;
   border-radius: 1px;
   transition: all 0.3s ease;
+  background: red;
 }
 
 /* Hamburger active state */
