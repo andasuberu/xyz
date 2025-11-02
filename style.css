@@ -750,7 +750,7 @@ header {
   align-items: center;
   font-size: 1.3rem;
   font-family: 'Poppins', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   color: #FAF9F7;
   text-decoration: none;
 }
@@ -810,7 +810,7 @@ header {
 }
   
   .project-hero-services {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
  
   .project-navigation {  
@@ -853,7 +853,7 @@ header {
 .gallery-row.double-hero {
   display: flex;
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 2.5rem;
   margin-bottom: 3rem;
 }
 
