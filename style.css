@@ -465,8 +465,8 @@ header {
   transition: border-radius 0.4s ease;
 }
 
-.masonry-item:hover img {
-  border-radius: 70px;
+.masonry-item img:hover {
+  border-radius: 5vw;
 }
 
 .caption {
@@ -504,10 +504,6 @@ header {
 }
 
 @media (max-width: 767px) {
-  .masonry-item:hover img {
-    border-radius: 0px;
-  }
-
   .masonry-gallery {
     grid-template-columns: 1fr;
     padding-bottom: 2rem;
