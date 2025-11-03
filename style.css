@@ -202,18 +202,6 @@ header {
   margin-right: 5%;
 }
 
-.hero-left h1.line2m {
-  display: none;
-  font-size: 1.6rem;
-  font-family: 'Schibsted Grotesk', sans-serif;
-  text-align: left;
-  line-height: 1.4;
-  font-weight: 400;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-right: 5%;
-}
-
 .cta-container {
   margin-top: 1.5rem;
   display: flex;
@@ -301,10 +289,6 @@ header {
   }
   
   .hero-left h1.line2 {
-    display: none;
-  }
-   
-  .hero-left h1.line2m {
     display: block;
     font-size: 1.5rem;
     margin-right: 5%;
