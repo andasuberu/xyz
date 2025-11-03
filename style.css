@@ -14,7 +14,6 @@ body {
   color: #FAF9F7;
   line-height: 1.6;
   padding: 0 3rem;
-  padding-top: 1.5rem;
 }
 
 @media (max-width: 767px) {
@@ -37,8 +36,8 @@ a:hover {
 /* Header */
 header {
   background-color: #0B0B0F;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .header-container {
@@ -51,8 +50,9 @@ header {
 
 /* Logo */
 .logo {
-  max-width: 40px;
-  height: auto;
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 /* Responsive Header */
@@ -63,7 +63,7 @@ header {
   }
 
   .logo {
-  max-width: 29px;
+    font-size: 1.3rem;
   }
 }
 
@@ -279,7 +279,7 @@ header {
 /* Responsive Hero */
 @media (max-width: 767px) {
   .hero {
-    margin: 3rem auto 4rem auto;
+    margin: 3rem auto 3rem auto;
   }
 
   .hero-left h1.line1 {
