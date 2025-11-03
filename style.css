@@ -95,8 +95,8 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 27px;
-  height: 11px;
+  width: 25px;
+  height: 10px;
   background: none;
   border: none;
   cursor: pointer;
@@ -162,7 +162,6 @@ header {
 
   .hamburger {
     display: flex; /* show hamburger */
-    margin-bottom: 8px;
   }
 }
 
