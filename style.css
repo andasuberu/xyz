@@ -53,7 +53,7 @@ header {
 .logo {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 /* Responsive Header */
@@ -64,7 +64,7 @@ header {
   }
 
   .logo {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   }
 }
 
@@ -98,6 +98,7 @@ header {
   width: 24px;
   height: 12px;
   padding-top: 2px;
+  padding-bottom: 2px;
   background: none;
   border: none;
   cursor: pointer;
