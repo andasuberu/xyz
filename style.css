@@ -518,7 +518,11 @@ header {
   }
 
   .masonry-item img:hover {
-  border-radius: 2vw;
+    border-radius: 2vw;
+  }
+
+  .caption {
+    font-size: 1.2rem;
   }
 
   .captiontag {
