@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   background: #0B0B0F;
   color: #FAF9F7;
   line-height: 1.6;
@@ -75,7 +75,7 @@ header {
 }
 
 .nav-menu a {
-  font-family: "Poppins", sans-serif;
+  font-family: "Schibsted Grotesk", sans-serif;
   font-weight: 400;
   font-size: 1.3rem;
   color: #999999;
@@ -139,7 +139,7 @@ header {
 }
 
 .mobile-menu a {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
   color: #FAF9F7;
@@ -193,10 +193,10 @@ header {
   
 .hero-left h1.line2 {
   font-size: 2rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   text-align: left;
   line-height: 1.4;
-  font-weight: 500;
+  font-weight: 400;
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-right: 5%;
@@ -205,7 +205,7 @@ header {
 .hero-left h1.line2m {
   display: none;
   font-size: 1.6rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   text-align: left;
   line-height: 1.4;
   font-weight: 400;
@@ -219,7 +219,7 @@ header {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
 }
 
 /* Button */
@@ -229,7 +229,7 @@ header {
   border-radius: 9999px;
   background-color: #FAF9F7;
   color: #0B0B0F;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   text-decoration: none;
@@ -247,7 +247,7 @@ header {
   gap: 0.6rem;
   background-color: #faf9f70d;
   color: #FAF9F7;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   padding: 0.7rem 1.6rem;
@@ -261,7 +261,7 @@ header {
   height: 10px;
   background-color: #16c172;
   border-radius: 50%;
-  top: -1px;
+  top: 0px;
 }
 
 .pulse-dot::after {
@@ -355,7 +355,7 @@ header {
   .subtitle {
   max-width: 1200px;
   margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   font-size: 1.3rem;
   font-weight: 500;
   text-align: left;
@@ -367,7 +367,7 @@ header {
   .title {
   max-width: 1200px;
   margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
   text-align: left;
@@ -378,7 +378,7 @@ header {
   .title2 {
   max-width: 1200px;
   margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
   text-align: left;
@@ -603,7 +603,7 @@ header {
 }
 
 .at-symbol {
-  font-family: "Archivo", sans-serif;
+  font-family: "Schibsted Grotesk", sans-serif;
   font-weight: 400;
   letter-spacing: 0;
 }
@@ -678,7 +678,7 @@ header {
 }
 
 .footer-container .nav {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
   color: #FAF9F7;
@@ -713,7 +713,7 @@ header {
 }
 
 .project-hero-left {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   font-size: 2.5rem;
   line-height: 1;
   margin-top: -6px;
@@ -721,7 +721,7 @@ header {
 }
 
 .project-hero-right {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   max-width: 50%;
   font-size: 1.3rem;
   font-weight: 400;
@@ -749,7 +749,7 @@ header {
   display: inline-flex;
   align-items: center;
   font-size: 1.3rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   font-weight: 400;
   color: #FAF9F7;
   text-decoration: none;
