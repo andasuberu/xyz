@@ -51,8 +51,9 @@ header {
 
 /* Logo */
 .logo {
-  max-width: 40px;
-  height: auto;
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
 }
 
 /* Responsive Header */
@@ -63,7 +64,7 @@ header {
   }
 
   .logo {
-  max-width: 29px;
+  font-size: 1.2rem;
   }
 }
 
