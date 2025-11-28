@@ -502,6 +502,7 @@ header {
 
   .masonry-item img {
     height: 250px;
+    border-radius: 2vw;
   }
 
   .masonry-item img:hover {
