@@ -13,6 +13,7 @@
     
     <link rel="stylesheet" href="style.css" />
   </head>
+  
   <body>
 <header>
   <div class="header-container fade-up">
@@ -23,7 +24,7 @@
     <nav class="nav-menu">
       <ul>
       <li><a href="mailto:uberanda@gmail.com?subject=Please Share Your CV">Request CV</a></li>
-      <li><a href="https://linkedin.com/in/andasuberu/">Connect With Me</a></li>
+      <li><a href="https://linkedin.com/in/andasuberu/">Say Hello</a></li>
       </ul>
     </nav>
 
@@ -57,103 +58,72 @@
       </div>
     </section>
 
+<div class="project-filters fade-up">
+  <span class="filter-text active" data-filter="all">All</span>
+  <span class="filter-text" data-filter="branding">Branding</span>
+  <span class="filter-text" data-filter="illustration">Illustration</span>
+  <span class="filter-text" data-filter="ui">UI/UX</span>
+</div>
+
     <section class="masonry-gallery">
-      <div class="masonry-item span-1 fade-in">
+      <div class="masonry-item span-1 fade-in" data-category="branding">
         <a href="https://andasuberu.xyz/salvo"><img data-src="images/salvo-thumbnail.png" alt="Salvo" class="lazy"/></a>
         <h3 class="caption">Salvo</h3>
         <h3 class="captiontag">Cool and Bold Vodka</h3>
       </div>
 
-      <div class="masonry-item span-1 fade-in">
+      <div class="masonry-item span-1 fade-in" data-category="branding">
         <a href="https://andasuberu.xyz/jaehall"><img data-src="images/jaehall-thumbnail.png" alt="Jaehall" class="lazy"/></a>
         <h3 class="caption">Jaehall Autos</h3>
         <h3 class="captiontag">Elite Cars, Exceptional Service</h3>
       </div>
 
-      <div class="masonry-item span-1 fade-in">
+      <div class="masonry-item span-1 fade-in"data-category="branding" >
         <a href="https://andasuberu.xyz/goldenmeadow"><img data-src="images/goldenmeadow-thumbnail.gif" alt="Golden Meadow" class="lazy"/></a>
         <h3 class="caption">Golden Meadow</h3>
         <h3 class="captiontag">Sunlit Scents for your Soul</h3>
       </div>
 
-      <div class="masonry-item span-1 fade-in">
+      <div class="masonry-item span-1 fade-in" data-category="ui">
         <a href="https://andasuberu.xyz/primeries"><img data-src="images/primeries-thumbnail.png" alt="Primeries" class="lazy"/></a>
         <h3 class="caption">Primeries</h3>
         <h3 class="captiontag">Shop the Culture. Live the Style.</h3>
       </div>
 
-      <div class="masonry-item span-1 fade-in">
+      <div class="masonry-item span-1 fade-in" data-category="ui">
         <a href="https://andasuberu.xyz/swiftpay"><img data-src="images/swiftpay-thumbnail.png" alt="SwiftPay" class="lazy"/></a>
         <h3 class="caption">SwiftPay</h3>
         <h3 class="captiontag">Payments Made Easy</h3>
       </div>
 
-      <div class="masonry-item span-1 fade-in">
+      <div class="masonry-item span-1 fade-in" data-category="branding">
         <a href="https://andasuberu.xyz/futurefish"><img data-src="images/futurefish-thumbnail.png" alt="Future Fish" class="lazy"/></a>
         <h3 class="caption">Future Fish</h3>
         <h3 class="captiontag">The Future of Aquaculture</h3>
       </div>
 
-      <div class="masonry-item span-1 fade-in">
+      <div class="masonry-item span-1 fade-in" data-category="branding">
         <a href="https://andasuberu.xyz/coe"><img data-src="images/coe-thumbnail.png" alt="Afe Babalola University" class="lazy"/></a>
         <h3 class="caption">Afe Babalola University</h3>
         <h3 class="captiontag">Labor Servitum Et Integritas</h3>
       </div>
       
-      <div class="masonry-item span-1 fade-in">
+      <div class="masonry-item span-1 fade-in" data-category="illustration">
         <a href="https://andasuberu.xyz/illustrations"><img data-src="images/illustrations-thumbnail.png" alt="Illustrations" class="lazy"/></a>
         <h3 class="caption">Illustrations</h3>
         <h3 class="captiontag">Colorful Things I've Made</h3>
       </div>
     </section>
-
-    <h3 class="title fade-up">About Me</h3>
-    <section class="about-section">
-      <div class="about-content">
-        <p class="about-text-left fade-up">
-          I believe great ideas deserve great design. I enjoy solving real problems through design and working with people who are as excited to bring a vision to life as I am.<br />
-        </p>
-        <p class="about-text-right fade-up">
-          I’ve worked across a mix of projects, from branding and illustration
-          to product interfaces and websites. And over time I’ve built for startups, small and large businesses, and personal creative ventures.<br /><br />
-          My work blends technical precision from my background in computer
-          engineering with creativity from traditional art. I love making
-          designs and building websites that are both functional and visually
-          engaging, and illustrating concepts that bring a clear idea to
-          life.
-          <br /><br />
-          I always aim to make my designs approachable, impactful, and
-          results-driven. When I'm not working, you'll probably find me watching a
-          good TV show, learning Japanese, or hitting
-          the gym.
-        </p>
-      </div>
-    </section>
-    
-    <h3 class="title2 fade-up">Ready to work together?</h3>
-    <section class="contact-section">
-      <div class="contact-content">
-        <p class="contact-text-left fade-up">
-  You can contact me directly at:
-    <a href="mailto:uberanda@gmail.com" class="email-link" style="text-decoration: underline;">
-    uberanda<span class="at-symbol">@</span>gmail.com<svg class="external-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-    <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
+<footer>
+  <div class="footer-container">
+    <a href="https://linkedin.com/in/andasuberu/" class="nav">
+      © Anda Suberu 2026
     </a>
-  </p>
-  <p class="contact-text-right fade-up">
-  I'd love to hear what you’re working on and how I can help. Reach out with a short note and we’ll take it from there. 
-  <br><br>
-  <span id="local-time"></span>
-  </p>
-      </div>
-    </section>
-
-    <footer>
-      <div class="footer-container">
-        <a href="https://linkedin.com/in/andasuberu/" class="nav">© 2025 Anda Suberu. All Rights Reserved</a>
-      </div>
-    </footer>
+    <a href="https://linkedin.com/in/andasuberu/" class="nav" id="resp">
+      All Rights Reserved
+    </a>
+  </div>
+</footer>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -206,6 +176,57 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
   
+  // Project filter
+const filterTexts = document.querySelectorAll(".filter-text");
+const projects = Array.from(document.querySelectorAll(".masonry-item"));
+const FADE_DURATION = 180;
+
+let isFiltering = false;
+
+filterTexts.forEach(text => {
+  text.addEventListener("click", () => {
+    if (isFiltering) return;
+    isFiltering = true;
+
+    const filter = text.dataset.filter;
+
+    // Active state
+    filterTexts.forEach(t => t.classList.remove("active"));
+    text.classList.add("active");
+
+    // Decide visibility once
+    const visibilityMap = projects.map(project => {
+      const categories = project.dataset.category || "";
+      return filter === "all" || categories.includes(filter);
+    });
+
+    // Fade out unwanted items
+    projects.forEach((project, i) => {
+      if (!visibilityMap[i]) {
+        project.classList.add("is-hidden");
+      }
+    });
+
+    // Reflow once
+    setTimeout(() => {
+      projects.forEach((project, i) => {
+        project.style.display = visibilityMap[i] ? "flex" : "none";
+      });
+
+      // Fade in visible items
+      requestAnimationFrame(() => {
+        projects.forEach((project, i) => {
+          if (visibilityMap[i]) {
+            project.classList.remove("is-hidden");
+          }
+        });
+        isFiltering = false;
+      });
+
+    }, FADE_DURATION);
+  });
+});
+
   // Local time
     function updateLocalTime() {
   const options = {
