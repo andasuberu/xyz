@@ -514,7 +514,7 @@ header {
 }
 
 /* Responsive Gallery */
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .masonry-gallery {
     grid-template-columns: repeat(2, 1fr);
     padding-bottom: 2rem;
