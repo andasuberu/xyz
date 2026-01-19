@@ -435,7 +435,7 @@ header {
   max-width: 1300px;
   margin: 0 auto;
   padding-bottom: 3rem;
-  border-bottom: 1px solid #999999;
+  border-bottom: 2px solid #ffffff;
 }
 
 .masonry-item {
@@ -547,6 +547,10 @@ header {
 }
 
 @media (max-width: 424px) {
+  .project-filters {
+    font-size: 1rem;
+  }
+
   .masonry-gallery {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 2rem;
@@ -733,18 +737,22 @@ header {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 1.3rem;
-  color: #FAF9F7;
+  color: #999999;
   pointer-events: auto;
+}
+
+#resp:hover {
+  color: #FAF9F7;
 }
 
 /* Responsive Footer */
 @media (max-width: 424px) {
 #resp {
-  display: none;
+  color: #FAF9F7;
 }
 
 .footer-container .nav {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 }
 
