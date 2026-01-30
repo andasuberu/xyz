@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="I'm a multidisciplinary visual designer and illustrator helping startups and global brands create clear and intentional design." />
+    <title>About - Anda Suberu</title>
+    <link rel="icon" type="image/png" href="images/asfavicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+  <body>
+<header>
+  <div class="header-container fade-up">
+    <a href="https://andasuberu.xyz" class="logo"><img src="images/aslogo.svg"></a>
+
+    <nav class="nav-menu">
+      <ul>
+      <li><a href="https://andasuberu.xyz" class="active">Work</a></li>
+      <li><a href="https://andasuberu.xyz/about">About</a></li>
+      <li><a href="https://drive.google.com/file/d/1IDr0rsyPOR_c7mccU089vMK97wMrugr3/view?usp=drive_link">Resume</a></li>
+      <li><a href="https://www.linkedin.com/in/andasuberu/">Connect</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="https://andasuberu.xyz" class="active">Work</a></li>
+      <li><a href="https://andasuberu.xyz/about">About</a></li>
+      <li><a href="https://drive.google.com/file/d/1IDr0rsyPOR_c7mccU089vMK97wMrugr3/view?usp=drive_link">Resume</a></li>
+      <li><a href="https://www.linkedin.com/in/andasuberu/">Connect</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero">
+      <div class="hero-left">
+        <h1 class="line2 fade-up">
+        Great ideas deserve great design. I enjoy solving real problems through design and working with people who are as excited to bring a vision to life as I am.
+        </h1>
+      </div>
+    </section>
+
+<section class="about">
+  <div class="about-left">
+    <h1 class="line2 fade-up">
+      About Me
+    </h1>
+  </div>
+  <div class="about-right fade-up">
+    <p>
+          I'm a multidisciplinary visual designer and illustrator helping startups and global brands create clear and intentional design.<br><br>
+          Focused on making things that work and feel right, I've handled a wide range of projects, from branding and illustration to product interfaces and websites. And over time I’ve built for startups, small and large businesses, and personal creative ventures.<br /><br />
+          My work blends technical precision from my background in computer
+          engineering with creativity from traditional art. I love making
+          designs and building websites that are both functional and visually
+          engaging, and illustrating concepts that bring a clear idea to
+          life.
+          <br /><br />
+          I always aim to make my designs approachable, impactful, and
+          results-driven. When I'm not working, you'll probably find me watching a good TV show, playing Mini Motorways, or learning Japanese.
+    </p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="contact-left">
+    <h1 class="line2 fade-up">
+      Get in Touch
+    </h1>
+  </div>
+  <div class="contact-right fade-up">
+    <p>
+    Ready to work together? I'd love to hear what you’re working on and how I can help. Reach out with a short note and we’ll take it from there.<br><br>Email: <a href="mailto:uberanda@gmail.com" style="text-decoration: underline;">uberanda@gmail.com</a><br>
+  <span id="local-time"></span>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div><p class="nav">
+      Copyright © 2026 · <a href="https://andasuberu.xyz" style="text-decoration: underline;">Anda Suberu</a>
+    </p></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Lazy load images
+  const items = document.querySelectorAll(".masonry-item img.lazy");
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove("lazy");
+          obs.unobserve(img);
+        }
+      });
+    },
+    { rootMargin: "200px" }
+  );
+  items.forEach(img => observer.observe(img));
+
+  // Animate fade-up / fade-in elements
+  const animItems = document.querySelectorAll(".fade-up, .fade-in");
+  const animObserver = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  animItems.forEach(item => animObserver.observe(item));
+
+  const hamburger = document.querySelector(".hamburger");
+  const mobileMenu = document.querySelector(".mobile-menu");
+
+  hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  mobileMenu.classList.toggle("active");
+});
+
+  document.querySelectorAll(".mobile-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    mobileMenu.classList.remove("active");
+  });
+});
+
+  // Close menu when tapping the black background
+  mobileMenu.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    mobileMenu.classList.remove("active");
+  });
+
+  // Prevent clicks inside the menu list from closing it
+  mobileMenu.querySelector("ul").addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+});
+  
+  // Project filter
+document.addEventListener("DOMContentLoaded", () => {
+  const pills = document.querySelectorAll(".filter-pill");
+  const items = document.querySelectorAll(".gallery-item");
+
+  pills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      const filter = pill.dataset.filter;
+
+      // Active pill state
+      pills.forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+
+      items.forEach(item => {
+        const category = item.dataset.category;
+
+        if (filter === "all" || category.includes(filter)) {
+          item.style.display = "inline-block";
+          item.classList.remove("is-hidden");
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const gallery = document.getElementById("gallery");
+  const itemsContainer = document.getElementById("gallery-items");
+  const allItems = Array.from(itemsContainer.querySelectorAll(".gallery-item"));
+  const rows = [
+    document.getElementById("row1"),
+    document.getElementById("row2"),
+    document.getElementById("row3")
+  ];
+
+  function layoutItems(items) {
+    // Clear existing rows
+    rows.forEach(row => (row.innerHTML = ""));
+
+    // Track current row heights
+    const rowHeights = rows.map(() => 0);
+
+    items.forEach(item => {
+      const minIndex = rowHeights.indexOf(Math.min(...rowHeights));
+      rows[minIndex].appendChild(item);
+      rowHeights[minIndex] += item.offsetHeight + 20; // gap
+    });
+  }
+
+  // Initial layout
+  layoutItems(allItems);
+
+  // Filter functionality
+  const pills = document.querySelectorAll(".filter-pill");
+  pills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      const filter = pill.dataset.filter;
+
+      // Set active state
+      pills.forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+
+      // Filter items
+      const visibleItems = allItems.filter(item => 
+        filter === "all" || item.dataset.category.includes(filter)
+      );
+
+      layoutItems(visibleItems);
+    });
+  });
+
+  // Re-layout on window resize
+  window.addEventListener("resize", () => {
+    // Get active filter
+    const activePill = document.querySelector(".filter-pill.active");
+    const filter = activePill ? activePill.dataset.filter : "all";
+    const visibleItems = allItems.filter(item => 
+      filter === "all" || item.dataset.category.includes(filter)
+    );
+    layoutItems(visibleItems);
+  });
+});
+
+  // Local time
+    function updateLocalTime() {
+  const options = {
+    hour: '2-digit',
+    minute: '2-digit'
+  };
+  const now = new Date().toLocaleTimeString('en-GB', options);
+  document.getElementById('local-time').textContent = `Local time: ${now} (UTC+1)`;
+}
+
+  updateLocalTime(); // show immediately
+  setInterval(updateLocalTime, 60000); // update every minute
+</script>
+  </body>
+</html>
