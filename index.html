@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Hi! I'm Anda Suberu — a multidisciplinary visual designer helping startups and global brands create clear and intentional design." />
     <title>Anda Suberu - Visual Designer</title>
-    <link rel="icon" type="image/x-icon" href="images/asfavicon.ico">
+    <link rel="icon" type="image/png" href="images/asfavicon.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -17,14 +15,14 @@
   <body>
 <header>
   <div class="header-container fade-up">
-    <a href="https://andasuberu.xyz" class="logo">
-      Anda Suberu
-    </a>
+    <a href="https://andasuberu.xyz" class="logo"><img src="images/aslogo.svg"></a>
 
     <nav class="nav-menu">
       <ul>
-      <li><a href="mailto:uberanda@gmail.com?subject=Please Share Your CV">Request CV</a></li>
-      <li><a href="mailto:uberanda@gmail.com">Say Hello</a></li>
+      <li><a href="https://andasuberu.xyz" class="active">Work</a></li>
+      <li><a href="https://andasuberu.xyz/about">About</a></li>
+      <li><a href="https://drive.google.com/file/d/1IDr0rsyPOR_c7mccU089vMK97wMrugr3/view?usp=drive_link">Resume</a></li>
+      <li><a href="https://www.linkedin.com/in/andasuberu/">Connect</a></li>
       </ul>
     </nav>
 
@@ -36,8 +34,10 @@
 
   <div class="mobile-menu">
     <ul>
-      <li><a href="mailto:uberanda@gmail.com?subject=Please Share Your CV">Request CV</a></li>
-      <li><a href="mailto:uberanda@gmail.com">Say Hello</a></li>
+      <li><a href="https://andasuberu.xyz" class="active">Work</a></li>
+      <li><a href="https://andasuberu.xyz/about">About</a></li>
+      <li><a href="https://drive.google.com/file/d/1IDr0rsyPOR_c7mccU089vMK97wMrugr3/view?usp=drive_link">Resume</a></li>
+      <li><a href="https://www.linkedin.com/in/andasuberu/">Connect</a></li>
     </ul>
   </div>
 </header>
@@ -46,83 +46,130 @@
     <section class="hero">
       <div class="hero-left">
         <h1 class="line2 fade-up">
-          Hi! I'm Anda Suberu — a multidisciplinary visual designer helping startups and global brands create clear and intentional design.
+        Hi! I'm Anda Suberu. I'm a multidisciplinary visual designer helping startups and global brands create clear and intentional design.
         </h1>
       </div>
-      <div class="cta-container fade-up">
-        <a href="mailto:uberanda@gmail.com" class="cta-btn">Get in Touch</a>
-      <div class="status">
-        <span class="pulse-dot"></span>
-        <span class="status-text">Available for Work</span>
-      </div>
-      </div>
+      <div class="filter-pills fade-up">
+  <button class="filter-pill active" data-filter="all">All</button>
+  <button class="filter-pill" data-filter="brand">Brand</button>
+  <button class="filter-pill" data-filter="web">Web</button>
+  <button class="filter-pill" data-filter="uiux">UI/UX</button>
+  <button class="filter-pill" data-filter="illustration">Illustration</button>
+  </div>
+
     </section>
 
-<div class="project-filters fade-up">
-  <span class="filter-text active" data-filter="all">All</span>
-  <span class="filter-text" data-filter="branding">Branding</span>
-  <span class="filter-text" data-filter="illustration">Illustration</span>
-  <span class="filter-text" data-filter="ui">UI/UX</span>
+<!-- Horizontal Masonry Gallery -->
+<div class="gallery" id="gallery">
+  <div class="gallery-row" id="row1"></div>
+  <div class="gallery-row" id="row2"></div>
+  <div class="gallery-row" id="row3"></div>
 </div>
 
-    <section class="masonry-gallery">
-      <div class="masonry-item span-1 fade-in" data-category="branding">
-        <a href="https://andasuberu.xyz/salvo"><img data-src="images/salvo-thumbnail.png" alt="Salvo" class="lazy"/></a>
-        <h3 class="caption">Salvo</h3>
-        <h3 class="captiontag">Cool and Bold Vodka</h3>
+<!-- Original gallery items hidden for JS placement -->
+<div style="display:none;" id="gallery-items">
+  <div class="gallery-item fade-in" data-category="brand">
+    <a href="https://andasuberu.xyz/jaehall">
+      <div class="image-wrapper">
+        <img src="images/jaehall-thumbnail.png" alt="Jaehall project thumbnail">
+        <img src="images/jaehall-hover.png" alt="Jaehall hover thumbnail" class="hover-img">
       </div>
+    </a>
+    <div class="title">Jaehall</div>
+    <div class="subtitle">Brand Identity</div>
+  </div>
 
-      <div class="masonry-item span-1 fade-in" data-category="branding">
-        <a href="https://andasuberu.xyz/jaehall"><img data-src="images/jaehall-thumbnail.png" alt="Jaehall" class="lazy"/></a>
-        <h3 class="caption">Jaehall Autos</h3>
-        <h3 class="captiontag">Elite Cars, Exceptional Service</h3>
-      </div>
+    <div class="gallery-item fade-in" data-category="brand">
+    <div class="image-wrapper">
+      <img src="images/hiketwo-thumbnail.png" alt="HikeTwo project thumbnail">
+    </div>
+    <div class="title">HikeTwo</div>
+    <div class="subtitle">Coming Soon</div>
+  </div>
 
-      <div class="masonry-item span-1 fade-in"data-category="branding" >
-        <a href="https://andasuberu.xyz/goldenmeadow"><img data-src="images/goldenmeadow-thumbnail.gif" alt="Golden Meadow" class="lazy"/></a>
-        <h3 class="caption">Golden Meadow</h3>
-        <h3 class="captiontag">Sunlit Scents for your Soul</h3>
+    <div class="gallery-item fade-in" data-category="brand">
+    <a href="https://andasuberu.xyz/coe">
+      <div class="image-wrapper">
+        <img src="images/coe-thumbnail.png" alt="COE project thumbnail">
+        <img src="images/coe-hover.png" alt="COE hover thumbnail" class="hover-img">
       </div>
+    </a>
+    <div class="title">Afe Babalola University</div>
+    <div class="subtitle">Brand Identity</div>
+  </div>
 
-      <div class="masonry-item span-1 fade-in" data-category="ui">
-        <a href="https://andasuberu.xyz/primeries"><img data-src="images/primeries-thumbnail.png" alt="Primeries" class="lazy"/></a>
-        <h3 class="caption">Primeries</h3>
-        <h3 class="captiontag">Shop the Culture. Live the Style.</h3>
+  <div class="gallery-item fade-in" data-category="brand">
+    <a href="https://andasuberu.xyz/goldenmeadow">
+      <div class="image-wrapper">
+        <img src="images/goldenmeadow-thumbnail.gif" alt="Golden Meadow project thumbnail">
+        <img src="images/goldenmeadow-hover.png" alt="Golden Meadow hover thumbnail" class="hover-img">
       </div>
+    </a>
+    <div class="title">Golden Meadow</div>
+    <div class="subtitle">Brand Identity</div>
+  </div>
 
-      <div class="masonry-item span-1 fade-in" data-category="ui">
-        <a href="https://andasuberu.xyz/swiftpay"><img data-src="images/swiftpay-thumbnail.png" alt="SwiftPay" class="lazy"/></a>
-        <h3 class="caption">SwiftPay</h3>
-        <h3 class="captiontag">Payments Made Easy</h3>
+  <div class="gallery-item fade-in" data-category="brand">
+    <a href="https://andasuberu.xyz/salvo">
+      <div class="image-wrapper">
+        <img src="images/salvo-thumbnail.png" alt="Salvo project thumbnail">
+        <img src="images/salvo-hover.png" alt="Salvo hover thumbnail" class="hover-img">
       </div>
+    </a>
+    <div class="title">Salvo</div>
+    <div class="subtitle">Brand Identity</div>
+  </div>
 
-      <div class="masonry-item span-1 fade-in" data-category="branding">
-        <a href="https://andasuberu.xyz/futurefish"><img data-src="images/futurefish-thumbnail.png" alt="Future Fish" class="lazy"/></a>
-        <h3 class="caption">Future Fish</h3>
-        <h3 class="captiontag">The Future of Aquaculture</h3>
+  <div class="gallery-item fade-in" data-category="uiux">
+    <a href="https://andasuberu.xyz/swiftpay">
+      <div class="image-wrapper">
+        <img src="images/swiftpay-thumbnail.png" alt="SwiftPay project thumbnail">
+        <img src="images/swiftpay-hover.png" alt="SwiftPay hover thumbnail" class="hover-img">
       </div>
+    </a>
+    <div class="title">SwiftPay</div>
+    <div class="subtitle">UI/UX</div>
+  </div>
 
-      <div class="masonry-item span-1 fade-in" data-category="branding">
-        <a href="https://andasuberu.xyz/coe"><img data-src="images/coe-thumbnail.png" alt="Afe Babalola University" class="lazy"/></a>
-        <h3 class="caption">Afe Babalola University</h3>
-        <h3 class="captiontag">Labor Servitum Et Integritas</h3>
+  <div class="gallery-item fade-in" data-category="illustration">
+    <a href="https://andasuberu.xyz/illustrations">
+      <div class="image-wrapper">
+        <img src="images/illustrations-thumbnail.png" alt="Illustrations project thumbnail">
+        <img src="images/illustrations-hover.png" alt="Illustrations hover thumbnail" class="hover-img">
       </div>
-      
-      <div class="masonry-item span-1 fade-in" data-category="illustration">
-        <a href="https://andasuberu.xyz/illustrations"><img data-src="images/illustrations-thumbnail.png" alt="Illustrations" class="lazy"/></a>
-        <h3 class="caption">Illustrations</h3>
-        <h3 class="captiontag">Colorful Things I've Made</h3>
+    </a>
+    <div class="title">Illustrations</div>
+    <div class="subtitle">Art & Illustration</div>
+  </div>
+
+  <div class="gallery-item fade-in" data-category="web uiux">
+    <a href="https://andasuberu.xyz/primeries">
+      <div class="image-wrapper">
+        <img src="images/primeries-thumbnail.png" alt="Primeries project thumbnail">
+        <img src="images/primeries-hover.png" alt="Primeries hover thumbnail" class="hover-img">
       </div>
-    </section>
+    </a>
+    <div class="title">Primeries</div>
+    <div class="subtitle">Web Design</div>
+  </div>
+
+   <div class="gallery-item fade-in" data-category="brand">
+    <a href="https://andasuberu.xyz/futurefish">
+      <div class="image-wrapper">
+        <img src="images/futurefish-thumbnail.png" alt="Future Fish project thumbnail">
+        <img src="images/futurefish-hover.png" alt="Future Fish hover thumbnail" class="hover-img">
+      </div>
+    </a>
+    <div class="title">Future Fish</div>
+    <div class="subtitle">Brand Identity</div>
+  </div>
+</div>
+
 <footer>
   <div class="footer-container">
-    <p class="nav">
-      © 2026 Anda Suberu
-    </p>
-    <a href="mailto:uberanda@gmail.com" class="nav" id="resp">
-      Say Hello
-    </a>
-  </div>
+    <div><p class="nav">
+      Copyright © 2026 · <a href="https://andasuberu.xyz" style="text-decoration: underline;">Anda Suberu</a>
+    </p></div>
 </footer>
 
 <script>
@@ -174,56 +221,101 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+  // Close menu when tapping the black background
+  mobileMenu.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    mobileMenu.classList.remove("active");
+  });
+
+  // Prevent clicks inside the menu list from closing it
+  mobileMenu.querySelector("ul").addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
 });
   
   // Project filter
-const filterTexts = document.querySelectorAll(".filter-text");
-const projects = Array.from(document.querySelectorAll(".masonry-item"));
-const FADE_DURATION = 180;
+document.addEventListener("DOMContentLoaded", () => {
+  const pills = document.querySelectorAll(".filter-pill");
+  const items = document.querySelectorAll(".gallery-item");
 
-let isFiltering = false;
+  pills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      const filter = pill.dataset.filter;
 
-filterTexts.forEach(text => {
-  text.addEventListener("click", () => {
-    if (isFiltering) return;
-    isFiltering = true;
+      // Active pill state
+      pills.forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
 
-    const filter = text.dataset.filter;
+      items.forEach(item => {
+        const category = item.dataset.category;
 
-    // Active state
-    filterTexts.forEach(t => t.classList.remove("active"));
-    text.classList.add("active");
-
-    // Decide visibility once
-    const visibilityMap = projects.map(project => {
-      const categories = project.dataset.category || "";
-      return filter === "all" || categories.includes(filter);
-    });
-
-    // Fade out unwanted items
-    projects.forEach((project, i) => {
-      if (!visibilityMap[i]) {
-        project.classList.add("is-hidden");
-      }
-    });
-
-    // Reflow once
-    setTimeout(() => {
-      projects.forEach((project, i) => {
-        project.style.display = visibilityMap[i] ? "flex" : "none";
+        if (filter === "all" || category.includes(filter)) {
+          item.style.display = "inline-block";
+          item.classList.remove("is-hidden");
+        } else {
+          item.style.display = "none";
+        }
       });
+    });
+  });
+});
 
-      // Fade in visible items
-      requestAnimationFrame(() => {
-        projects.forEach((project, i) => {
-          if (visibilityMap[i]) {
-            project.classList.remove("is-hidden");
-          }
-        });
-        isFiltering = false;
-      });
+document.addEventListener("DOMContentLoaded", () => {
+  const gallery = document.getElementById("gallery");
+  const itemsContainer = document.getElementById("gallery-items");
+  const allItems = Array.from(itemsContainer.querySelectorAll(".gallery-item"));
+  const rows = [
+    document.getElementById("row1"),
+    document.getElementById("row2"),
+    document.getElementById("row3")
+  ];
 
-    }, FADE_DURATION);
+  function layoutItems(items) {
+    // Clear existing rows
+    rows.forEach(row => (row.innerHTML = ""));
+
+    // Track current row heights
+    const rowHeights = rows.map(() => 0);
+
+    items.forEach(item => {
+      const minIndex = rowHeights.indexOf(Math.min(...rowHeights));
+      rows[minIndex].appendChild(item);
+      rowHeights[minIndex] += item.offsetHeight + 20; // gap
+    });
+  }
+
+  // Initial layout
+  layoutItems(allItems);
+
+  // Filter functionality
+  const pills = document.querySelectorAll(".filter-pill");
+  pills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      const filter = pill.dataset.filter;
+
+      // Set active state
+      pills.forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+
+      // Filter items
+      const visibleItems = allItems.filter(item => 
+        filter === "all" || item.dataset.category.includes(filter)
+      );
+
+      layoutItems(visibleItems);
+    });
+  });
+
+  // Re-layout on window resize
+  window.addEventListener("resize", () => {
+    // Get active filter
+    const activePill = document.querySelector(".filter-pill.active");
+    const filter = activePill ? activePill.dataset.filter : "all";
+    const visibleItems = allItems.filter(item => 
+      filter === "all" || item.dataset.category.includes(filter)
+    );
+    layoutItems(visibleItems);
   });
 });
 
