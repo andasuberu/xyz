@@ -12,10 +12,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   
-  <body>
+<body class="home">
 <header>
   <div class="header-container fade-up">
-    <a href="https://andasuberu.xyz" class="logo">Anda Suberu — Designer</a>
+    <a href="https://andasuberu.xyz" class="logo">
+  <span>Anda Suberu — Designer</span>
+</a>
 
     <nav class="nav-menu">
       <ul>
@@ -26,10 +28,12 @@
       </ul>
     </nav>
 
-    <button class="hamburger" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-    </button>
+<div class="hamburger-container">
+  <button class="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+  </button>
+</div>
   </div>
 
   <div class="mobile-menu">
@@ -41,23 +45,37 @@
     </ul>
   </div>
 </header>
+<section class="hero">
+  <!-- Desktop Hero (3 lines) -->
+  <div class="hero-left hero-desktop">
+    <h1 class="hero-text">
+      <span><span class="span-inner">Hi! I'm Anda, a multidisciplinary visual designer</span></span><br>
+      <span><span class="span-inner">helping startups and global brands create clear</span></span><br>
+      <span><span class="span-inner">and intentional design.</span></span>
+    </h1>
+  </div>
+
+  <!-- Mobile Hero (6 lines) -->
+  <div class="hero-left hero-mobile">
+    <h1 class="hero-text">
+      <span><span class="span-inner">Hi! I'm Anda, a</span></span><br>
+      <span><span class="span-inner">multidisciplinary visual</span></span><br>
+      <span><span class="span-inner">designer helping startups</span></span><br>
+      <span><span class="span-inner">and global brands create</span></span><br>
+      <span><span class="span-inner">clear and intentional</span></span><br>
+      <span><span class="span-inner">design.</span></span>
+    </h1>
+  </div>
+</section>
 
 
-    <section class="hero">
-      <div class="hero-left">
-        <h1 class="line2 fade-up">
-        Hi! I'm Anda, a multidisciplinary visual designer helping startups and global brands create clear and intentional design.
-        </h1>
-      </div>
-      <div class="filter-pills fade-up">
+<section class="rest">
+  <div class="filter-pills fade-up">
   <button class="filter-pill active" data-filter="all">All</button>
   <button class="filter-pill" data-filter="brand">Brand</button>
   <button class="filter-pill" data-filter="uiux">UI/UX</button>
   <button class="filter-pill" data-filter="illustration">Illustration</button>
   </div>
-
-    </section>
-
 <!-- Horizontal Masonry Gallery -->
 <div class="gallery" id="gallery">
   <div class="gallery-row" id="row1"></div>
@@ -170,6 +188,7 @@
       Copyright © 2026 · <a href="https://andasuberu.xyz" style="text-decoration: underline;">Anda Suberu</a>
     </p></div>
 </footer>
+</section>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -316,6 +335,14 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     layoutItems(visibleItems);
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Delay everything after hero
+  setTimeout(() => {
+    const rest = document.querySelector(".rest");
+    rest.classList.add("show");
+  }, 500); // delay (0.5s)
 });
 
   // Local time
