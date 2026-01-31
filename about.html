@@ -12,24 +12,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   
-  <body>
+<body class="home">
 <header>
   <div class="header-container fade-up">
-    <a href="https://andasuberu.xyz" class="logo"><img src="images/aslogo.svg"></a>
+    <a href="https://andasuberu.xyz" class="logo">
+  <span>Anda Suberu — Designer</span>
+</a>
 
     <nav class="nav-menu">
       <ul>
-      <li><a href="https://andasuberu.xyz">Work</a></li>
-      <li><a href="https://andasuberu.xyz/about" class="active">About</a></li>
+      <li><a href="https://andasuberu.xyz" class="active">Work</a></li>
+      <li><a href="https://andasuberu.xyz/about">About</a></li>
       <li><a href="https://drive.google.com/file/d/1IDr0rsyPOR_c7mccU089vMK97wMrugr3/view?usp=drive_link">Resume</a></li>
       <li><a href="https://www.linkedin.com/in/andasuberu/">Connect</a></li>
       </ul>
     </nav>
 
-    <button class="hamburger" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-    </button>
+<div class="hamburger-container">
+  <button class="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+  </button>
+</div>
   </div>
 
   <div class="mobile-menu">
@@ -41,16 +45,31 @@
     </ul>
   </div>
 </header>
-
 <section class="hero">
-      <div class="hero-left">
-        <h1 class="line2 fade-up">
-        Great ideas deserve great design. I enjoy solving real problems through design and working with people who are as excited to bring a vision to life as I am.
-        </h1>
-      </div>
-    </section>
+  <!-- Desktop Hero (3 lines) -->
+  <div class="hero-left hero-desktop">
+    <h1 class="hero-text">
+      <span><span class="span-inner">Good ideas deserve good design. I love solving real </span></span><br>
+      <span><span class="span-inner">problems with design and working with people who</span></span><br>
+      <span><span class="span-inner">are excited to bring a vision to life with me.</span></span>
+    </h1>
+  </div>
 
-<section class="about">
+  <!-- Mobile Hero (6 lines) -->
+  <div class="hero-left hero-mobile">
+    <h1 class="hero-text">
+      <span><span class="span-inner">Good ideas deserve good</span></span><br>
+      <span><span class="span-inner">design. I love solving real</span></span><br>
+      <span><span class="span-inner">problems with design and</span></span><br>
+      <span><span class="span-inner">working with people who</span></span><br>
+      <span><span class="span-inner">are excited to bring a</span></span><br>
+      <span><span class="span-inner">vision to life with me.</span></span>
+    </h1>
+  </div>
+</section>
+
+<section class="rest">
+<div class="about">
   <div class="about-left">
     <h1 class="line2 fade-up">
       About Me
@@ -70,7 +89,7 @@
           results-driven. When I'm not working, you'll probably find me watching a good TV show, playing Mini Motorways, or learning Japanese.
     </p>
   </div>
-</section>
+  </div>
 
 <section class="contact">
   <div class="contact-left">
@@ -92,6 +111,7 @@
       Copyright © 2026 · <a href="https://andasuberu.xyz" style="text-decoration: underline;">Anda Suberu</a>
     </p></div>
 </footer>
+</section>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -238,6 +258,14 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     layoutItems(visibleItems);
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Delay everything after hero
+  setTimeout(() => {
+    const rest = document.querySelector(".rest");
+    rest.classList.add("show");
+  }, 500); // delay (0.5s)
 });
 
   // Local time
