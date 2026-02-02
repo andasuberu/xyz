@@ -85,7 +85,7 @@
 
 <!-- Original gallery items hidden for JS placement -->
 <div style="display:none;" id="gallery-items">
-  <div class="gallery-item fade-in" data-category="brand">
+  <div class="gallery-item fade-in" data-category="brand" data-row="1">
     <a href="https://andasuberu.xyz/jaehall">
       <div class="image-wrapper">
         <img src="images/jaehall-thumbnail.png" alt="Jaehall project thumbnail">
@@ -96,7 +96,7 @@
     <div class="subtitle">Brand Identity</div>
   </div>
 
-    <div class="gallery-item fade-in" data-category="brand">
+    <div class="gallery-item fade-in" data-category="brand" data-row="2">
     <div class="image-wrapper">
       <img src="images/hiketwo-thumbnail.png" alt="HikeTwo project thumbnail">
     </div>
@@ -104,7 +104,7 @@
     <div class="subtitle">Coming Soon</div>
   </div>
 
-    <div class="gallery-item fade-in" data-category="brand">
+    <div class="gallery-item fade-in" data-category="brand" data-row="3">
     <a href="https://andasuberu.xyz/coe">
       <div class="image-wrapper">
         <img src="images/coe-thumbnail.png" alt="COE project thumbnail">
@@ -115,7 +115,7 @@
     <div class="subtitle">Brand Identity</div>
   </div>
 
-  <div class="gallery-item fade-in" data-category="brand">
+  <div class="gallery-item fade-in" data-category="brand" data-row="1"> 
     <a href="https://andasuberu.xyz/goldenmeadow">
       <div class="image-wrapper">
         <img src="images/goldenmeadow-thumbnail.gif" alt="Golden Meadow project thumbnail">
@@ -126,7 +126,7 @@
     <div class="subtitle">Brand Identity</div>
   </div>
 
-    <div class="gallery-item fade-in" data-category="uiux">
+  <div class="gallery-item fade-in" data-category="uiux" data-row="2">
     <a href="https://andasuberu.xyz/swiftpay">
       <div class="image-wrapper">
         <img src="images/swiftpay-thumbnail.png" alt="SwiftPay project thumbnail">
@@ -137,7 +137,7 @@
     <div class="subtitle">UI/UX</div>
   </div>
 
-    <div class="gallery-item fade-in" data-category="brand">
+  <div class="gallery-item fade-in" data-category="brand" data-row="3">
     <a href="https://andasuberu.xyz/salvo">
       <div class="image-wrapper">
         <img src="images/salvo-thumbnail.png" alt="Salvo project thumbnail">
@@ -148,7 +148,7 @@
     <div class="subtitle">Brand Identity</div>
   </div>
 
-  <div class="gallery-item fade-in" data-category="uiux">
+  <div class="gallery-item fade-in" data-category="uiux" data-row="1">
     <a href="https://andasuberu.xyz/primeries">
       <div class="image-wrapper">
         <img src="images/primeries-thumbnail.png" alt="Primeries project thumbnail">
@@ -159,7 +159,7 @@
     <div class="subtitle">Web Design</div>
   </div>
 
-   <div class="gallery-item fade-in" data-category="brand">
+   <div class="gallery-item fade-in" data-category="brand" data-row="2">
     <a href="https://andasuberu.xyz/futurefish">
       <div class="image-wrapper">
         <img src="images/futurefish-thumbnail.png" alt="Future Fish project thumbnail">
@@ -170,7 +170,7 @@
     <div class="subtitle">Brand Identity</div>
   </div>
 
-    <div class="gallery-item fade-in" data-category="illustration">
+    <div class="gallery-item fade-in" data-category="illustration" data-row="3">
     <a href="https://andasuberu.xyz/illustrations">
       <div class="image-wrapper">
         <img src="images/illustrations-thumbnail.png" alt="Illustrations project thumbnail">
@@ -264,17 +264,6 @@ document.addEventListener("DOMContentLoaded", () => {
       // Active pill state
       pills.forEach(p => p.classList.remove("active"));
       pill.classList.add("active");
-
-      items.forEach(item => {
-        const category = item.dataset.category;
-
-        if (filter === "all" || category.includes(filter)) {
-          item.style.display = "inline-block";
-          item.classList.remove("is-hidden");
-        } else {
-          item.style.display = "none";
-        }
-      });
     });
   });
 });
@@ -289,19 +278,16 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("row3")
   ];
 
-  function layoutItems(items) {
-    // Clear existing rows
-    rows.forEach(row => (row.innerHTML = ""));
+function layoutItems(items) {
+  rows.forEach(row => row.innerHTML = "");
 
-    // Track current row heights
-    const rowHeights = rows.map(() => 0);
-
-    items.forEach(item => {
-      const minIndex = rowHeights.indexOf(Math.min(...rowHeights));
-      rows[minIndex].appendChild(item);
-      rowHeights[minIndex] += item.offsetHeight + 20; // gap
-    });
-  }
+  items.forEach(item => {
+    const rowIndex = Number(item.dataset.row) - 1;
+    if (rows[rowIndex]) {
+      rows[rowIndex].appendChild(item);
+    }
+  });
+}
 
   // Initial layout
   layoutItems(allItems);
@@ -309,21 +295,37 @@ document.addEventListener("DOMContentLoaded", () => {
   // Filter functionality
   const pills = document.querySelectorAll(".filter-pill");
   pills.forEach(pill => {
-    pill.addEventListener("click", () => {
-      const filter = pill.dataset.filter;
+  pill.addEventListener("click", () => {
+    pills.forEach(p => p.classList.remove("active"));
+    pill.classList.add("active");
 
-      // Set active state
-      pills.forEach(p => p.classList.remove("active"));
-      pill.classList.add("active");
+    const filter = pill.dataset.filter;
 
-      // Filter items
-      const visibleItems = allItems.filter(item => 
-        filter === "all" || item.dataset.category.includes(filter)
-      );
+    const visibleItems = allItems.filter(item =>
+      filter === "all" || item.dataset.category.includes(filter)
+    );
 
-      layoutItems(visibleItems);
-    });
+    if (filter === "all") {
+      layoutItems(visibleItems);      // curated rows
+    } else {
+      layoutSequential(visibleItems); // compact rows
+    }
   });
+});
+
+
+  //Helper function
+  function layoutSequential(items) {
+  rows.forEach(row => row.innerHTML = "");
+
+  let rowIndex = 0;
+
+  items.forEach(item => {
+    rows[rowIndex].appendChild(item);
+    rowIndex = (rowIndex + 1) % rows.length;
+  });
+}
+
 
   // Re-layout on window resize
   window.addEventListener("resize", () => {
