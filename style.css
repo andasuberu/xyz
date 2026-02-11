@@ -177,7 +177,7 @@ header {
 
 /* Hamburger container as mask */
 .hamburger-container {
-  display: inline-block;
+  display: none;
   position: relative;
   overflow: hidden; /* hides the rectangle mask */
 }
@@ -262,15 +262,20 @@ header {
   }
 }
 
-/* @media (max-width: 767px) { */
+ @media (max-width: 767px) {
   .nav-menu {
     display: none; /* hide desktop nav */
+  }
+
+    .hamburger-container {
+    display: inline-block;
   }
 
   .hamburger {
     display: flex; /* show hamburger */
   }
-/* } */
+
+ }
 
 /* Hero Section */
 .hero {
