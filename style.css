@@ -1011,7 +1011,7 @@ display: none!important;
   
 /* Gallery rows */
 .project-gallery {
-  margin-top: 0rem;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
