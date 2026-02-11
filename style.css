@@ -64,7 +64,7 @@ header {
   overflow: hidden; /* hide the "cover rectangle" */
 }
 
-/* The "cover" rectangle */
+/* 
 .logo::before {
   content: "";
   position: absolute;
@@ -72,20 +72,19 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000; /* rectangle color, same as background */
+  background-color: #000;
   transform: translateY(0);
   animation: reveal-rect 1s ease forwards;
   animation-delay: 0.5s;
   z-index: 2;
 }
 
-/* Animate logo text rising from behind the rectangle */
 .logo span {
   display: inline-block;
   transform: translateY(100%);
   animation: rise-text 1s ease forwards;
   animation-delay: 0.5s;
-}
+} */
 
 /* Keyframes */
 @keyframes reveal-rect {
