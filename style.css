@@ -115,7 +115,7 @@ header {
   }
 
   .logo {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   }
 
   .logo img{
@@ -156,7 +156,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 30px;
-  height: 10px;
+  height: 13px;
   padding-top: 2px;
   padding-bottom: 2px;
   background: none;
