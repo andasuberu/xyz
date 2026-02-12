@@ -196,12 +196,13 @@ header {
   animation-delay: 0.5s; /* slightly before or after logo */
 }
 
-/* Animate hamburger rising */
+/*
 .hamburger {
   transform: translateY(100%);
   animation: rise-line 1s ease forwards;
-  animation-delay: 0.5s; /* match mask delay */
+  animation-delay: 0.5s;
 }
+*/
 
 /* Reuse the same keyframes as logo/hero text */
 @keyframes reveal-line {
@@ -366,16 +367,19 @@ display: none!important;
   margin-left: 4px;
 }
 
+/*
 .rest {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.7s ease-out 1.5s, transform 0.7s ease-out 1.5s; /* 1.5s delay */
+  transition: opacity 0.7s ease-out 1.5s, transform 0.7s ease-out 1.5s;
 }
 
 .rest.show {
   opacity: 1;
   transform: translateY(0);
 }
+*/
+
 }
 
   .subtitle {
