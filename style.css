@@ -14,6 +14,7 @@ body {
   color: #FFFFFF;
   line-height: 1.6;
   padding: 0 2.5rem;
+  padding-top: 120px;
 }
 
 @media (max-width: 767px) {
@@ -38,6 +39,15 @@ header {
   background-color: #000000;
   padding-top: 3rem;
   padding-bottom: 1.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  transition: transform 0.3s ease;
 }
 
 .header-container {
@@ -46,6 +56,11 @@ header {
   align-items: center;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+/* Hidden state (scrolling down) */
+header.hide {
+  transform: translateY(-100%);
 }
 
 /* Logo */
