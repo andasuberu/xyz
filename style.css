@@ -37,7 +37,7 @@ a:hover {
 header {
   background-color: #000000;
   padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .header-container {
@@ -679,7 +679,7 @@ display: none!important;
 }
   
 .footer-container {
-  padding-top: 2rem;
+  padding-top: 0rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
