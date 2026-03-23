@@ -16,7 +16,8 @@
 <header>
   <div class="header-container fade-up">
     <a href="https://andasuberu.xyz" class="logo">
-  <span>Anda Suberu</span>
+        <img src="images/andasuberu.svg">
+  <!-- <span>Anda Suberu</span> -->
 </a>
 
     <nav class="nav-menu">
@@ -152,6 +153,25 @@
   mobileMenu.querySelector("ul").addEventListener("click", (e) => {
     e.stopPropagation();
   });
+
+
+// Header magic
+  let lastScrollY = window.scrollY;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY && currentScrollY > 100) {
+    // scrolling DOWN → hide header
+    header.classList.add("hide");
+  } else {
+    // scrolling UP → show header
+    header.classList.remove("hide");
+  }
+
+  lastScrollY = currentScrollY;
+});
 
 });
     </script>
