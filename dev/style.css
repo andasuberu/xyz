@@ -108,3 +108,15 @@ a {
 a:hover {
   border-color: var(--link);
 }
+
+/* Responsive */
+@media (max-width: 767px) {
+  .header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container {
+    padding: 0 20px 60px;
+  }
+}
