@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Anda Suberu – Developer">
+  <title>Anda Suberu – Developer</title>
+  <link rel="icon" href="asfavicon.ico" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode">
+
+  <header class="header">
+    <div class="logo">
+      <img src="headshot.png" alt="Anda Suberu headshot" />
+    </div>
+
+    <button id="theme-toggle">Lights On</button>
+  </header>
+
+  <main class="container">
+    <section class="bio">
+      <p class="name">Anda Suberu</p>
+      <p class="mail">uberanda@gmail.com</p>
+
+      <p class="lead">
+        Hi! I'm Anda, a developer and designer creating functional and aesthetic websites and product interfaces.
+      </p>
+
+      <p>
+        Most recently, I developed the sites for 
+        <a href="https://oakalleyconsulting.com">Oakalley Consulting</a> and 
+        <a href="https://notjustawriter.com">Not Just A Writer Agency</a>. 
+        I also created personal sites for my 
+        <a href="https://andasuberu.xyz">Design Portfolio</a> and my 
+        <a href="https://andasuberu.xyz/illos">Illustration Portfolio</a>.
+      </p>
+      
+      <p>
+        Before all this, I worked at <a href="https://ravenandmacaw.com">Raven & Macaw</a> as an in-house designer and developer, where I designed the official company site.
+      </p>
+
+      <p>
+        My work blends technical precision from my background in computer engineering with creativity from traditional art. I love making designs and building websites and interfaces that are both functional and visually engaging.
+      </p>
+
+      <p>
+        Available for new projects and collaborations. Currently based in Abuja <span id="local-time"></span> working with clients globally.
+      </p>
+
+      <p class="links">
+        <a class="gapped" href="mailto:uberanda@gmail.com">Email</a>
+        <a class="gapped" href="https://linkedin.com/in/andasuberu">LinkedIn</a>
+        <a class="gapped" href="https://instagram.com/andasuberu">Instagram</a>
+      </p>
+    </section>
+  </main>
+
+  <script>
+      // Theme toggle
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      toggleButton.textContent = body.classList.contains('dark-mode') ? 'Lights On' : 'Lights Off';
+    });
+
+      // Local time
+    function updateLocalTime() {
+    const options = {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+    };
+
+    const now = new Date().toLocaleTimeString('en-US', options);
+    document.getElementById('local-time').textContent = `(${now} UTC+1)`;
+    }
+
+    updateLocalTime(); // show immediately
+    setInterval(updateLocalTime, 60000); // update every minute
+  </script>
+
+</body>
+</html>

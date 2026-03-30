@@ -1,0 +1,121 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Theme variables */
+body {
+  --bg: #ffffff;
+  --text-primary: #111;
+  --text-secondary: #777;
+  --link: #111;
+  --border: #ccc;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+
+  margin-top: 80px;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  --bg: #111;
+  --text-primary: #fff;
+  --text-secondary: #aaa;
+  --link: #fff;
+  --border: #555;
+}
+
+/* Layout */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 32px 80px;
+}
+
+/* Header */
+.header {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Toggle */
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+/* Typography */
+.bio .name {
+  font-size: 22px;
+  color: var(--text-primary);
+}
+
+.bio .mail {
+  font-size: 22px;
+  margin-top: -20px;
+  color: var(--text-secondary);
+}
+
+.bio p {
+  margin-bottom: 16px;
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.bio .lead {
+  font-size: 20px;
+  margin-top: 32px;
+  color: var(--text-primary);
+}
+
+/* Links */
+.links {
+  margin-top: 24px;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition: 0.2s ease;
+}
+
+.gapped {
+  margin-right: 10px;
+}
+
+a:hover {
+  border-color: var(--link);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 20px 60px;
+  }
+
+  .bio .lead {
+    font-size: 16px;
+  }
+}
