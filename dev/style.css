@@ -110,12 +110,8 @@ a:hover {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .container {
     padding: 0 20px 60px;
-  }
-
-  .bio .lead {
-    font-size: 16px;
   }
 }
