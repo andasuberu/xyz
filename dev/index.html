@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Anda Suberu – Developer">
-  <title>Anda Suberu – Developer</title>
+  <title>Anda Suberu – Web Developer</title>
   <link rel="icon" href="asfavicon.ico" type="image/png">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -14,23 +14,20 @@
     <div class="logo">
       <p>A/-S</p>
     </div>
-
-    <button id="theme-toggle">Lights On</button>
+    <div class="header-actions">
+    <button id="theme-toggle"></button>
+    <span id="time-pill"></span></div>
   </header>
 
   <main class="container">
     <section class="bio">
-      <p class="name">Hi, I'm Anda.</p>
-
-      <p class="lead">
-       I'm a developer and designer based in Abuja, creating functional and aesthetic websites and product interfaces.
-      </p>
+      <p class="name">Hi, I'm Anda, a web developer and designer based in Abuja, creating functional and aesthetic websites and interfaces<span class="cursor"></span></p><br>
 
       <p>
         Most recently, I developed websites for 
-        <a href="https://oakalleyconsulting.com">Oakalley Consulting</a> and 
+        <a href="https://oakalleyconsulting.com">Oakalley Consulting Firm</a> and 
         <a href="https://notjustawriter.com">Not Just A Writer Agency</a>. 
-        I also created personal sites for my 
+        I also created two personal sites for my 
         <a href="https://andasuberu.xyz">design</a> and
         <a href="https://andasuberu.xyz/illos">illustration</a> portfolios.
       </p>
@@ -38,47 +35,202 @@
       <p>
         Before all this, I worked at <a href="https://ravenandmacaw.com">Raven & Macaw</a> as an in-house designer and developer, where I designed the official company site.
       </p>
+  <section class="projects">
+  <p class="name">
+        Recent Projects
+  </p>
+
+  <div class="project-grid">
+    <a href="https://oakalleyconsulting.com" class="project-item" id="proj" target="_blank" rel="noopener noreferrer">
+      <img src="images/OA.png" alt="Project 1">
+      <p class="project-title">Oakalley Consulting <span class="arrow"><img src="external.svg" alt="external"></span></p>
+      <p class="project-year">2025</p>
+    </a>
+
+    <a href="https://notjustawriter.com" class="project-item" id="proj" target="_blank" rel="noopener noreferrer">
+      <img src="images/NJAW.png" alt="Project 2">
+      <p class="project-title">Not Just A Writer <span class="arrow"><img src="external.svg" alt="external"></span></p>
+      <p class="project-year">2026</p>
+    </a>
+  </div>
+</section>
+
+<section class="about">
+    <p class="name">
+        About Me
+    </p>
+    
+      <p>
+      I'm a multidisciplinary visual designer helping startups and global brands create clear and intentional design. Somewhere along the line, I picked up web development to round out what I can do.
+      </p>
 
       <p>
         My work blends technical precision from my background in computer engineering with creativity from traditional art. I love designing and building websites and interfaces that are both functional and visually engaging.
       </p>
 
       <p>
-        Currently based in Abuja <span id="local-time"></span> working with clients globally. Available for new projects and collaborations. 
+        Currently based in Abuja <span id="local-time"></span> I work with clients globally. Available for new projects and collaborations. 
       </p>
 
+
+<section class="certifications">
+  <p class="name">
+        Certifications
+  </p>
+<div class="ticker-wrapper">
+  <div class="ticker" id="cert-ticker">
+    <div class="ticker-item">
+      <p class="title">Sololearn: PHP</p>
+      <p class="subtitle">Issued June 2023</p>
+    </div>
+    <div class="ticker-item">
+      <p class="title">Sololearn: Responsive Web Design</p>
+      <p class="subtitle">Issued June 2022</p>
+    </div>
+    <div class="ticker-item">
+      <p class="title">Sololearn: HTML</p>
+      <p class="subtitle">Issued May 2022</p>
+    </div>
+    <div class="ticker-item">
+      <p class="title">Sololearn: CSS</p>
+      <p class="subtitle">Issued May 2022</p>
+    </div>
+    <div class="ticker-item">
+      <p class="title">Sololearn: JavaScript</p>
+      <p class="subtitle">Issued June 2022</p>
+    </div>
+    <div class="ticker-item">
+      <p class="title">Sololearn: Web Development Fundamentals</p>
+      <p class="subtitle">Issued March 2022</p>
+    </div>
+
+    <!-- Duplicate for seamless scroll -->
+    <div class="ticker-item">
+      <p class="title">Sololearn: PHP</p>
+      <p class="subtitle">Issued June 2023</p>
+    </div>
+    <div class="ticker-item">
+      <p class="title">Sololearn: Responsive Web Design</p>
+      <p class="subtitle">Issued June 2022</p>
+    </div>
+    <div class="ticker-item">
+      <p class="title">Sololearn: HTML</p>
+      <p class="subtitle">Issued May 2022</p>
+    </div>
+    <div class="ticker-item">
+      <p class="title">Sololearn: CSS</p>
+      <p class="subtitle">Issued May 2022</p>
+    </div>
+    <div class="ticker-item">
+      <p class="title">Sololearn: JavaScript</p>
+      <p class="subtitle">Issued June 2022</p>
+    </div>
+    <div class="ticker-item">
+      <p class="title">Sololearn: Web Development Fundamentals</p>
+      <p class="subtitle">Issued March 2022</p>
+    </div>
+  </div>
+</div>
+
+<section class="writings">
+  <p class="name">
+        Writings
+  </p>
+
+  <p>
+  Nothing to see here yet:)
+  </p>
+</section>
+
+</section>
+      <section class="footer">
+      <p class="links">2026 ©<a href="andasuberu.xyz/dev">Anda Suberu</a></p>
       <p class="links">
-        <a class="gapped" href="mailto:uberanda@gmail.com">Email</a>
-        <a class="gapped" href="https://linkedin.com/in/andasuberu">LinkedIn</a>
-        <a class="gapped" href="https://instagram.com/andasuberu">Instagram</a>
+        <a href="mailto:uberanda@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/andasuberu">LinkedIn</a>
+        <a href="https://instagram.com/andasuberu">Instagram</a>
       </p>
+      </section>
+</section>
     </section>
   </main>
 
   <script>
-      // Theme toggle
-    const toggleButton = document.getElementById('theme-toggle');
-    const body = document.body;
+// Theme toggle
+const toggleButton = document.getElementById('theme-toggle');
+const body = document.body;
 
-    toggleButton.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      toggleButton.textContent = body.classList.contains('dark-mode') ? 'Lights On' : 'Lights Off';
-    });
+// Add img and span inside the button
+toggleButton.innerHTML = `
+  <img id="theme-icon" src="" alt="theme icon" />
+  <span id="theme-label"></span>
+`;
+
+const icon = document.getElementById('theme-icon');
+const label = document.getElementById('theme-label');
+
+// Update button icon and label based on current theme
+function updateButtonLabel() {
+  if (body.classList.contains('dark-mode')) {
+    icon.src = 'dark_mode.svg';
+    label.textContent = 'Lights Off';
+  } else {
+    icon.src = 'light_mode.svg';
+    label.textContent = 'Lights On';
+  }
+}
+
+// Manual toggle — user takes control
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  updateButtonLabel();
+});
+
+// Initialize on page load
+updateButtonLabel();
 
       // Local time
-    function updateLocalTime() {
-    const options = {
+  function updateLocalTime() {
+  const options = {
     hour: '2-digit',
     minute: '2-digit',
     hour12: true
-    };
+  };
 
-    const now = new Date().toLocaleTimeString('en-US', options);
-    document.getElementById('local-time').textContent = `(${now} UTC+1)`;
-    }
+  const now = new Date().toLocaleTimeString('en-US', options);
 
-    updateLocalTime(); // show immediately
-    setInterval(updateLocalTime, 60000); // update every minute
+  // Header pill
+  const pill = document.getElementById('time-pill');
+  if (pill) {
+    pill.textContent = now;
+  }
+
+  // Body text (your original one)
+  const local = document.getElementById('local-time');
+  if (local) {
+    local.textContent = `(${now} UTC+1)`;
+  }
+}
+
+updateLocalTime();
+setInterval(updateLocalTime, 60000);
+
+// Ticker
+const ticker = document.getElementById('cert-ticker');
+const items = ticker.querySelectorAll('.ticker-item');
+const itemWidth = 350 + 16; // width + gap
+const totalWidth = items.length / 2 * itemWidth; // only first set
+
+ticker.style.animation = `scroll ${totalWidth / 50}s linear infinite`; // adjust speed
+
+// Inject keyframes
+const style = document.createElement('style');
+style.innerHTML = `
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-${totalWidth}px); }
+}`;
+document.head.appendChild(style);
   </script>
 
 </body>
