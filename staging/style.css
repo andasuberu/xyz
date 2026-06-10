@@ -466,14 +466,25 @@ h2 {
   }
 
   .hero {
+  align-items: flex-start;
   flex-direction: column;
   }
 
   .hero .line {
-  font-size: 30px;
-  line-height: 50px;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 38px;
   letter-spacing: -2%;
 }
+
+  .hero-left {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero h1 {
+    text-align: left;
+  }
 
 .hero-right {
   justify-content: flex-start; /* pushes it left */
@@ -563,6 +574,32 @@ h2 {
   padding-bottom: 3.4rem; /* tweak this if needed */
 }
 
+@media (max-width: 767px) {
+  .workhero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .work-left {
+    max-width: 100%;
+  }
+
+  .work-right {
+    align-items: flex-start;
+    padding-bottom: 0;
+  }
+
+  h2 {
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+
+  .btn {
+    display: none;
+  }
+}
+
 .portfolio {
   display: grid;
   gap: 2rem;
@@ -643,6 +680,39 @@ h2 {
   height: 400px;
 }
 
+@media (max-width: 767px) {
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .large,
+  .small.right,
+  .medium.center,
+  .left-bottom,
+  .right-bottom {
+    grid-column: auto;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+    .project-media,
+  .large .project-media,
+  .small.right .project-media,
+  .medium.center .project-media,
+  .left-bottom .project-media,
+  .right-bottom .project-media {
+    height: 280px;
+  }
+
+  .portfolio {
+  margin-top: 3rem;
+}
+}
+
 .project-meta {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -719,6 +789,47 @@ h2 {
     max-width: 420px;
 }
 
+@media (max-width: 767px) {
+    .serviceshero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .services-left {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .services-right {
+    display: none;
+  }
+
+  h2 {
+    padding-right: 0;
+  }
+
+  .services-left {
+  max-width: 100%;
+  }
+
+  .service-number {
+  display: none;
+}
+
+.services {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+  .service-item {
+    grid-template-columns: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
 .contact {
   display: flex;
   justify-content: space-between;
@@ -746,6 +857,19 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+@media (max-width: 767px) {
+  .contact {
+    flex-direction: column;
+    gap: 4rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .contact h2 {
+    margin-top: 0;
+  }
 }
 
 .footer {
@@ -790,6 +914,31 @@ h2 {
   width: 30px;
   height: 30px;
   display: block;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    gap: 0;
+  }
+
+    .footer-mid {
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .footer-right {
+    align-items: flex-end;
+    text-align: right;
+    display: none;
+  }
+
+    .footer-mid p {
+    white-space: nowrap;
+  }
+
+  .footerlogo img {
+    margin-top: -4px;
+  }
 }
 
 html, body, * {
