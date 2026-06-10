@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Studio – Bud Co.">
+  <title>Studio – Bud Co.</title>
+  <link rel="icon" href="budfavicon.ico" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode">
+<div class="cursor">
+  <span class="cursor-text"></span>
+</div>
+
+  <header>
+  <div class="header-container fade-up">
+    <a href="#" class="logo">
+        <img src="budlogo.svg">
+    </a>
+
+    <nav class="nav-menu">
+      <ul>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Studio</a></li>
+      <li class="theme"><button id="theme-toggle"></button></li>
+      </ul>
+    </nav>
+
+<div class="hamburger-container">
+  <button class="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+  </button>
+</div>
+  </div>
+
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="#" class="active">Work</a></li>
+      <li><a href="#">Studio</a></li>
+    </ul>
+  </div>
+</header>
+
+  <main class="container">
+    <section class="hero">
+
+<div class="hero-left">
+<h1>
+  <span class="aline">Bud Co.™</span>
+  <div class="rotatorcontainer">
+  <h1 class="rotating-text">
+    Helping brands <span class="nowrap">
+      <span class="window">
+        <div class="window-inner">
+          <span><i>bloom</i><br /></span>
+          <span><i>grow</i><br /></span>
+          <span><i>thrive</i><br /></span>
+          <span><i>blossom</i><br /></span>
+          <span><i>take root</i><br /></span>
+          <span><i>bloom</i><br /></span>
+        </div>
+      </span>
+    </span>
+  </h1>
+</div>
+</h1>
+</div>
+
+<div class="hero-right">
+  <p>
+    Our Work
+    <span class="about-arrow">
+      <img src="arrow.svg" alt="">
+    </span>
+  </p>
+</div>
+
+</section>
+
+<section class="divider"></section>
+
+<section class="whoweare">
+<div class="whowearehero">
+<div class="whoweare-left">
+<p class="subheading">Who We Are</p>
+<h2>Two buds working together.<br> Keeping every part of the creative process simple and intentional since 2024.</h2>
+<p class="whoweare-description">Bud Co. was founded in 2024 by Anda & AJ Suberu. We combine our passion for art and design with hands-on experience working alongside different brands and creative teams. Together, we focus on creating good work that helps businesses grow.</p>
+</div>
+
+<div class="whoweare-right">
+<img src="budabout.svg" alt="budco illustration">
+</div>
+</div>
+
+<section class="divider"></section>
+
+<section>
+<div class="serviceshero">
+<div class="services-left">
+<p class="subheading">How We Work</p>
+<h2>We like to keep things simple. We work best in easy, clear, collaborative environments, like a good back-and-forth with your best buds.
+</h2>
+</div>
+
+<div class="services-right">
+<a href="#" class="btn">Start Your Project</a>
+</div>
+</div>
+
+</section>
+
+<section class="divider"></section>
+
+<section>
+<div class="contact">
+<div class="contact-left">
+<p class="contactsubheading">Say hello</p>
+</div>
+
+<div class="contact-mid">
+  <p class="contactsubheading">Contact</p>
+<h2>hello@budco.studio<br><br>Abuja, Nigeria.<br>Available Worldwide</h2>
+</div>
+
+<div class="contact-right">
+  <p class="contactsubheading">Social</p>
+<h2>Instagram<br>LinkedIn</h2>
+</div>
+</div>
+
+</section>
+
+<section class="footer">
+      <div class="footer-left">
+      <a href="#" class="footerlogo">
+        <img src="footerlogo.svg">
+      </a>
+      </div>
+
+      <div class="footer-mid">
+      <p class="links">2026 © Bud Collective</p>
+      </div>
+
+      <div class="footer-right">
+      <p class="links">
+        <a href="#">Instagram</a>
+      </p>
+      </div>
+</section>
+
+</main>
+</body>
+
+<script>
+// Momentum scroll
+let currentScroll = window.pageYOffset;
+let targetScroll = currentScroll;
+const ease = 0.05; // lower = heavier
+
+window.addEventListener(
+  "wheel",
+  (e) => {
+    e.preventDefault();
+
+    targetScroll += e.deltaY;
+    targetScroll = Math.max(
+      0,
+      Math.min(
+        targetScroll,
+        document.documentElement.scrollHeight - window.innerHeight
+      )
+    );
+  },
+  { passive: false }
+);
+
+function smoothScroll() {
+  currentScroll += (targetScroll - currentScroll) * ease;
+
+  window.scrollTo(0, currentScroll);
+
+  requestAnimationFrame(smoothScroll);
+}
+
+smoothScroll();
+
+// Theme toggle
+const toggleButton = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Add img and span inside the button
+toggleButton.innerHTML = `
+  <img id="theme-icon" src="" alt="theme icon" />
+  <span id="theme-label"></span>
+`;
+
+const icon = document.getElementById('theme-icon');
+const label = document.getElementById('theme-label');
+
+// Update button icon and label based on current theme
+function updateButtonLabel() {
+  if (body.classList.contains('dark-mode')) {
+    icon.src = 'dark_mode.svg';
+    label.textContent = '';
+  } else {
+    icon.src = 'light_mode.svg';
+    label.textContent = '';
+  }
+}
+
+// Manual toggle — user takes control
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  updateButtonLabel();
+});
+
+// Initialize on page load
+updateButtonLabel();
+
+// Custom cursor
+const cursor = document.querySelector(".cursor");
+
+let mouseX = 0;
+let mouseY = 0;
+let currentX = 0;
+let currentY = 0;
+
+let started = false;
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+
+  if (!started) {
+    // instantly sync position (no animation jump)
+    currentX = mouseX;
+    currentY = mouseY;
+
+    cursor.style.left = currentX + "px";
+    cursor.style.top = currentY + "px";
+    cursor.style.opacity = "1";
+
+    started = true;
+    requestAnimationFrame(animateCursor);
+  }
+});
+
+// smooth follow
+function animateCursor() {
+  currentX += (mouseX - currentX) * 0.3;
+  currentY += (mouseY - currentY) * 0.3;
+
+  cursor.style.left = currentX + "px";
+  cursor.style.top = currentY + "px";
+
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+const hoverTargets = document.querySelectorAll(".project");
+const cursorText = document.querySelector(".cursor-text");
+
+hoverTargets.forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    cursor.classList.add("active");
+
+    cursor.style.transform = "translate(-50%, -50%) scale(2.5)";
+
+    if (el.classList.contains("project")) {
+      cursorText.textContent = "View";
+    } else {
+      cursorText.textContent = "";
+    }
+
+    cursorText.style.opacity = "1";
+    cursorText.style.transform = "scale(1)";
+  });
+
+  el.addEventListener("mouseleave", () => {
+    cursor.classList.remove("active");
+    cursor.style.transform = "translate(-50%, -50%) scale(1)";
+
+    cursorText.style.opacity = "0";
+    cursorText.style.transform = "scale(0.8)";
+  });
+});
+
+const linkHoverTargets = document.querySelectorAll("a, button");
+
+linkHoverTargets.forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    cursor.classList.add("link-hover");
+  });
+
+  el.addEventListener("mouseleave", () => {
+    cursor.classList.remove("link-hover");
+  });
+});
+
+      // Local time
+  function updateLocalTime() {
+  const options = {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+  };
+
+  const now = new Date().toLocaleTimeString('en-US', options);
+
+  // Header pill
+  const pill = document.getElementById('time-pill');
+  if (pill) {
+    pill.textContent = now;
+  }
+
+  
+  // Body text (your original one)
+  const local = document.getElementById('local-time');
+  if (local) {
+    local.textContent = `(${now} UTC+1)`;
+  }
+}
+
+// Header magic
+let lastScrollY = 0;
+const header = document.querySelector("header");
+
+function updateHeader() {
+  if (currentScroll > lastScrollY && currentScroll > 100) {
+    header.classList.add("hide");
+  } else {
+    header.classList.remove("hide");
+  }
+
+  lastScrollY = currentScroll;
+
+  requestAnimationFrame(updateHeader);
+}
+
+updateHeader();
+
+// Ticker
+const ticker = document.getElementById('cert-ticker');
+const items = ticker.querySelectorAll('.ticker-item');
+const itemWidth = 350 + 16; // width + gap
+const totalWidth = items.length / 2 * itemWidth; // only first set
+
+ticker.style.animation = `scroll ${totalWidth / 50}s linear infinite`; // adjust speed
+
+// Inject keyframes
+const style = document.createElement('style');
+style.innerHTML = `
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-${totalWidth}px); }
+}`;
+document.head.appendChild(style);
+  </script>
+
+</body>
+</html>
