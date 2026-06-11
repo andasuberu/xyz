@@ -252,6 +252,7 @@
 </body>
 
 <script>
+// Momentum scroll
 let currentScroll = window.scrollY;
 let targetScroll = window.scrollY;
 const ease = 0.05;
@@ -314,6 +315,10 @@ function checkScrollMode() {
 // init after load (important)
 window.addEventListener("load", checkScrollMode);
 window.addEventListener("resize", checkScrollMode);
+
+// Theme toggle
+const toggleButton = document.getElementById('theme-toggle');
+const body = document.body;
 
 // Add img and span inside the button
 toggleButton.innerHTML = `
