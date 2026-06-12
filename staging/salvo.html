@@ -151,13 +151,23 @@
 
 <script>
 // Momentum scroll
-let currentScroll = window.pageYOffset;
-let targetScroll = currentScroll;
-const ease = 0.05; // lower = heavier
+let currentScroll = window.scrollY;
+let targetScroll = window.scrollY;
+const ease = 0.05;
 
-window.addEventListener(
-  "wheel",
-  (e) => {
+let isEnabled = false;
+let wheelHandler = null;
+
+function isDesktop() {
+  return window.innerWidth > 767;
+}
+
+function enableSmoothScroll() {
+  if (isEnabled) return;
+
+  isEnabled = true;
+
+  wheelHandler = (e) => {
     e.preventDefault();
 
     targetScroll += e.deltaY;
@@ -168,19 +178,41 @@ window.addEventListener(
         document.documentElement.scrollHeight - window.innerHeight
       )
     );
-  },
-  { passive: false }
-);
+  };
 
-function smoothScroll() {
-  currentScroll += (targetScroll - currentScroll) * ease;
+  window.addEventListener("wheel", wheelHandler, { passive: false });
 
-  window.scrollTo(0, currentScroll);
+  function animate() {
+    currentScroll += (targetScroll - currentScroll) * ease;
+    window.scrollTo(0, currentScroll);
+    requestAnimationFrame(animate);
+  }
 
-  requestAnimationFrame(smoothScroll);
+  animate();
 }
 
-smoothScroll();
+function disableSmoothScroll() {
+  if (!isEnabled) return;
+
+  isEnabled = false;
+
+  window.removeEventListener("wheel", wheelHandler);
+  wheelHandler = null;
+
+  window.scrollTo(0, window.scrollY);
+}
+
+function checkScrollMode() {
+  if (isDesktop()) {
+    enableSmoothScroll();
+  } else {
+    disableSmoothScroll();
+  }
+}
+
+// init after load (important)
+window.addEventListener("load", checkScrollMode);
+window.addEventListener("resize", checkScrollMode);
 
 // Theme toggle
 const toggleButton = document.getElementById('theme-toggle');
