@@ -27,26 +27,26 @@ body {
 
 /* Dark mode overrides */
 body.dark-mode {
-  --bg: #111;
+  --bg: #1c1b22;
   --text-primary: #fff;
   --text-secondary: #aaa;
   --link: #fff;
   --border: #555;
   --borderticker: #303030;
   --backgroundticker: #202020;
-  --headerbg: #242424;
+  --headerbg: #6b6a6f80;
 }
 
 /* Layout */
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 32px 80px;
 }
 
 /* Header */
 .header {
-  max-width: 760px;
+  max-width: 960px;
   margin: 20px auto;
   padding: 14px 20px;
 
@@ -69,6 +69,11 @@ body.dark-mode {
   color: var(--text-primary);
   object-fit: cover;
   border-radius: 50%;
+}
+
+.logo {
+  cursor: default;
+  user-select: none;
 }
 
 .header-actions {
@@ -144,6 +149,10 @@ a:hover {
   border-color: var(--link);
 }
 
+.emph {
+  color: var(--text-primary);
+}
+
 /* Responsive */
 @media (max-width: 767px) {
 
@@ -196,6 +205,71 @@ a:hover {
   to {
     visibility: hidden;
   }
+}
+
+.contact-actions{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin:24px 0 8px;
+}
+
+.resume-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:10px 18px;
+
+    background:#fff;
+    color:#111;
+
+    border:none;
+    border-radius:999px;
+
+    font-weight:600;
+    font-size:16px;
+
+    text-decoration:none;
+
+    transition:.2s ease;
+}
+
+.resume-btn{
+    color: var(--bg);
+    background: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+}
+
+.resume-btn svg{
+    width:18px;
+    height:18px;
+}
+
+.social-btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+    background:var(--headerbg);
+
+    color:var(--text-primary);
+
+    transition:.2s ease;
+}
+
+.social-btn:hover{
+    background:var(--text-primary);
+    color:var(--bg);
+}
+
+.social-btn svg{
+    width:18px;
+    height:18px;
 }
 
 /* Projects Section */
@@ -268,8 +342,7 @@ a:hover {
 
 .ticker-item {
   flex: 0 0 350px;
-  background: var(--backgroundticker);
-  border: 1px solid var(--borderticker);
+  background: var(--headerbg);
   border-radius: 8px;
   padding: 16px;
   text-align: left;
@@ -279,16 +352,13 @@ a:hover {
   font-size: 14px;
   font-weight: 400;
   color: var(--text-primary);
-  margin-bottom: 4px;
+  margin-bottom: 0px;
 }
 
 .ticker-item .subtitle {
   font-size: 12px;
   color: var(--text-secondary);
-}
-
-.certifications p {
-  margin-bottom: 0px !important;
+  margin-bottom: 4px;
 }
 
 @keyframes scroll {
@@ -303,6 +373,36 @@ a:hover {
 .writings .name {
   margin-bottom: 12px !important;
 }
+
+.metadat {
+  color: var(--text-secondary);
+  font-size: 14px !important;
+  margin-top: -10px;
+  margin-bottom: 40px !important;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid var(--border);
+  opacity: 50%;
+  margin: 48px 0;
+}
+
+.posttitle {
+color: var(--text-primary) !important;
+margin-bottom: 0px !important;
+border-bottom: none !important;
+}
+
+.postdate {
+  margin-bottom: 20px !important;
+}
+
+.about img {
+  width: 100%;
+  margin-top: -8px;
+}
+
 .footer {
   margin-top: 60px;
   display: flex;
