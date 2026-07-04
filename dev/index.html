@@ -12,7 +12,7 @@
 
   <header class="header">
     <div class="logo">
-      <p>A/-S</p>
+    <p id="logo-text">A/-S</p>
     </div>
     <div class="header-actions">
     <button id="theme-toggle"></button>
@@ -33,24 +33,91 @@
       </p>
       
       <p>
-        Before all this, I worked at <a href="https://ravenandmacaw.com">Raven & Macaw</a> as an in-house designer and developer, where I designed the official company site.
+        Before all this, I worked at <a href="https://ravenandmacaw.com">Raven & Macaw</a> as an in-house designer and developer, where I designed the company's official website, among other responsibilities.
       </p>
+
+      <div class="contact-actions">
+
+<a href="resume.pdf" class="resume-btn">
+
+  Resume
+
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    width="18"
+    height="18"
+    aria-hidden="true"
+  >
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+    <polyline points="7 10 12 15 17 10"></polyline>
+    <line x1="12" y1="15" x2="12" y2="3"></line>
+  </svg>
+
+</a>
+
+<a href="mailto:uberanda@gmail.com" class="social-btn" aria-label="Email">
+
+<svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    width="20"
+    height="20"
+    aria-hidden="true"
+>
+    <path fill="none" d="M0 0h24v24H0z"></path>
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10h5v-2h-5c-4.34 0-8-3.66-8-8s3.66-8 8-8 8 3.66 8 8v1.43c0 .79-.71 1.57-1.5 1.57s-1.5-.78-1.5-1.57V12c0-2.76-2.24-5-5-5s-5 2.24-5 5 2.24 5 5 5c1.38 0 2.64-.56 3.54-1.47.65.89 1.77 1.47 2.96 1.47 1.97 0 3.5-1.6 3.5-3.57V12c0-5.52-4.48-10-10-10zm0 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"></path>
+</svg>
+
+</a>
+
+<a href="https://linkedin.com/in/andasuberu" class="social-btn" target="_blank" aria-label="LinkedIn">
+
+<svg
+    viewBox="0 0 448 512"
+    fill="currentColor"
+    width="20"
+    height="20"
+    aria-hidden="true"
+>
+    <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+</svg>
+
+</a>
+
+</div>
   <section class="projects">
   <p class="name">
         Recent Projects
   </p>
 
   <div class="project-grid">
-    <a href="https://oakalleyconsulting.com" class="project-item" id="proj" target="_blank" rel="noopener noreferrer">
-      <img src="images/OA.png" alt="Project 1">
-      <p class="project-title">Oakalley Consulting <span class="arrow"><img src="external.svg" alt="external"></span></p>
-      <p class="project-year">2025</p>
+    <a href="https://andasuberu.xyz/dev/penntrail.html" class="project-item" id="proj" target="_blank" rel="noopener noreferrer">
+      <img src="images/PT.png" alt="Project 1">
+      <p class="project-title">PennTrail <span class="arrow"><img src="external.svg" alt="external"></span></p>
+      <p class="project-year">2026</p>
     </a>
 
-    <a href="https://notjustawriter.com" class="project-item" id="proj" target="_blank" rel="noopener noreferrer">
-      <img src="images/NJAW.png" alt="Project 2">
+    <a href="https://oakalleyconsulting.com" class="project-item" id="proj" target="_blank" rel="noopener noreferrer">
+      <img src="images/OA.png" alt="Project 2">
+      <p class="project-title">Oakalley Consulting <span class="arrow"><img src="external.svg" alt="external"></span></p>
+      <p class="project-year">2026</p>
+    </a>
+
+    <a href="https://andasuberu.xyz/dev/index.html" class="project-item" id="proj" target="_blank" rel="noopener noreferrer">
+      <img src="images/NJAW.png" alt="Project 3">
       <p class="project-title">Not Just A Writer <span class="arrow"><img src="external.svg" alt="external"></span></p>
       <p class="project-year">2026</p>
+    </a>
+
+    <a href="https://andasuberu.xyz/dev/medimax.html" class="project-item" id="proj" target="_blank" rel="noopener noreferrer">
+      <img src="images/MM.png" alt="Project 4">
+      <p class="project-title">Medimax Hospital <span class="arrow"><img src="external.svg" alt="external"></span></p>
+      <p class="project-year">2023</p>
     </a>
   </div>
 </section>
@@ -61,15 +128,15 @@
     </p>
     
       <p>
-      I'm a multidisciplinary visual designer helping startups and global brands create clear and intentional design. Somewhere along the line, I picked up web development to round out what I can do.
+      I'm a <span class="emph">multidisciplinary visual designer</span> helping startups and global brands create clear and intentional design. Somewhere along the line, I picked up web development to round out my skill set.
       </p>
 
       <p>
-        My work blends technical precision from my background in computer engineering with creativity from traditional art. I love designing and building websites and interfaces that are both functional and visually engaging.
+        My work blends technical precision from my background in <span class="emph">computer engineering</span> with creativity from <span class="emph">traditional art.</span> I love designing and building websites and interfaces that are both functional and visually engaging.
       </p>
 
       <p>
-        Currently based in Abuja <span id="local-time"></span> I work with clients globally. Available for new projects and collaborations. 
+        Currently based in Abuja <span id="local-time"></span>, I work with clients globally. <span class="emph">Available for new projects</span> and collaborations.
       </p>
 
 
@@ -137,8 +204,34 @@
         Writings
   </p>
 
-  <p>
-  Nothing to see here yet:)
+<a href="https://andasuberu.xyz/dev/why_i_learned_to_code_as_a_designer.html">
+  <p class="posttitle">
+  Why I Learned to Code as a Designer
+  </p>
+</a>
+
+  <p class="postdate">
+  2026-05-28  
+  </p>
+
+<a href="https://andasuberu.xyz/dev/shipping_beats_perfect.html">
+    <p class="posttitle">
+  Shipping Beats Perfect
+  </p>
+</a>
+  
+  <p  class="postdate">
+  2026-02-11  
+  </p>
+
+  <a href="https://andasuberu.xyz/dev/the_rain_will_pass.html">
+    <p class="posttitle">
+  The Rain Will Pass
+  </p>
+  </a>
+
+  <p class="postdate">
+  2025-11-30  
   </p>
 </section>
 
@@ -230,6 +323,54 @@ style.innerHTML = `
   100% { transform: translateX(-${totalWidth}px); }
 }`;
 document.head.appendChild(style);
+
+
+// Name reveal
+const logo = document.getElementById("logo-text");
+
+const finalText = "Anda Suberu";
+const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>[]{}/*+-_";
+
+let animating = false;
+
+logo.addEventListener("mouseenter", () => {
+
+  if (animating) return;
+  animating = true;
+
+  let iteration = 0;
+
+  const interval = setInterval(() => {
+
+    logo.textContent = finalText
+      .split("")
+      .map((letter, index) => {
+
+        if (index < iteration) {
+          return finalText[index];
+        }
+
+        if (letter === " ") return " ";
+
+        return chars[Math.floor(Math.random() * chars.length)];
+      })
+      .join("");
+
+    iteration += 1 / 3;
+
+    if (iteration >= finalText.length) {
+      clearInterval(interval);
+      logo.textContent = finalText;
+      animating = false;
+    }
+
+  }, 30);
+
+});
+
+logo.addEventListener("mouseleave", () => {
+  logo.textContent = "A/-S";
+});
   </script>
 
 </body>

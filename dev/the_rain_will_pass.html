@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Anda Suberu – Developer">
+  <title>Anda Suberu – Web Developer</title>
+  <link rel="icon" href="asfavicon.ico" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode">
+
+  <header class="header">
+    <div class="logo">
+    <p id="logo-text">A/-S</p>
+    </div>
+    <div class="header-actions">
+    <button id="theme-toggle"></button>
+    <span id="time-pill"></span></div>
+  </header>
+
+  <main class="container">
+  <section class="bio">   
+      
+<section class="about">
+    <p class="name">
+        The Rain Will Pass
+    </p>
+    <p class="metadat">
+      2025-11-30 • 1 min read
+    </p>
+
+    <hr class="divider">
+    
+<p>
+
+If you've lived here long enough, you've probably stood under a roof waiting for the rain to stop.<br><br>
+
+Not because you wanted to.<br><br>
+
+Because there was nothing else you could do.<br><br>
+
+The rain doesn't ask whether you're running late.<br><br>
+
+It doesn't care that you're only five minutes from home.<br><br>
+
+When it starts, everyone makes the same decision.<br><br>
+
+<span class="emph">Wait.</span><br><br>
+
+</p>
+
+<hr class="divider">
+
+<p>
+
+Strangers become temporary neighbors.<br><br>
+
+Everyone checks the sky every few minutes.<br><br>
+
+Somebody jokes that it's only getting started.<br><br>
+
+Somebody else insists it will stop soon.<br><br>
+
+Nobody really knows either of those things.<br><br>
+
+There's something comforting about those moments.<br><br>
+
+For a few minutes, everyone's schedule is paused.<br><br>
+
+The office worker.<br><br>
+
+The student.<br><br>
+
+The okada rider.<br><br>
+
+<span class="emph">We're all standing under the same roof, waiting for the same rain.</span><br><br>
+
+</p>
+
+<hr class="divider">
+
+<p>
+
+Eventually, someone decides they've waited long enough and runs for it.<br><br>
+
+Someone else stays behind.<br><br>
+
+A few minutes later, the rain begins to ease.<br><br>
+
+<span class="emph">It usually does.</span><br><br>
+
+Life is a little like that.<br><br>
+
+Storms don't always disappear quickly.<br><br>
+
+They remind us that not everything can be hurried.<br><br>
+
+Sometimes all you can do is wait, chat with the stranger next to you, watch the road disappear beneath the rain, and trust that the sky will eventually make room for sunshine again.<br><br>
+
+<span class="emph">It always does.</span>
+
+</p>
+
+<br><br><a href="file:///C:/Users/HP%20USER/Documents/Work/Personal/Portfolio%20-%20Offline%20Copy/dev/index.html"><span class="emph">Back to home</span></a>
+      </p>
+
+      <section class="footer">
+      <p class="links">2026 ©<a href="andasuberu.xyz/dev">Anda Suberu</a></p>
+      <p class="links">
+        <a href="mailto:uberanda@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/andasuberu">LinkedIn</a>
+      </p>
+      </section>
+</section>
+    </section>
+  </main>
+
+  <script>
+// Theme toggle
+const toggleButton = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Add img and span inside the button
+toggleButton.innerHTML = `
+  <img id="theme-icon" src="" alt="theme icon" />
+  <span id="theme-label"></span>
+`;
+
+const icon = document.getElementById('theme-icon');
+const label = document.getElementById('theme-label');
+
+// Update button icon and label based on current theme
+function updateButtonLabel() {
+  if (body.classList.contains('dark-mode')) {
+    icon.src = 'dark_mode.svg';
+    label.textContent = 'Lights Off';
+  } else {
+    icon.src = 'light_mode.svg';
+    label.textContent = 'Lights On';
+  }
+}
+
+// Manual toggle — user takes control
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  updateButtonLabel();
+});
+
+// Initialize on page load
+updateButtonLabel();
+
+      // Local time
+  function updateLocalTime() {
+  const options = {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+  };
+
+  const now = new Date().toLocaleTimeString('en-US', options);
+
+  // Header pill
+  const pill = document.getElementById('time-pill');
+  if (pill) {
+    pill.textContent = now;
+  }
+
+  // Body text (your original one)
+  const local = document.getElementById('local-time');
+  if (local) {
+    local.textContent = `(${now} UTC+1)`;
+  }
+}
+
+updateLocalTime();
+setInterval(updateLocalTime, 60000);
+
+// Ticker
+const ticker = document.getElementById('cert-ticker');
+const items = ticker.querySelectorAll('.ticker-item');
+const itemWidth = 350 + 16; // width + gap
+const totalWidth = items.length / 2 * itemWidth; // only first set
+
+ticker.style.animation = `scroll ${totalWidth / 50}s linear infinite`; // adjust speed
+
+// Inject keyframes
+const style = document.createElement('style');
+style.innerHTML = `
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-${totalWidth}px); }
+}`;
+document.head.appendChild(style);
+
+
+// Name reveal
+const logo = document.getElementById("logo-text");
+
+const finalText = "Anda Suberu";
+const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>[]{}/*+-_";
+
+let animating = false;
+
+logo.addEventListener("mouseenter", () => {
+
+  if (animating) return;
+  animating = true;
+
+  let iteration = 0;
+
+  const interval = setInterval(() => {
+
+    logo.textContent = finalText
+      .split("")
+      .map((letter, index) => {
+
+        if (index < iteration) {
+          return finalText[index];
+        }
+
+        if (letter === " ") return " ";
+
+        return chars[Math.floor(Math.random() * chars.length)];
+      })
+      .join("");
+
+    iteration += 1 / 3;
+
+    if (iteration >= finalText.length) {
+      clearInterval(interval);
+      logo.textContent = finalText;
+      animating = false;
+    }
+
+  }, 30);
+
+});
+
+logo.addEventListener("mouseleave", () => {
+  logo.textContent = "A/-S";
+});
+  </script>
+
+</body>
+</html>
