@@ -76,6 +76,21 @@ body.dark-mode {
   user-select: none;
 }
 
+.logo-separator{
+  display:inline-block;
+  animation: logoBlink 2.2s ease-in-out infinite;
+}
+
+@keyframes logoBlink{
+  0%, 25%, 100%{
+    opacity:1;
+  }
+
+  50%, 75%{
+    opacity:0;
+  }
+}
+
 .header-actions {
   margin-right: -4px;
 }
@@ -87,6 +102,8 @@ body.dark-mode {
   font-size: 14px;
   color: var(--text-primary);
   margin-right: 8px;
+
+  display: none !important;
 }
 
 #theme-toggle img {
@@ -205,6 +222,48 @@ a:hover {
   to {
     visibility: hidden;
   }
+}
+
+.hero-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+}
+
+.link-icon{
+    width:15px;
+    height:15px;
+
+    animation: floatIcon 1.6s ease-in-out infinite;
+
+    transition:
+        transform .25s ease,
+        opacity .25s ease;
+
+    opacity:.8;
+}
+
+.hero-link:hover .link-icon{
+    animation: bounceIcon .5s ease infinite;
+    opacity:1;
+}
+
+@keyframes floatIcon{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-3px);
+    }
+}
+
+@keyframes bounceIcon{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-6px);
+    }
 }
 
 .contact-actions{
@@ -401,6 +460,25 @@ border-bottom: none !important;
 .about img {
   width: 100%;
   margin-top: -8px;
+}
+
+.visit-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    margin-top: -10px;
+    margin-bottom: 40px;
+
+    color:var(--text-secondary);
+    font-size:14px;
+
+    border-bottom:none;
+}
+
+.visit-link svg{
+    width:14px;
+    height:14px;
 }
 
 .footer {
