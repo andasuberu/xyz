@@ -8,11 +8,13 @@
   <link rel="icon" href="asfavicon.ico" type="image/png">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="dark-mode">
+<body>
 
   <header class="header">
     <div class="logo">
-    <p id="logo-text">A/-S</p>
+    <a href="https://andasuberu.xyz/dev"> <p id="logo-text">
+  A<span class="logo-separator">/-</span>S
+</p></a>
     </div>
     <div class="header-actions">
     <button id="theme-toggle"></button>
@@ -37,7 +39,7 @@
       <img src="images/PennTrail Landing Page-3.png">
       <img src="images/PennTrail Landing Page-4.png">
 
-<br><br><a href="file:///C:/Users/HP%20USER/Documents/Work/Personal/Portfolio%20-%20Offline%20Copy/dev/index.html"><span class="emph">Back to home</span></a>
+<br><br><a href="https://andasuberu.xyz/dev"><span class="emph">Back to home</span></a>
       </p>
 
       <section class="footer">
@@ -51,131 +53,7 @@
     </section>
   </main>
 
-  <script>
-// Theme toggle
-const toggleButton = document.getElementById('theme-toggle');
-const body = document.body;
-
-// Add img and span inside the button
-toggleButton.innerHTML = `
-  <img id="theme-icon" src="" alt="theme icon" />
-  <span id="theme-label"></span>
-`;
-
-const icon = document.getElementById('theme-icon');
-const label = document.getElementById('theme-label');
-
-// Update button icon and label based on current theme
-function updateButtonLabel() {
-  if (body.classList.contains('dark-mode')) {
-    icon.src = 'dark_mode.svg';
-    label.textContent = 'Lights Off';
-  } else {
-    icon.src = 'light_mode.svg';
-    label.textContent = 'Lights On';
-  }
-}
-
-// Manual toggle — user takes control
-toggleButton.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-  updateButtonLabel();
-});
-
-// Initialize on page load
-updateButtonLabel();
-
-      // Local time
-  function updateLocalTime() {
-  const options = {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: true
-  };
-
-  const now = new Date().toLocaleTimeString('en-US', options);
-
-  // Header pill
-  const pill = document.getElementById('time-pill');
-  if (pill) {
-    pill.textContent = now;
-  }
-
-  // Body text (your original one)
-  const local = document.getElementById('local-time');
-  if (local) {
-    local.textContent = `(${now} UTC+1)`;
-  }
-}
-
-updateLocalTime();
-setInterval(updateLocalTime, 60000);
-
-// Ticker
-const ticker = document.getElementById('cert-ticker');
-const items = ticker.querySelectorAll('.ticker-item');
-const itemWidth = 350 + 16; // width + gap
-const totalWidth = items.length / 2 * itemWidth; // only first set
-
-ticker.style.animation = `scroll ${totalWidth / 50}s linear infinite`; // adjust speed
-
-// Inject keyframes
-const style = document.createElement('style');
-style.innerHTML = `
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-${totalWidth}px); }
-}`;
-document.head.appendChild(style);
-
-
-// Name reveal
-const logo = document.getElementById("logo-text");
-
-const finalText = "Anda Suberu";
-const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>[]{}/*+-_";
-
-let animating = false;
-
-logo.addEventListener("mouseenter", () => {
-
-  if (animating) return;
-  animating = true;
-
-  let iteration = 0;
-
-  const interval = setInterval(() => {
-
-    logo.textContent = finalText
-      .split("")
-      .map((letter, index) => {
-
-        if (index < iteration) {
-          return finalText[index];
-        }
-
-        if (letter === " ") return " ";
-
-        return chars[Math.floor(Math.random() * chars.length)];
-      })
-      .join("");
-
-    iteration += 1 / 3;
-
-    if (iteration >= finalText.length) {
-      clearInterval(interval);
-      logo.textContent = finalText;
-      animating = false;
-    }
-
-  }, 30);
-
-});
-
-logo.addEventListener("mouseleave", () => {
-  logo.textContent = "A/-S";
-});
-  </script>
+<script src="common.js"></script>
 
 </body>
 </html>

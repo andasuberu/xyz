@@ -12,7 +12,9 @@
 
   <header class="header">
     <div class="logo">
-    <p id="logo-text">A/-S</p>
+    <p id="logo-text">
+  A<span class="logo-separator">/-</span>S
+</p>
     </div>
     <div class="header-actions">
     <button id="theme-toggle"></button>
@@ -25,7 +27,7 @@
 
       <p>
         Most recently, I developed websites for 
-        <a href="https://oakalleyconsulting.com">Oakalley Consulting Firm</a> and 
+        <a href="https://budco.studio">Bud Collective</a> and 
         <a href="https://notjustawriter.com">Not Just A Writer Agency</a>. 
         I also created two personal sites for my 
         <a href="https://andasuberu.xyz">design</a> and
@@ -102,9 +104,9 @@
       <p class="project-year">2026</p>
     </a>
 
-    <a href="https://oakalleyconsulting.com" class="project-item" id="proj" target="_blank" rel="noopener noreferrer">
-      <img src="images/OA.png" alt="Project 2">
-      <p class="project-title">Oakalley Consulting <span class="arrow"><img src="external.svg" alt="external"></span></p>
+    <a href="https://andasuberu.xyz/dev/budco.html" class="project-item" id="proj" target="_blank" rel="noopener noreferrer">
+      <img src="images/BC.png" alt="Project 2">
+      <p class="project-title">Bud Collective <span class="arrow"><img src="external.svg" alt="external"></span></p>
       <p class="project-year">2026</p>
     </a>
 
@@ -114,10 +116,10 @@
       <p class="project-year">2026</p>
     </a>
 
-    <a href="https://andasuberu.xyz/dev/medimax.html" class="project-item" id="proj" target="_blank" rel="noopener noreferrer">
-      <img src="images/MM.png" alt="Project 4">
-      <p class="project-title">Medimax Hospital <span class="arrow"><img src="external.svg" alt="external"></span></p>
-      <p class="project-year">2023</p>
+    <a href="https://oakalleyconsulting.com" class="project-item" id="proj" target="_blank" rel="noopener noreferrer">
+      <img src="images/OA.png" alt="Project 4">
+      <p class="project-title">Oakalley Consulting <span class="arrow"><img src="external.svg" alt="external"></span></p>
+      <p class="project-year">2026</p>
     </a>
   </div>
 </section>
@@ -204,7 +206,7 @@
         Writings
   </p>
 
-<a href="https://andasuberu.xyz/dev/why_i_learned_to_code_as_a_designer.html">
+<a href="https://andasuberu.xyz/dev/2026-05-28-why-i-learned-to-code-as-a-designer.html">
   <p class="posttitle">
   Why I Learned to Code as a Designer
   </p>
@@ -214,7 +216,7 @@
   2026-05-28  
   </p>
 
-<a href="https://andasuberu.xyz/dev/shipping_beats_perfect.html">
+<a href="https://andasuberu.xyz/dev/2026-02-11-shipping-beats-perfect.html">
     <p class="posttitle">
   Shipping Beats Perfect
   </p>
@@ -224,9 +226,9 @@
   2026-02-11  
   </p>
 
-  <a href="https://andasuberu.xyz/dev/the_rain_will_pass.html">
+  <a href="file:///C:/Users/HP%20USER/Documents/Work/Personal/Dev/2025-11-30-rain.html">
     <p class="posttitle">
-  The Rain Will Pass
+  Rain
   </p>
   </a>
 
@@ -247,131 +249,8 @@
     </section>
   </main>
 
-  <script>
-// Theme toggle
-const toggleButton = document.getElementById('theme-toggle');
-const body = document.body;
-
-// Add img and span inside the button
-toggleButton.innerHTML = `
-  <img id="theme-icon" src="" alt="theme icon" />
-  <span id="theme-label"></span>
-`;
-
-const icon = document.getElementById('theme-icon');
-const label = document.getElementById('theme-label');
-
-// Update button icon and label based on current theme
-function updateButtonLabel() {
-  if (body.classList.contains('dark-mode')) {
-    icon.src = 'dark_mode.svg';
-    label.textContent = 'Lights Off';
-  } else {
-    icon.src = 'light_mode.svg';
-    label.textContent = 'Lights On';
-  }
-}
-
-// Manual toggle — user takes control
-toggleButton.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-  updateButtonLabel();
-});
-
-// Initialize on page load
-updateButtonLabel();
-
-      // Local time
-  function updateLocalTime() {
-  const options = {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: true
-  };
-
-  const now = new Date().toLocaleTimeString('en-US', options);
-
-  // Header pill
-  const pill = document.getElementById('time-pill');
-  if (pill) {
-    pill.textContent = now;
-  }
-
-  // Body text (your original one)
-  const local = document.getElementById('local-time');
-  if (local) {
-    local.textContent = `(${now} UTC+1)`;
-  }
-}
-
-updateLocalTime();
-setInterval(updateLocalTime, 60000);
-
-// Ticker
-const ticker = document.getElementById('cert-ticker');
-const items = ticker.querySelectorAll('.ticker-item');
-const itemWidth = 350 + 16; // width + gap
-const totalWidth = items.length / 2 * itemWidth; // only first set
-
-ticker.style.animation = `scroll ${totalWidth / 50}s linear infinite`; // adjust speed
-
-// Inject keyframes
-const style = document.createElement('style');
-style.innerHTML = `
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-${totalWidth}px); }
-}`;
-document.head.appendChild(style);
-
-
-// Name reveal
-const logo = document.getElementById("logo-text");
-
-const finalText = "Anda Suberu";
-const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>[]{}/*+-_";
-
-let animating = false;
-
-logo.addEventListener("mouseenter", () => {
-
-  if (animating) return;
-  animating = true;
-
-  let iteration = 0;
-
-  const interval = setInterval(() => {
-
-    logo.textContent = finalText
-      .split("")
-      .map((letter, index) => {
-
-        if (index < iteration) {
-          return finalText[index];
-        }
-
-        if (letter === " ") return " ";
-
-        return chars[Math.floor(Math.random() * chars.length)];
-      })
-      .join("");
-
-    iteration += 1 / 3;
-
-    if (iteration >= finalText.length) {
-      clearInterval(interval);
-      logo.textContent = finalText;
-      animating = false;
-    }
-
-  }, 30);
-
-});
-
-logo.addEventListener("mouseleave", () => {
-  logo.textContent = "A/-S";
-});
-  </script>
+<script src="common.js"></script>
+<script src="home.js"></script>
 
 </body>
 </html>
