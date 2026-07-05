@@ -102,7 +102,6 @@ body.dark-mode {
   font-size: 14px;
   color: var(--text-primary);
   margin-right: 8px;
-
   display: none !important;
 }
 
