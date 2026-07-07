@@ -533,6 +533,19 @@ display: none!important;
   margin: 0 auto;
   gap: 20px;
   position: relative;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: galleryIn .7s cubic-bezier(.22,1,.36,1) forwards;
+  animation-delay: .3s;
+
+}
+
+@keyframes galleryIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Each row wrapper */
