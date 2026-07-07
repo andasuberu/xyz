@@ -72,7 +72,7 @@
 
     <div class="gallery-item">
         <div class="image-wrapper">
-          <img src="images/hmwl-gif.gif"width="940" height="940">
+          <img src="images/hmwl-gif.gif"width="940" height="940" loading="lazy">
         </div>
     </div>
 
@@ -90,13 +90,13 @@
     
     <div class="gallery-item">
         <div class="image-wrapper">
-          <img src="images/rm-mock.png"width="940" height="940">
+          <img src="images/rm-mock.png"width="940" height="940" loading="lazy">
         </div>
     </div>
 
     <div class="gallery-item">
         <div class="image-wrapper">
-          <img src="images/mura-icons.png"width="940" height="940">
+          <img src="images/mura-icons.png"width="940" height="940" loading="lazy">
         </div>
     </div>
 </div>
@@ -105,7 +105,7 @@
 
     <div class="gallery-item">
         <div class="image-wrapper">
-          <img src="images/tunolandingpage-illustration.png"width="1671" height="940">
+          <img src="images/tunolandingpage-illustration.png"width="1671" height="940" loading="lazy">
         </div>
     </div>
 
@@ -115,25 +115,25 @@
 
     <div class="gallery-item">
         <div class="image-wrapper">
-          <img src="images/illos-mock.png" width="940" height="940">
+          <img src="images/illos-mock.png" width="940" height="940" loading="lazy">
         </div>
     </div>
 
     <div class="gallery-item">
         <div class="image-wrapper">
-          <img src="images/sumscreen-illustration.png" width="940" height="940">
+          <img src="images/sumscreen-illustration.png" width="940" height="940" loading="lazy">
         </div>
     </div>
 
     <div class="gallery-item">
         <div class="image-wrapper">
-          <img src="images/freelanceblogthumb-illustration.png"width="940" height="470">
+          <img src="images/freelanceblogthumb-illustration.png"width="940" height="470" loading="lazy">
         </div>
     </div>
 
     <div class="gallery-item">
         <div class="image-wrapper">
-          <img src="images/hestia-illustration.png" width="940" height="940">
+          <img src="images/hestia-illustration.png" width="940" height="940" loading="lazy">
         </div>
     </div>
 
@@ -143,7 +143,7 @@
 
     <div class="gallery-item">
         <div class="image-wrapper">
-          <img src="images/alphalabels-illustration.png"width="1671" height="940">
+          <img src="images/alphalabels-illustration.png"width="1671" height="940" loading="lazy">
         </div>
     </div>
 
@@ -153,37 +153,37 @@
 
     <div class="gallery-item">
         <div class="image-wrapper">
-          <img src="images/sabug-illustration.png" width="940" height="940">
+          <img src="images/sabug-illustration.png" width="940" height="940" loading="lazy">
         </div>
     </div>
 
     <div class="gallery-item">
         <div class="image-wrapper">
-          <img src="images/antu-gif.gif" width="940" height="940">
+          <img src="images/antu-gif.gif" width="940" height="940" loading="lazy">
         </div>
     </div>
     
     <div class="gallery-item">
         <div class="image-wrapper">
-          <img src="images/travel-icons.png" width="940" height="940">
+          <img src="images/travel-icons.png" width="940" height="940" loading="lazy">
         </div>
     </div>
 
     <div class="gallery-item">
         <div class="image-wrapper">
-          <img src="images/marentide-icons.png" width="940" height="940">
+          <img src="images/marentide-icons.png" width="940" height="940" loading="lazy">
         </div>
     </div>
 
     <div class="gallery-item">
         <div class="image-wrapper">
-          <img src="images/map-illustration.png" width="940" height="940">
+          <img src="images/map-illustration.png" width="940" height="940" loading="lazy">
         </div>
     </div>
 
     <div class="gallery-item">
         <div class="image-wrapper">
-          <img src="images/mnpgrey-illustration.png" width="940" height="940">
+          <img src="images/mnpgrey-illustration.png" width="940" height="940" loading="lazy">
         </div>
     </div>
 </div>
@@ -277,6 +277,21 @@
       if (e.key === 'Escape') closeBtn.click();
     }
   });
+
+  document.querySelectorAll(".image-wrapper img").forEach(img => {
+
+  function finishLoading() {
+    img.classList.add("loaded");
+  }
+
+  if (img.complete) {
+    finishLoading();
+  } else {
+    img.addEventListener("load", finishLoading);
+  }
+
+});
+
 </script>
 
 </body>
