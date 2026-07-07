@@ -359,6 +359,13 @@ a:hover {
   width: 100%;
   border-radius: 16px; /* Rounded corners */
   object-fit: cover;
+  
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+.project-item img.loaded {
+  opacity: 1;
 }
 
 .project-title {

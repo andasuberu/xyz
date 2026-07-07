@@ -19,3 +19,17 @@ if (ticker) {
   document.head.appendChild(style);
 
 }
+
+document.querySelectorAll(".lazy-image").forEach(img => {
+
+  function finishLoading() {
+    img.classList.add("loaded");
+  }
+
+  if (img.complete) {
+    finishLoading();
+  } else {
+    img.addEventListener("load", finishLoading);
+  }
+
+});
