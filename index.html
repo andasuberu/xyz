@@ -6,11 +6,29 @@
     <meta name="description" content="Hi! I'm Anda Suberu — a multidisciplinary visual designer helping startups and global brands create clear and intentional design." />
     <title>Anda Suberu - Visual Designer</title>
     <link rel="icon" type="image/png" href="images/asfavicon.png">
-
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css" />
+
+    <link
+    rel="preload"
+    href="fonts/BebasNeue-Regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin>
+
+    <link
+    rel="preload"
+    href="fonts/Sora-Light.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin>
+
+    <link
+    rel="preload"
+    href="fonts/Sora-Regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin>
   </head>
   
 <body class="home">
@@ -49,10 +67,10 @@
 </header>
   <section class="hero fade-in">
   <div class="hero-left">
-    <h1 class="line1">MULTIDISCIPLINARY</h1>
+    <h1 class="line1" style="  font-size: 6.5rem; font-family: 'Bebas Neue', sans-serif; line-height: 0.7; font-weight: 400; padding-bottom: 1rem;">MULTIDISCIPLINARY</h1>
     <h1 class="line2">VISUAL DESIGNER<!--<img src="images/asterisk.svg" alt="asterisk" class="asterisk">--></h1>
   </div>
-  <div class="hero-right">
+  <div class="hero-right" style=" max-width: 500px; font-size: 1.1rem; font-weight: 300; line-height: 1.6; color: #fff; padding-right: 3rem; padding-left: 3rem;">
     <p>I work with early-stage startups and established brands on a variety of projects ranging from visual identity and illustration to UI/UX and web design.</p>
   </div>
   </section>
@@ -71,8 +89,8 @@
     <div class="gallery-item fade-in" data-category="uiux" data-row="1">
     <a href="https://andasuberu.xyz/primeries">
       <div class="image-wrapper">
-        <img src="images/primeries-thumbnail.png" alt="Primeries project thumbnail">
-        <img src="images/primeries-hover.png" alt="Primeries hover thumbnail" class="hover-img">
+        <img src="images/primeries-thumbnail.webp" alt="Primeries project thumbnail">
+        <img src="images/primeries-hover.webp" alt="Primeries hover thumbnail" class="hover-img">
       </div>
     </a>
     <div class="title">Primeries</div>
@@ -82,8 +100,8 @@
     <div class="gallery-item fade-in" data-category="brand" data-row="1"> 
     <a href="https://andasuberu.xyz/goldenmeadow">
       <div class="image-wrapper">
-        <img src="images/goldenmeadow-thumbnail.gif" alt="Golden Meadow project thumbnail">
-        <img src="images/goldenmeadow-hover.png" alt="Golden Meadow hover thumbnail" class="hover-img">
+        <img src="images/goldenmeadow-thumbnail.gif" loading="lazy" decoding="async" alt="Golden Meadow project thumbnail">
+        <img src="images/goldenmeadow-hover.webp" loading="lazy" decoding="async" alt="Golden Meadow hover thumbnail" class="hover-img">
       </div>
     </a>
     <div class="title">Golden Meadow</div>
@@ -93,8 +111,8 @@
   <div class="gallery-item fade-in" data-category="brand" data-row="2">
     <a href="https://andasuberu.xyz/jaehall">
       <div class="image-wrapper">
-        <img src="images/jaehall-thumbnail.png" alt="Jaehall project thumbnail">
-        <img src="images/jaehall-hover.png" alt="Jaehall hover thumbnail" class="hover-img">
+        <img src="images/jaehall-thumbnail.webp" alt="Jaehall project thumbnail">
+        <img src="images/jaehall-hover.webp" alt="Jaehall hover thumbnail" class="hover-img">
       </div>
     </a>
     <div class="title">Jaehall</div>
@@ -103,7 +121,7 @@
 
     <div class="gallery-item fade-in" data-category="brand" data-row="3">
     <div class="image-wrapper">
-      <img src="images/hiketwo-thumbnail.png" alt="HikeTwo project thumbnail">
+      <img src="images/hiketwo-thumbnail.webp" alt="HikeTwo project thumbnail">
     </div>
     <div class="title">HikeTwo</div>
     <div class="subtitle">Coming Soon</div>
@@ -112,8 +130,8 @@
     <div class="gallery-item fade-in" data-category="brand" data-row="2">
     <a href="https://andasuberu.xyz/coe">
       <div class="image-wrapper">
-        <img src="images/coe-thumbnail.png" alt="COE project thumbnail">
-        <img src="images/coe-hover.png" alt="COE hover thumbnail" class="hover-img">
+        <img src="images/coe-thumbnail.webp" loading="lazy" decoding="async" alt="COE project thumbnail">
+        <img src="images/coe-hover.webp" loading="lazy" decoding="async" alt="COE hover thumbnail" class="hover-img">
       </div>
     </a>
     <div class="title">Afe Babalola University</div>
@@ -123,8 +141,8 @@
   <div class="gallery-item fade-in" data-category="uiux" data-row="3">
     <a href="https://andasuberu.xyz/swiftpay">
       <div class="image-wrapper">
-        <img src="images/swiftpay-thumbnail.png" alt="SwiftPay project thumbnail">
-        <img src="images/swiftpay-hover.png" alt="SwiftPay hover thumbnail" class="hover-img">
+        <img src="images/swiftpay-thumbnail.webp" loading="lazy" decoding="async" alt="SwiftPay project thumbnail">
+        <img src="images/swiftpay-hover.webp" loading="lazy" decoding="async" alt="SwiftPay hover thumbnail" class="hover-img">
       </div>
     </a>
     <div class="title">SwiftPay</div>
@@ -134,8 +152,8 @@
   <div class="gallery-item fade-in" data-category="brand" data-row="1">
     <a href="https://andasuberu.xyz/salvo">
       <div class="image-wrapper">
-        <img src="images/salvo-thumbnail.png" alt="Salvo project thumbnail">
-        <img src="images/salvo-hover.png" alt="Salvo hover thumbnail" class="hover-img">
+        <img src="images/salvo-thumbnail.webp" loading="lazy" decoding="async" alt="Salvo project thumbnail">
+        <img src="images/salvo-hover.webp" loading="lazy" decoding="async" alt="Salvo hover thumbnail" class="hover-img">
       </div>
     </a>
     <div class="title">Salvo</div>
@@ -145,8 +163,8 @@
    <div class="gallery-item fade-in" data-category="brand" data-row="3">
     <a href="https://andasuberu.xyz/futurefish">
       <div class="image-wrapper">
-        <img src="images/futurefish-thumbnail.gif" alt="Future Fish project thumbnail">
-        <img src="images/futurefish-thumbnail.png" alt="Future Fish hover thumbnail" class="hover-img">
+        <img src="images/futurefish-thumbnail.gif" loading="lazy" decoding="async" alt="Future Fish project thumbnail">
+        <img src="images/futurefish-thumbnail.webp" loading="lazy" decoding="async" alt="Future Fish hover thumbnail" class="hover-img">
       </div>
     </a>
     <div class="title">Future Fish</div>
@@ -156,8 +174,8 @@
     <div class="gallery-item fade-in" data-category="illustration" data-row="2">
     <a href="https://andasuberu.xyz/illustrations">
       <div class="image-wrapper">
-        <img src="images/illustrations-thumbnail.png" alt="Illustrations project thumbnail">
-        <img src="images/illustrations-hover.png" alt="Illustrations hover thumbnail" class="hover-img">
+        <img src="images/illustrations-thumbnail.webp" loading="lazy" decoding="async" alt="Illustrations project thumbnail">
+        <img src="images/illustrations-hover.webp" loading="lazy" decoding="async" alt="Illustrations hover thumbnail" class="hover-img">
       </div>
     </a>
     <div class="title">Illustrations</div>
@@ -191,6 +209,29 @@ document.addEventListener("DOMContentLoaded", function () {
     { rootMargin: "200px" }
   );
   items.forEach(img => observer.observe(img));
+
+    // Smooth loading
+document.querySelectorAll(".image-wrapper").forEach(wrapper => {
+    const imgs = wrapper.querySelectorAll("img");
+
+    let loadedCount = 0;
+
+    function imageLoaded() {
+        loadedCount++;
+
+        if (loadedCount === imgs.length) {
+            wrapper.classList.add("loaded");
+        }
+    }
+
+    imgs.forEach(img => {
+        if (img.complete) {
+            imageLoaded();
+        } else {
+            img.addEventListener("load", imageLoaded, { once: true });
+        }
+    });
+});
 
   // Animate fade-up / fade-in elements
   const animItems = document.querySelectorAll(".fade-up, .fade-in");

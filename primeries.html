@@ -63,25 +63,25 @@
 
         <!-- Single column -->
         <div class="gallery-row single fade-in">
-          <img src="images/Primeries/primeries-banner.png" alt="Primeries banner image">
+          <img class="lazy-image" src="images/Primeries/primeries-banner.png" alt="Primeries banner image">
         </div>
 
         <!-- Double column -->
         <div class="gallery-row double fade-in">
-          <img src="images/Primeries/primeries-mobile-mockup-1.png" alt="Primeries mobile mockup">
-          <img src="images/Primeries/primeries-laptop-mockup.png" alt="Primeries laptop mockup">
+          <img class="lazy-image" src="images/Primeries/primeries-mobile-mockup-1.png" alt="Primeries mobile mockup">
+          <img class="lazy-image" src="images/Primeries/primeries-laptop-mockup.png" alt="Primeries laptop mockup">
         </div>
 
         <!-- Double column -->
         <div class="gallery-row double fade-in">
-          <img src="images/Primeries/screen-1.png" alt="Primeries screen 1">
-          <img src="images/Primeries/screen-2.png" alt="Primeries screen 2">
+          <img class="lazy-image" src="images/Primeries/screen-1.png" alt="Primeries screen 1">
+          <img class="lazy-image" src="images/Primeries/screen-2.png" alt="Primeries screen 2">
         </div>
 
         <!-- Double column -->
         <div class="gallery-row double fade-in">
-          <img src="images/Primeries/laptop-mockup-2.png" alt="Primeries mobile mockup 2">
-          <img src="images/Primeries/phone-mockup-2.png" alt="Primeries phone mockup 2">
+          <img class="lazy-image" src="images/Primeries/laptop-mockup-2.png" alt="Primeries mobile mockup 2">
+          <img class="lazy-image" src="images/Primeries/phone-mockup-2.png" alt="Primeries phone mockup 2">
         </div>
       </section>
 
@@ -164,6 +164,20 @@ window.addEventListener("scroll", () => {
   }
 
   lastScrollY = currentScrollY;
+});
+
+document.querySelectorAll(".lazy-image").forEach(img => {
+
+  function finishLoading() {
+    img.classList.add("loaded");
+  }
+
+  if (img.complete) {
+    finishLoading();
+  } else {
+    img.addEventListener("load", finishLoading);
+  }
+
 });
 
 });

@@ -1,3 +1,43 @@
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("fonts/BebasNeue-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Sora";
+    src: url("fonts/Sora-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Sora";
+    src: url("fonts/Sora-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Sora";
+    src: url("fonts/Sora-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Sora";
+    src: url("fonts/Sora-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -508,30 +548,52 @@ display: none!important;
   break-inside: avoid;
 }
 
-/* Keep hover effects intact */
 .image-wrapper {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: pointer;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    background: #111;
+    animation: skeletonPulse 1.6s ease-in-out infinite;
+}
+
+.image-wrapper.loaded {
+    animation: none;
+    background: transparent;
 }
 
 .image-wrapper img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: opacity 0.4s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity .2s ease;
 }
 
-.image-wrapper img.hover-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
+.image-wrapper.loaded img:not(.hover-img) {
+    opacity: 1;
 }
 
-.image-wrapper:hover img.hover-img {
-  opacity: 1;
+.image-wrapper .hover-img {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+.image-wrapper.loaded:hover .hover-img {
+    opacity: 1;
+}
+
+@keyframes skeletonPulse {
+    0%,
+    100% {
+        background: #111111;
+    }
+
+    50% {
+        background: #1a1a1a;
+    }
 }
 
 /* Responsive fallback */
@@ -922,6 +984,20 @@ display: none!important;
 .project-hero-services {
   padding-top: 1rem;
   color: #999999;
+}
+
+.lazy-image {
+  display: block;
+  width: 100%;
+  opacity: 0;
+  background: #111;
+  transition: opacity .2s ease;
+  animation: skeletonPulse 1.6s ease-in-out infinite;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+  animation: none;
 }
 
 .project-navigation {

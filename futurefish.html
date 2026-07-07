@@ -59,29 +59,29 @@
 
       <!-- Single column -->
       <div class="gallery-row single fade-in">
-        <img src="images/Future Fish/futurefishsite.png" alt="Future fish site">
+        <img class="lazy-image" src="images/Future Fish/futurefishsite.png" alt="Future fish site">
       </div>
 
       <!-- Single column -->
       <div class="gallery-row single fade-in">
-        <img src="images/Future Fish/futurefishlogos.png" alt="Future fish logos">
+        <img class="lazy-image" src="images/Future Fish/futurefishlogos.png" alt="Future fish logos">
       </div>
 
       <!-- Double column -->
       <div class="gallery-row double fade-in">
-        <img src="images/Future Fish/futurefishposter.png" alt="Future fish poster">
-        <img src="images/Future Fish/ffcolors.png" alt="Future fish colors">
+        <img class="lazy-image" src="images/Future Fish/futurefishposter.png" alt="Future fish poster">
+        <img class="lazy-image" src="images/Future Fish/ffcolors.png" alt="Future fish colors">
       </div>
 
       <!-- Double column -->
       <div class="gallery-row double fade-in">
-        <img src="images/Future Fish/fftype.png" alt="Future fish type">
-        <img src="images/Future Fish/futurefishappicon.png" alt="Future fish app icon">
+        <img class="lazy-image" src="images/Future Fish/fftype.png" alt="Future fish type">
+        <img class="lazy-image" src="images/Future Fish/futurefishappicon.png" alt="Future fish app icon">
       </div>
 
       <!-- Single column -->
       <div class="gallery-row single fade-in">
-        <img src="images/Future Fish/futurefishbrandguidelines.png" alt="Future fish brand guidelines">
+        <img class="lazy-image" src="images/Future Fish/futurefishbrandguidelines.png" alt="Future fish brand guidelines">
       </div>
 
     </section>
@@ -165,6 +165,20 @@ window.addEventListener("scroll", () => {
   }
 
   lastScrollY = currentScrollY;
+});
+
+document.querySelectorAll(".lazy-image").forEach(img => {
+
+  function finishLoading() {
+    img.classList.add("loaded");
+  }
+
+  if (img.complete) {
+    finishLoading();
+  } else {
+    img.addEventListener("load", finishLoading);
+  }
+
 });
 
 });

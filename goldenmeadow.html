@@ -62,14 +62,14 @@
 
         <!-- Double column -->
         <div class="gallery-row double fade-in">
-          <img src="images/Golden Meadow/Golden-Meadow-Cover.png" alt="Golden meadow cover">
-          <img src="images/Golden Meadow/Golden-Meadow-Candles.png" alt="Golden meadow candles">
+          <img class="lazy-image" src="images/Golden Meadow/Golden-Meadow-Cover.png" alt="Golden meadow cover">
+          <img class="lazy-image" src="images/Golden Meadow/Golden-Meadow-Candles.png" alt="Golden meadow candles">
         </div>
         
         <!-- Double column -->
         <div class="gallery-row double fade-in">
-          <img src="images/Golden Meadow/Golden-Meadow-Box.png" alt="Golden meadow box">
-          <img src="images/Golden Meadow/Golden-Meadow-Card.png" alt="Goldem meadow card">
+          <img class="lazy-image" src="images/Golden Meadow/Golden-Meadow-Box.png" alt="Golden meadow box">
+          <img class="lazy-image" src="images/Golden Meadow/Golden-Meadow-Card.png" alt="Goldem meadow card">
         </div>
       </section>
 
@@ -151,6 +151,20 @@ window.addEventListener("scroll", () => {
   }
 
   lastScrollY = currentScrollY;
+});
+
+document.querySelectorAll(".lazy-image").forEach(img => {
+
+  function finishLoading() {
+    img.classList.add("loaded");
+  }
+
+  if (img.complete) {
+    finishLoading();
+  } else {
+    img.addEventListener("load", finishLoading);
+  }
+
 });
 
 });

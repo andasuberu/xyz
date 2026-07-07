@@ -62,13 +62,13 @@
 
         <!-- Single column -->
         <div class="gallery-row single fade-in">
-          <img src="images/Salvo/Label.png" alt="Salvo label">
+          <img class="lazy-image" src="images/Salvo/Label.png" alt="Salvo label">
         </div>
 
         <!-- Double column -->
         <div class="gallery-row double fade-in">
-          <img src="images/Salvo/Tags.png" alt="Salvo Tags">
-          <img src="images/Salvo/Salvo.png" alt="Salvo">
+          <img class="lazy-image" src="images/Salvo/Tags.png" alt="Salvo Tags">
+          <img class="lazy-image" src="images/Salvo/Salvo.png" alt="Salvo">
         </div>
       </section>
 
@@ -154,6 +154,20 @@ window.addEventListener("scroll", () => {
   }
 
   lastScrollY = currentScrollY;
+});
+
+document.querySelectorAll(".lazy-image").forEach(img => {
+
+  function finishLoading() {
+    img.classList.add("loaded");
+  }
+
+  if (img.complete) {
+    finishLoading();
+  } else {
+    img.addEventListener("load", finishLoading);
+  }
+
 });
 
 });
