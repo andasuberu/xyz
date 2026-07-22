@@ -760,8 +760,22 @@ display: none!important;
   color: #FFFFFF;
 }
 
-.footer-container img {
-  min-width: 90px;
+.footerright {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 2px;
+}
+
+.footerright img {
+  width: 18px;
+  height: 18px;
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+.footerright img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
 .contact {
