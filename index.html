@@ -32,6 +32,15 @@
   </head>
   
 <body class="home">
+<div id="preloader">
+    <div class="preloader-inner">
+        <img src="images/aslogo.svg" alt="Anda Suberu">
+
+        <div class="loader-line">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+</div>
 <header>
   <div class="header-container fade-up">
     <a href="https://andasuberu.xyz" class="logo">
@@ -202,6 +211,23 @@
 </section>
 
 <script>
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+
+  if (!preloader) return;
+
+  // Let the logo/bar animation finish
+  setTimeout(function () {
+    preloader.classList.add("hide");
+
+    // Remove it completely after the fade
+    setTimeout(function () {
+      preloader.remove();
+    }, 700);
+
+  }, 1700);
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   // Lazy load images
   const items = document.querySelectorAll(".masonry-item img.lazy");
