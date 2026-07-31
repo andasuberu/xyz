@@ -116,6 +116,7 @@ a:hover {
     margin-top:24px;
     overflow:hidden;
     border-radius: 999px;
+    display: none !important;
 }
 
 .loader-fill{
