@@ -42,7 +42,7 @@
     </div>
 </div>
 <header>
-  <div class="header-container fade-up">
+  <div class="header-container fade-up" data-delay="0">
     <a href="https://andasuberu.xyz" class="logo">
         <img src="images/andasuberu.svg">
   <!-- <span>Anda Suberu</span> -->
@@ -74,20 +74,27 @@
     </ul>
   </div>
 </header>
-  <section class="hero fade-in">
+  <section class="hero">
   <div class="hero-left">
+    <div class="reveal fade-up" data-delay="500">
     <h1 class="line1" style="  font-size: 6.5rem; font-family: 'Bebas Neue', sans-serif; line-height: 0.7; font-weight: 400; padding-bottom: 1rem;">MULTIDISCIPLINARY</h1>
-    <h1 class="line2">VISUAL DESIGNER<!--<img src="images/asterisk.svg" alt="asterisk" class="asterisk">--></h1>
+    </div>
+
+    <div class="reveal fade-up" data-delay="600">
+    <h1 class="line2" >VISUAL DESIGNER<!--<img src="images/asterisk.svg" alt="asterisk" class="asterisk">--></h1>
+    </div>
   </div>
   <div class="hero-right" style=" max-width: 500px; font-size: 1.1rem; font-weight: 300; line-height: 1.6; color: #fff; padding-right: 3rem; padding-left: 3rem;">
+    <div class="reveal fade-up" data-delay="1000">
     <p>I work with early-stage startups and established brands on a variety of projects ranging from visual identity and illustration to UI/UX and web design.</p>
+    </div>
   </div>
   </section>
 
 
 <section class="rest">
 <!-- Horizontal Masonry Gallery -->
-<div class="gallery" id="gallery">
+<div class="gallery fade-in" id="gallery" data-delay="1600">
   <div class="gallery-row" id="row1"></div>
   <div class="gallery-row" id="row2"></div>
   <div class="gallery-row" id="row3"></div>
@@ -192,7 +199,7 @@
   </div>
 </div>
 
-<footer class="fade-in">
+<footer class="fade-in" data-delay="400">
   <div class="footer-container">
     <div><p class="nav">
       © 2022 - 2026 <a href="https://andasuberu.xyz" style="text-decoration: underline;">Anda Suberu</a>
@@ -211,18 +218,49 @@
 </section>
 
 <script>
+
+// Animate fade-up / fade-in elements AFTER preloader
+function startEntranceAnimations() {
+  const animItems = document.querySelectorAll(".fade-up, .fade-in, .fade-down");
+
+  const animObserver = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+  entry.target.classList.add("show");
+}, entry.target.dataset.delay || 0);
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0 }
+  );
+
+  animItems.forEach(item => animObserver.observe(item));
+}
+
 window.addEventListener("load", function () {
   const preloader = document.getElementById("preloader");
 
-  if (!preloader) return;
+  if (!preloader) {
+    startEntranceAnimations();
+    return;
+  }
 
-  // Let the logo/bar animation finish
+  // Let the preloader animation finish
   setTimeout(function () {
+
     preloader.classList.add("hide");
 
-    // Remove it completely after the fade
+    // Wait for the fade-out
     setTimeout(function () {
+
       preloader.remove();
+
+      // Start page animations only after the preloader is gone
+      startEntranceAnimations();
+
     }, 700);
 
   }, 1700);
@@ -268,21 +306,6 @@ document.querySelectorAll(".image-wrapper").forEach(wrapper => {
         }
     });
 });
-
-  // Animate fade-up / fade-in elements
-  const animItems = document.querySelectorAll(".fade-up, .fade-in");
-  const animObserver = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          obs.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0 }
-  );
-  animItems.forEach(item => animObserver.observe(item));
 
   const hamburger = document.querySelector(".hamburger");
   const mobileMenu = document.querySelector(".mobile-menu");
