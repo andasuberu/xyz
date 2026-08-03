@@ -248,12 +248,21 @@ window.addEventListener("load", function () {
     return;
   }
 
+  // Skip preloader if it has already been shown this session
+  if (sessionStorage.getItem("preloaderShown")) {
+    preloader.remove();
+    startEntranceAnimations();
+    return;
+  }
+
+  // Remember that we've shown it
+  sessionStorage.setItem("preloaderShown", "true");
+
   // Let the preloader animation finish
   setTimeout(function () {
 
     preloader.classList.add("hide");
 
-    // Wait for the fade-out
     setTimeout(function () {
 
       preloader.remove();
